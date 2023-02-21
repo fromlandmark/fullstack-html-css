@@ -1,0 +1,21 @@
+@import '../colors';
+@import '../mixins';
+
+.top_bar {
+    background: $green;
+    height: 40px;
+    padding: 0 16px;
+    color: $white;
+    @include flex(null, space-between, center); 
+    &__menu {
+        a {
+             &:not(:last-child) { 
+                &::after {
+                    content: '|';
+                    position: relative;
+                    left: 2px;
+                }
+            }
+        }
+    }
+}
