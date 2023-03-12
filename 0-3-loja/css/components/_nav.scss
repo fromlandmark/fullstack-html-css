@@ -1,0 +1,42 @@
+@import "../partials/colors";
+
+nav {
+	height: 64px;
+	width: 100%;
+	display: flex;
+	position: sticky;
+	background: $white;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__logo {
+	img {
+		height: 50px;
+	}
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	.nav__item {
+		&:hover {
+			cursor: pointer;
+			.nav__dropdown__items {
+				top: 64px;
+			}
+		}
+		.nav__dropdown__items {
+			transition: all 0.4s;
+			display: block;
+			position: absolute;
+			top: -100vh;
+			z-index: -1;
+			width: 100%;
+			background: white;
+			left: 0;
+			min-height: 200px;
+		}
+	}
+}

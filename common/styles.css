@@ -331,30 +331,61 @@ nav a:hover {
 
 
 /* Exercices */
-.exercices {
+.exercises {
     margin: 64px 0;
     padding: 0 16px;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    width: 100%
 }
 
 .exercise_card {
     background: white;
-    width: clamp(200px, 50%, 300px);
+    width: 100%;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
-    height: 225px;
+    max-height: 225px;
     border-radius: 6px;
     padding: 12px;
     text-decoration: none;
+    opacity: 1;
 }
 
 .exercise_card .thumbnail {
     width: 100%;
     flex-grow: 1;
     border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+
 }
+
+
+
 
 .exercise_card[data-exercise="html"] .thumbnail {
     background: #cc9933;
+}
+
+.exercise_card[data-exercise="html"] .thumbnail::before {
+    content: 'HTML'
+}
+
+.exercise_card[data-exercise="css"] .thumbnail {
+    background: #0000ee;
+}
+
+.exercise_card[data-exercise="css"] .thumbnail::before {
+    content: 'CSS'
 }
 
 .exercise_card__title {
