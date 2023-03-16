@@ -1,0 +1,20 @@
+@import 'reset';
+@import 'typography';
+@import 'nav';
+@import 'buttons';
+@import 'splash-screen';
+@import 'how-to';
+@import 'solutions';
+@import 'articles';
+@import 'advertising';
+@import 'footer';
+
+html, body {
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    padding: 32px 0;
+}
+
+@import 'queries';
