@@ -4,11 +4,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
+    margin-bottom: 12px;
 }
 
 [class*="col-"] {
     height: 100%;
-
+    margin-bottom: 6px;
 }
 
 .col-1 {
@@ -57,4 +58,20 @@
 
 .col-12 {
     grid-column: span 12 / span 12;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.gap-16 {
+    gap: 16px;
 }

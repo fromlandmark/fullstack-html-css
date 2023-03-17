@@ -3,6 +3,7 @@
 /*16px*/
 html {
     font-size: 87.5%;
+    font-family: 'Roboto Slab', serif;
 }
 
 /*14px*/
@@ -20,7 +21,6 @@ h3,
 h4,
 h5 {
     margin: 0;
-    font-family: 'Roboto Slab', serif;
     font-weight: 400;
     line-height: 120%;
 }

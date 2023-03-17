@@ -38,6 +38,37 @@ body {
     background: transparent;
 }
 
+.h-full {
+    height: 100%;
+}
+
+/* alert ------------------------------------------ */
+.alert {
+    display: inline-flex;
+    gap: 8px;
+    font-size: 12px;
+
+}
+
+.alert__category {
+    height: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.alert--gray {
+    background: #F5F5F5;
+}
+
+.alert__info {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid gainsboro;
+}
+
 /* pre header ------------------------------------------ */
 .pre_header {
     text-align: center;
@@ -48,6 +79,12 @@ body {
 .header {
     text-align: center;
     padding: 32px 0;
+}
+
+.header h1 {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: .9px;
 }
 
 /* nav ------------------------------------------ */
@@ -65,7 +102,7 @@ body {
 }
 
 /* articles */
-article img {
+img {
     width: 100%;
 }
 
@@ -106,6 +143,20 @@ article img {
     font-size: 14px;
 }
 
+.article__xsmall {
+    padding: 8px 0;
+}
+
+.article__xsmall:not(:last-of-type) {
+    border-bottom: 1px solid gainsboro;
+}
+
+.article__xsmall .article--featured__title {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
 /* article info */
 .article--info {
     display: flex;
@@ -114,16 +165,64 @@ article img {
     padding: 8px;
 }
 
-.article--info .article--featured__title {
+.article--info .article--info__title {
     font-size: 24px;
     line-height: 130%;
 }
 
-.article--info .article--featured__description {
+.article--info .article--info__description {
     line-height: 140%;
 }
 
 .article--info .actions {
     display: flex;
     justify-content: flex-end;
+}
+
+.article--info--small {
+    padding: 12px 0;
+    gap: 6px;
+}
+
+.article--info--small .article--info__title {
+    font-size: 14px;
+}
+
+.article--info--small .article--info__description {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: calc(1.2rem * 7);
+    text-overflow: ellipsis;
+    line-height: 1.2rem;
+}
+
+/* article_horizontal */
+.article_horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+.article_horizontal .article_horizontal__bottom {
+    display: grid;
+}
+
+
+.article_horizontal .article_horizontal__bottom {
+    display: flex;
+    gap: 8px;
+}
+
+.article_horizontal .article_horizontal__bottom .article__horizontal_description {
+    flex-grow: 1;
+    line-height: 120%;
+}
+
+.article_horizontal .article_horizontal__bottom .article__horizontal_thumbnail {
+    width: calc(100% / 8 * 2);
+    height: 100%;
 }
