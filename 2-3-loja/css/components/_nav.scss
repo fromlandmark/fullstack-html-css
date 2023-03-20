@@ -8,6 +8,7 @@ nav {
 	background: $white;
 	align-items: center;
 	justify-content: space-between;
+	z-index: 5;
 }
 
 .nav__logo {
@@ -20,23 +21,39 @@ nav {
 	display: flex;
 	align-items: center;
 	gap: 32px;
+
 	.nav__item {
+		z-index: 4;
 		&:hover {
 			cursor: pointer;
 			.nav__dropdown__items {
-				top: 64px;
+				height: 300px;
 			}
 		}
 		.nav__dropdown__items {
-			transition: all 0.4s;
+			overflow: hidden;
+			transition: height 0.2s;
 			display: block;
 			position: absolute;
-			top: -100vh;
+			height: 0px;
 			z-index: -1;
 			width: 100%;
 			background: white;
 			left: 0;
-			min-height: 200px;
+			top: 64px;
+			// min-height: 200px;
+		}
+	}
+}
+
+.items__wrapper {
+	display: flex;
+	gap: 32px;
+	ul {
+		list-style: none;
+		line-height: 200%;
+		li:first-child {
+			font-weight: bold;
 		}
 	}
 }

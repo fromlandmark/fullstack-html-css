@@ -401,7 +401,7 @@ template {
 }
 
 section {
-  padding: 24px 32px;
+  padding: 64px 32px;
 }
 
 .section--h-full {
@@ -458,7 +458,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  margin: 0 0 1rem 0;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   line-height: 1.3;
@@ -550,6 +550,7 @@ nav {
   background: #ffffff;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
 }
 
 .nav__logo img {
@@ -561,28 +562,56 @@ nav {
   align-items: center;
   gap: 32px;
 }
+.nav__links .nav__item {
+  z-index: 4;
+}
 .nav__links .nav__item:hover {
   cursor: pointer;
 }
 .nav__links .nav__item:hover .nav__dropdown__items {
-  top: 64px;
+  height: 300px;
 }
 .nav__links .nav__item .nav__dropdown__items {
-  transition: all 0.4s;
+  overflow: hidden;
+  transition: height 0.2s;
   display: block;
   position: absolute;
-  top: -100vh;
+  height: 0px;
   z-index: -1;
   width: 100%;
   background: white;
   left: 0;
-  min-height: 200px;
+  top: 64px;
+}
+
+.items__wrapper {
+  display: flex;
+  gap: 32px;
+}
+.items__wrapper ul {
+  list-style: none;
+  line-height: 200%;
+}
+.items__wrapper ul li:first-child {
+  font-weight: bold;
 }
 
 .splash_screen {
   width: 100%;
-  height: 80vh;
+  height: clamp(600px, 80vw, 800px);
   background: gainsboro;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash_screen img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section__categories {
@@ -639,6 +668,55 @@ nav {
     grid-template-columns: repeat(8, 1fr);
   }
 }
+.section__newsletter {
+  background: #514f4d;
+  padding: 64px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__field {
+  --swiper-theme-color: #007aff;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+  color: #f7eee3;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 1px solid #f7eee3;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  grid-column: span 1;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 34.625rem;
+}
+.form__field input {
+  padding: 12px 8px;
+  flex-grow: 1;
+  border: 0;
+  background: transparent;
+  color: white;
+}
+.form__field input::-moz-placeholder {
+  color: white;
+}
+.form__field input::placeholder {
+  color: white;
+}
+.form__field input:focus {
+  outline: #f7eee3;
+}
+.form__field button {
+  min-width: 200px;
+  border: 0;
+  background: #f7eee3;
+}
+
 footer {
   background: #383632;
   color: white;

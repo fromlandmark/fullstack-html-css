@@ -25,6 +25,11 @@
 			category: "html",
 		},
 		{
+			name: "Family Of Buttons",
+			href: "1-1-css-buttons-family",
+			category: "css",
+		},
+		{
 			name: "CSS Navy Battle",
 			href: "1-3-css-navy-battle",
 			category: "css",
@@ -46,7 +51,7 @@
 		},
 		{
 			name: "Loja",
-			href: "0-3-loja",
+			href: "2-3-loja",
 			category: "css",
 		},
  ];
