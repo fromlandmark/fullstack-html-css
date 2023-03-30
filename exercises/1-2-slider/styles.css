@@ -1,0 +1,41 @@
+.slider__container {
+    max-width: 800px;
+    width: 100%;
+    height: 400px;
+    background: gainsboro;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    gap: 0;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    overflow: auto;
+    /* scroll-behavior: smooth; */
+    scroll-snap-type: x mandatory;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: rgb(87, 87, 87);
+}
+
+.slider__container::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fafafa;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.slider__actions {
+    max-width: 800px;
+    width: 100%;
+    margin: 32px auto;
+    text-align: center;
+}

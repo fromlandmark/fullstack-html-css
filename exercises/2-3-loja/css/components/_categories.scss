@@ -1,0 +1,18 @@
+.section__categories {
+	max-width: 1400px;
+	margin: 0 auto;
+	.thumbnail {
+		position: relative;
+		img {
+			width: 100%;
+			aspect-ratio: 3/2;
+		}
+		.thumbnail__title {
+			position: absolute;
+			z-index: 2;
+			bottom: 8px;
+			left: 8px;
+			font-size: 16px;
+		}
+	}
+}

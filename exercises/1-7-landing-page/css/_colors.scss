@@ -1,0 +1,27 @@
+$black: #191919;
+$white: #ffffff;
+$cyan: #338cf4;
+$blue: #0064da;
+$light-gray: #fbfbfb;
+
+
+@mixin background($color) {
+    @if $color == 'black' {
+        background: $black;
+        color: $white;
+    }
+    @if $color == 'blue' {
+        background: $blue;
+        color: $white;
+    }
+    @if $color == 'white' {
+        background: $white;
+        color: $blue;
+    }
+}
+
+.bg {
+    &-gray {
+        background: $light-gray;
+    }
+}

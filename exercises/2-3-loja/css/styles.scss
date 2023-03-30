@@ -1,0 +1,17 @@
+@import "./partials/normalize";
+@import "./partials/grid";
+@import "./partials/typography";
+@import "./partials/colors";
+@import "./partials/buttons";
+
+@import "./components/nav";
+@import "./components/splash";
+@import "./components/categories";
+@import "./components/collections";
+@import "./components/video";
+@import "./components/carousel";
+@import "./components/subscribe";
+@import "./components/footer";
+
+// category page
+@import "./components/products";
