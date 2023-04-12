@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		input {
+			border: 1.5px solid gainsboro;
+			padding: 8px 12px;
+			border-radius: 4px;
+			position: relative;
+		}
+
+		input:not(:valid) {
+			border: 1px solid rgb(143, 0, 0);
+		}
+
+		.form__field:has(input:not(:valid))::after {
+			content: attr(data-error);
+		}
+	</style>
+	<body>
+		<input type="month" name="" id="" />
+
+		<input type="date" name="" id="" />
+
+		<input type="text" name="" id="" placeholder="Texto aqui" />
+
+		<div class="form__field" data-error="Email is not valid">
+			<label for="email">Email</label>
+			<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+		</div>
+	</body>
+</html>

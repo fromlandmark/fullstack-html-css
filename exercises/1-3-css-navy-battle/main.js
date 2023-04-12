@@ -1,4 +1,20 @@
-const targets = [10,3,4,1,6,2,43,66,21,23]
+let targets = []
+const populateTargets = () => {
+	const targetsOnStorage = JSON.parse(localStorage.getItem("targets"));
+	if (!targetsOnStorage) {
+		for (let index = 0; index <= 10; index++) {
+			const target = Math.floor(Math.random() * 100);
+			
+			targets.push(target);
+		}
+        localStorage.setItem('targets', JSON.stringify(targets))
+	} else {
+        targets = targetsOnStorage
+    }
+};
+
+populateTargets();
+
 const boards = document.querySelectorAll('.board');
 const configs = {
     unit: 1,
@@ -7,6 +23,7 @@ const configs = {
     width: 400,
     height: 400
 }
+
 let boardCount = 0;
 
 boards.forEach(board => {
@@ -33,3 +50,4 @@ boards.forEach(board => {
     
     boardCount++
 });
+

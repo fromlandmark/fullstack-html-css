@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: rgb(242, 242, 242);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label {
+    margin: 0;
+    line-height: 150%;
+}
+
+section {
+    margin: 32px 0;
+}
+
+
+.section__title {
+    font-size: 1.2rem;
+    padding: 12px 0;
+    margin: 12px 0;
+    font-weight: 400;
+    border-bottom: 1px solid gainsboro;
+}
+
+.card {
+    min-width: 100px;
+    min-height: 100px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 12px;
+}
+
+
+.avatar__group {
+    display: flex;
+}
+
+.avatar__group .avatar {
+    margin: 0 -6px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background: gainsboro;
+    border-radius: 100%;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.avatar--square {
+    border-radius: 4px;
+}
+
+.avatar--sm {
+    width: 20px;
+    height: 20px;
+}
+
+.bar__container {
+    width: 100%;
+    height: 6px;
+    background: gainsboro;
+    border-radius: 4px;
+    overflow: hidden;
+
+}
+
+.bar__value {
+    width: 50%;
+    height: 100%;
+    background: red;
+    border-radius: 0 4px 4px 0;
+}
+
+/* typography */
+.headline {
+    font-size: 0.9rem;
+}
+
+span {
+    font-size: 0.8rem;
+}
+
+/* 
+---------------------------------------------------------------------------------
+Flex Properties
+--------------------------------------------------------------------------------
+*/
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.gap-md {
+    gap: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* 
+---------------------------------------------------------------------------------
+Color Properties
+--------------------------------------------------------------------------------
+*/
+
+.gray-100 {
+    color: rgb(101, 101, 101);
+}
+
+.gray-200 {
+    color: rgb(91, 91, 91);
+}
+
+.gray-300 {
+    color: rgb(81, 81, 81);
+}
+
+.gray-400 {
+    color: rgb(71, 71, 71);
+}
+
+.gray-500 {
+    color: rgb(61, 61, 61);
+}
+
+.gray-600 {
+    color: rgb(51, 51, 51);
+}
+
+.gray-700 {
+    color: rgb(41, 41, 41);
+}
+
+.gray-800 {
+    color: rgb(31, 31, 31);
+}
+
+.gray-900 {
+    color: rgb(21, 21, 21);
+}

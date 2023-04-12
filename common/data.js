@@ -74,30 +74,6 @@ export const presentationsLinks = [
 		href: "presentations/0-1-html-intro-2023.pdf",
 		category: "html",
 	},
-	{
-		name: "Elementos e Atributos em questão de CSS",
-		href: "presentations/0-2-html-intro-e-atributos-2023.pdf",
-		category: "html",
-	},
-	{
-		name: "Media Tags",
-		href: "presentations/0-3-html-medias-2023.pdf",
-		category: "html",
-	},
-	{
-		name: "Html Introdução",
-		href: "presentations/0-1-html-intro-2023.pdf",
-		category: "html",
-	},
-	{
-		name: "Elementos e Atributos em questão de CSS",
-		href: "presentations/0-2-html-intro-e-atributos-2023.pdf",
-		category: "html",
-	},
-	{
-		name: "Media Tags",
-		href: "presentations/0-3-html-medias-2023.pdf",
-		category: "html",
-	},
+	
 ];
  

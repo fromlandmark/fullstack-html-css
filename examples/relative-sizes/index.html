@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<style>
+			html {
+				font-size: 14px;
+			}
+
+			.container {
+				background: red;
+				margin: 4px;
+				/* width: 25vw;
+				min-width: 150px;
+				max-width: 200px; */
+				width: clamp(150px, 25vw, 200px);
+				height: 500px;
+				/* vw viewport width
+                    vh viewport height
+                */
+			}
+
+			h1 {
+				font-size: 1.5rem;
+			}
+			p {
+				font-size: 1rem;
+				/* root */
+				/* font-size: 2rem; */
+			}
+
+			.flex {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		</style>
+		<div class="flex">
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+		</div>
+		<div class="container--image"></div>
+		<div class="flex">
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+			<div class="container">
+				<h1>Heading 1</h1>
+				<p>paragraph</p>
+			</div>
+		</div>
+	</body>
+</html>

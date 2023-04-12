@@ -56,6 +56,86 @@ div {
     background: #fbe4e8;
 }
 
+/* board a -------------------------------------------------- */
+.board.board-a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-a .board-box-1,
+.board-a .board-box-2 {
+    height: 100%;
+    width: 100px;
+}
+
+/* board b -------------------------------------------------- */
+.board.board-b {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-b div {
+    height: 50%;
+    width: 50px;
+}
+
+
+.board-b .board-box-2 {
+    align-self: flex-end;
+}
+
+/* board c -------------------------------------------------- */
+.board.board-c {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-c div {
+    height: 100%;
+    width: 50px;
+}
+
+/* board 0 -------------------------------------------------- */
+.board.board-0 {
+    display: flex;
+    justify-content: space-between;
+    animation-play-state: paused;
+}
+
+.board-0 .board-box-1,
+.board-0 .board-box-2 {
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes move {
+    0% {
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    20% {
+        height: 100%;
+    }
+
+    80% {
+        height: 50px;
+        border-radius: 20px
+    }
+
+    100% {
+        height: 100px;
+
+    }
+}
+
+.board-0:hover div {
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
 
 
 /* board 1 -------------------------------------------------- */
