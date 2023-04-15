@@ -1,0 +1,19 @@
+.carousel {
+	display: grid;
+	grid-template-columns: repeat(8, minmax(300px, 1fr));
+	gap: 12px;
+	overflow: auto;
+	.carousel__card {
+		min-width: 300px;
+		img {
+			width: 100%;
+			aspect-ratio: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.carousel {
+		grid-template-columns: repeat(8, 1fr);
+	}
+}

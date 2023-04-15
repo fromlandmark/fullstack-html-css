@@ -1,0 +1,307 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(10, 10, 10);
+    box-sizing: border-box;
+    align-items: center;
+    min-height: 100vh;
+    gap: 24px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 0.5fr);
+    padding: 24px;
+}
+
+.board {
+    background: rgba(20, 20, 20);
+    aspect-ratio: 1;
+    border: 1px solid rgba(40, 40, 40);
+    padding: 12px;
+}
+
+div {
+    border-radius: 8px;
+}
+
+/* BG-colors */
+.bg-gray {
+    background: #fafafa;
+}
+
+.bg-blue {
+    background: #6979f8;
+}
+
+.bg-red {
+    background: #ff647c;
+}
+
+.bg-orange {
+    background: #ffa26b;
+}
+
+.bg-green {
+    background: #00c48c;
+}
+
+.bg-purple {
+    background: #be52f2;
+}
+
+.bg-pink {
+    background: #fbe4e8;
+}
+
+/* board a -------------------------------------------------- */
+.board.board-a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-a .board-box-1,
+.board-a .board-box-2 {
+    height: 100%;
+    width: 100px;
+}
+
+/* board b -------------------------------------------------- */
+.board.board-b {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-b div {
+    height: 50%;
+    width: 50px;
+}
+
+
+.board-b .board-box-2 {
+    align-self: flex-end;
+}
+
+/* board c -------------------------------------------------- */
+.board.board-c {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-c div {
+    height: 100%;
+    width: 50px;
+}
+
+/* board 0 -------------------------------------------------- */
+.board.board-0 {
+    display: flex;
+    justify-content: space-between;
+    animation-play-state: paused;
+}
+
+.board-0 .board-box-1,
+.board-0 .board-box-2 {
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes move {
+    0% {
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    20% {
+        height: 100%;
+    }
+
+    80% {
+        height: 50px;
+        border-radius: 20px
+    }
+
+    100% {
+        height: 100px;
+
+    }
+}
+
+.board-0:hover div {
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+
+/* board 1 -------------------------------------------------- */
+.board-1 {
+    display: grid;
+    grid-template-areas: 'board-box-1 board-box-1 board-box-1'
+        'board-box-2 board-box-2 board-box-2';
+    grid-template-rows: 150px 1fr;
+    gap: 12px;
+}
+
+.board-1>.board-box-2 {
+    display: grid;
+    grid-template-areas: 'board-box-2-1 board-box-2-2';
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.board-box-1 {
+    grid-area: board-box-1
+}
+
+.board-box-2 {
+    grid-area: board-box-2
+}
+
+.board-box-3 {
+    grid-area: board-box-3
+}
+
+.board-box-2-1 {
+    grid-area: board-box-2-1
+}
+
+.board-box-2-2 {
+    grid-area: board-box-2-2
+}
+
+.board-box-2-3 {
+    grid-area: board-box-2-3
+}
+
+.board-box-2-4 {
+    grid-area: board-box-2-4
+}
+
+.board-box-2-5 {
+    grid-area: board-box-2-5
+}
+
+.board-box-2-6 {
+    grid-area: board-box-2-6
+}
+
+.board-box-2-7 {
+    grid-area: board-box-2-7
+}
+
+.board-box-2-8 {
+    grid-area: board-box-2-8
+}
+
+.board-box-2-9 {
+    grid-area: board-box-2-9
+}
+
+.board-box-2-10 {
+    grid-area: board-box-2-10
+}
+
+
+/* board 2 -------------------------------------------------- */
+.board-2 {
+    display: grid;
+    grid-template-areas: 'board-box-1 board-box-2 board-box-2 board-box-2';
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+}
+
+/* board 3 -------------------------------------------------- */
+.board-3 {
+    display: grid;
+    grid-template-areas: 'board-box-1'
+        'board-box-2 ';
+    grid-template-rows: 150px 1fr;
+    gap: 12px;
+}
+
+/* board 4 -------------------------------------------------- */
+.board-4 {
+    display: grid;
+    grid-template-areas: 'board-box-1 board-box-2';
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+}
+
+.board-4>.board-box-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 40px);
+    gap: 4px;
+    place-content: end
+}
+
+/* board 5 -------------------------------------------------- */
+.board-5 {
+    display: grid;
+    grid-template-areas: 'board-box-1 board-box-1 board-box-1 board-box-2'
+        'board-box-1 board-box-1 board-box-1 board-box-2'
+        'board-box-1 board-box-1 board-box-1 board-box-2'
+        'board-box-3 board-box-3 board-box-3 board-box-3';
+
+    gap: 12px;
+}
+
+.board-5-inner-1 {
+    grid-area: board-5-inner-1;
+}
+
+.board-5-inner-2 {
+    grid-area: board-5-inner-2;
+}
+
+.board-5-inner-3 {
+    grid-area: board-5-inner-3;
+}
+
+.board-5-inner-1-1 {
+    grid-area: board-5-inner-1-1;
+}
+
+.board-5-inner-1-2 {
+    grid-area: board-5-inner-1-2;
+}
+
+.board-5-inner-1-3 {
+    grid-area: board-5-inner-1-3;
+}
+
+.board-5>.board-box-1 {
+    display: grid;
+    grid-template-areas: 'board-5-inner-1 board-5-inner-1 board-5-inner-1 board-5-inner-2'
+        'board-5-inner-1 board-5-inner-1 board-5-inner-1 board-5-inner-2'
+        'board-5-inner-1 board-5-inner-1 board-5-inner-1 board-5-inner-2'
+        'board-5-inner-3 board-5-inner-3 board-5-inner-3 board-5-inner-3';
+
+    gap: 12px;
+}
+
+.board-5>.board-box-1>.board-5-inner-1 {
+    display: grid;
+    grid-template-areas: 'board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-2'
+        'board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-2'
+        'board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-1 board-5-inner-1-2'
+        'board-5-inner-1-3 board-5-inner-1-3 board-5-inner-1-3 board-5-inner-1-3';
+    gap: 12px;
+}
+
+/* board 6 -------------------------------------------------- */
+.board-6 {
+    display: grid;
+    grid-template-areas: '. . board-box-1 .'
+        '. . board-box-1 board-box-2'
+        '. . . board-box-2'
+        '. . . board-box-2'
+        'board-box-3 board-box-3 . .';
+
+    gap: 12px;
+}

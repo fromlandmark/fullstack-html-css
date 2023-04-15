@@ -1,0 +1,26 @@
+footer {
+    font-weight: 300;
+    font-size: 14px;
+    .footer__wrapper {
+        
+        display: flex;
+        gap: 12px;
+        margin: 0 auto;
+        justify-content: center;
+        max-width: 1440px;
+        width: 100%;
+        border-top: 1px solid gainsboro;
+        padding: 16px 0;
+        .footer__col {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% / 4);
+            .footer__link {
+                color: black;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

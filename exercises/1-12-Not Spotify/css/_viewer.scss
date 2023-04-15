@@ -1,0 +1,127 @@
+.viewer__container {
+	background: #0e0b0b;
+	flex-grow: 1;
+	max-width: calc(100vw - 240px);
+	height: 100vh;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.collection {
+	padding: 12px;
+	margin: 12px 0;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: white;
+		opacity: 0.8;
+		margin-bottom: 20px;
+	}
+	&__inner {
+		width: 100%;
+		display: flex;
+		gap: 12px;
+		flex-wrap: wrap;
+	}
+}
+
+.card__featured {
+	background-color: hsla(0, 0%, 100%, 0.1);
+	width: calc(100% / 3 - 12px);
+	height: 75px;
+	display: flex;
+	overflow: hidden;
+	border-radius: 4px;
+	.card__thumbnail {
+		height: 100%;
+	}
+	.card__content {
+		display: flex;
+		align-items: center;
+		padding: 12px;
+		flex-grow: 1;
+		.card__title {
+			color: white;
+			opacity: 0.8;
+			font-weight: 800;
+			font-size: 1rem;
+			line-height: 1.4rem;
+		}
+	}
+	.card__icon {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1;
+	}
+}
+
+// thumbnail hover states
+.card__featured {
+	.card__icon {
+		.btn__player {
+			transition: all 0.2s ease-in;
+			opacity: 0;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		.card__icon {
+			.btn__player {
+				cursor: pointer;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// card showcase
+.collection__showcase {
+	.collection__inner {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		width: 100%;
+		.card__showcase {
+			background: #181818;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border-radius: 12px;
+			padding: 12px;
+			overflow: hidden;
+			.card__thumbnail {
+				width: calc(100%);
+				margin: 0 auto;
+				border-radius: 12px;
+			}
+			.card__content {
+				text-align: left;
+				width: 100%;
+				.card__title {
+					color: rgba(255, 255, 255, 0.5);
+					font-size: 0.9rem;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+					padding: 8px 2px;
+					font-weight: 700;
+				}
+				.card__subtitle {
+					color: rgba(255, 255, 255, 0.5);
+					font-size: 0.9rem;
+					font-weight: 100;
+					line-height: 1.1rem;
+					padding: 0 2px;
+				}
+			}
+		}
+	}
+}

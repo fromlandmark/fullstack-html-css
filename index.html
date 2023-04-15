@@ -21,9 +21,9 @@
 				<span>2023</span>
 			</div>
 			<nav>
-				<a href="">Conteúdo</a>
-				<a href="">Apresentações</a>
-				<a href="">Exercícios</a>
+				<a href="#content__wrapper">Conteúdo</a>
+				<a href="#presentations__wrapper">Apresentações</a>
+				<a href="#exercises__wrapper">Exercícios</a>
 				<a href="">Materiais de Apoio</a>
 			</nav>
 		</section>
@@ -37,7 +37,7 @@
 			</div>
 		</section>
 		<!-- content -->
-		<section class="content">
+		<section class="content" id="content__wrapper">
 			<div class="content__wrapper">
 				<div class="content_caption">
 					<span>html</span>
@@ -90,12 +90,18 @@
 			</div>
 		</section>
 
+		<!-- presentations -->
+		<h3 class="section__title">Apresentações</h3>
+		<section class="presentations" id="presentations__wrapper"></section>
+
 		<!-- exercicios -->
-		<section class="exercices">
-			<a href="./03-loja/index.html" class="exercise_card" data-exercise="html">
-				<div class="thumbnail"></div>
-				<span class="exercise_card__title">Loja</span>
-			</a>
-		</section>
+		<h3 class="section__title">Exercícios</h3>
+		<section class="exercises" id="exercises__wrapper"></section>
+
+		<!-- exercicios -->
+		<h3 class="section__title">Materiais de Apoio</h3>
+		<section class="materials" id="materials__wrapper"></section>
 	</body>
+
+	<script type="module" src="common/main.js"></script>
 </html>
