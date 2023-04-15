@@ -99,20 +99,20 @@ export const presentationsLinks = [
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-7-css-animations-functions-2023.pdf",
-		name: "1-7-css-animations-functions-2023.pdf",
-		category: "css",
-	},
-	{
-		href: "http://localhost:3000/presentations/1-8-css-sass-2023.pdf",
-		name: "1-8-css-sass-2023.pdf",
-		category: "css",
-	},
-	{
 		href: "http://localhost:3000/presentations/css-bem.pdf",
-		name: "css-bem.pdf",
+		name: "1-6-css-bem.pdf",
 		category: "css",
 	},
+	// {
+	// 	href: "http://localhost:3000/presentations/1-7-css-animations-functions-2023.pdf",
+	// 	name: "1-7-css-animations-functions-2023.pdf",
+	// 	category: "css",
+	// },
+	// {
+	// 	href: "http://localhost:3000/presentations/1-8-css-sass-2023.pdf",
+	// 	name: "1-8-css-sass-2023.pdf",
+	// 	category: "css",
+	// },
 ];
 
 export const ArticlesDB = [
