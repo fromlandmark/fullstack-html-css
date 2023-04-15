@@ -541,3 +541,22 @@ nav a:hover {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+.empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.empty-state p {
+    margin-left: -32px;
+    font-size: 0.9rem;
+    opacity: .8;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
