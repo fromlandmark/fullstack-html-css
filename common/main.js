@@ -1,4 +1,4 @@
-import { exercisesList, presentationsLinks } from "./data.js";
+import { exercisesList, presentationsLinks, ArticlesDB } from "./data.js";
 
 const initHistoryNavigation = () => {
 	const navbar = document.createElement("nav");
@@ -13,7 +13,6 @@ const initHistoryNavigation = () => {
 };
 
 const exercisesContainer = document.querySelector("#exercises__wrapper");
-const presentationsContainer = document.querySelector("#presentations__wrapper");
 
 exercisesList.forEach((exercise) => {
 	const exerciseTemplate = (exercise) => {
@@ -26,6 +25,7 @@ exercisesList.forEach((exercise) => {
 	exercisesContainer.innerHTML += exerciseTemplate(exercise);
 });
 
+const presentationsContainer = document.querySelector("#presentations__wrapper");
 presentationsLinks.forEach((exercise) => {
 	const listItem = (exercise) => {
 		return `<a href="/${exercise.href}" download class="presentation_card" data-type="${exercise.category}">
@@ -40,4 +40,15 @@ presentationsLinks.forEach((exercise) => {
 
 presentationsContainer.style.gridTemplateColumns = `repeat(${presentationsLinks.length}, 300px)`;
 
- 
+
+const materialsContainer = document.querySelector("#materials__wrapper");
+ArticlesDB.forEach((articleSection) => {
+
+	articleSection.articles.forEach(article => { 
+			materialsContainer.innerHTML += `<a href="${article.href}"  target='_blank' class="article_link">
+                  ${article.label || "te"} 
+                 </div>
+			</a>`;
+		})
+		
+})

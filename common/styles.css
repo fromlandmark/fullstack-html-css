@@ -477,6 +477,49 @@ nav a:hover {
     display: block;
 }
 
+
+/* materials */
+.materials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 12px;
+
+}
+
+.article_link {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    max-width: 150ch;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    position: relative;
+    z-index: 1;
+}
+
+.article_link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(20, 20, 20, 1);
+    display: block;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.article_link:hover::before {
+    width: 100%;
+}
+
+.article_link:not(:last-child) {
+    border-bottom: 1px solid #3f3f3f;
+}
+
 /* Fonts variants */
 
 
