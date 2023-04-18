@@ -1,5 +1,4 @@
 [class*="col-"] {
-	border: 0.5px solid gray;
 	box-sizing: border-box;
 	padding: 8px;
 }
@@ -12,6 +11,15 @@
 	gap: 8px;
 }
 
+.d-sm-none {
+	display: block;
+}
+
+@media screen and (max-width: 768px) {
+	.d-sm-none {
+		display: none;
+	}
+}
 @for $i from 1 through 12 {
 	.col-lg-#{$i} {
 		width: calc(100% / 12 * $i - 8px);
