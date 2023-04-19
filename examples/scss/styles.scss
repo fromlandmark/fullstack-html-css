@@ -1,0 +1,59 @@
+$variants: primary, success, warning, danger;
+@import "colors";
+
+%button {
+	padding: 8px 0px;
+	border: 0;
+	background: lighten($color: red, $amount: 100);
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.btn {
+	@extend %button;
+	&:hover {
+		cursor: pointer;
+	}
+	&--icon {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+@each $variant in $variants {
+	$i: index($variants, $variant);
+	.btn-#{$variant} {
+		color: nth($colors, $i);
+	}
+}
+
+// colunas
+$cols: 12;
+
+[class*="col-"] {
+	box-sizing: border-box;
+	padding: 8px;
+}
+
+.row {
+	margin: 8px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+@for $i from 1 through 12 {
+	.col-lg-#{$i} {
+		width: calc(100% / 12 * $i - 8px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	@for $i from 6 through 12 {
+		.col-lg-#{$i} {
+			width: calc(100% - 8px);
+		}
+	}
+}
