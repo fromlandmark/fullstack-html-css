@@ -1,0 +1,9 @@
+@mixin flex($justify-content: flex-start, $align-items: flex-end) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin fontSize($rem: 1) {
+	font-size: calc(14px * $rem);
+}
