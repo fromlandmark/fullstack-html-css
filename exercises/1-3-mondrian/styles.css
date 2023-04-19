@@ -305,3 +305,33 @@ div {
 
     gap: 12px;
 }
+
+
+.ex8-board {
+    display: flex;
+    gap: 4px;
+}
+
+.ex8-box {
+    height: 100%;
+    width: 20%
+}
+
+.ex8-width {
+    width: 80%;
+}
+
+.ex8-wrapbox {
+    width: 33%;
+    height: 10%;
+}
+
+.ex8-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-content: flex-end;
+    gap: 1px;
+}

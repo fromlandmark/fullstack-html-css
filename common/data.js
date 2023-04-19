@@ -54,62 +54,62 @@ export const exercisesList = [
 
 export const presentationsLinks = [
 	{
-		href: "http://localhost:3000/presentations/0-1-html-intro-2023.pdf",
+		href: "presentations/0-1-html-intro-2023.pdf",
 		name: "0-1-html-intro-2023.pdf",
 		category: "html",
 	},
 	{
-		href: "http://localhost:3000/presentations/0-2-html-intro-e-atributos-2023.pdf",
+		href: "presentations/0-2-html-intro-e-atributos-2023.pdf",
 		name: "0-2-html-intro-e-atributos-2023.pdf",
 		category: "html",
 	},
 	{
-		href: "http://localhost:3000/presentations/0-3-html-medias-2023.pdf",
+		href: "presentations/0-3-html-medias-2023.pdf",
 		name: "0-3-html-medias-2023.pdf",
 		category: "html",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-0-css-introdução-2023.pdf",
+		href: "presentations/1-0-css-introdução-2023.pdf",
 		name: "1-0-css-introdução-2023.pdf",
 		category: "html",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-1-css-introdução-2-2023.pdf",
+		href: "presentations/1-1-css-introdução-2-2023.pdf",
 		name: "1-1-css-introdução-2-2023.pdf",
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-2-css-overflow-box-model-2023.pdf",
+		href: "presentations/1-2-css-overflow-box-model-2023.pdf",
 		name: "1-2-css-overflow-box-model-2023.pdf",
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-3-css-position-display-zindex-2023.pdf",
+		href: "presentations/1-3-css-position-display-zindex-2023.pdf",
 		name: "1-3-css-position-display-zindex-2023.pdf",
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-4-css-media-queries.pdf",
+		href: "presentations/1-4-css-media-queries.pdf",
 		name: "1-4-css-media-queries.pdf",
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/1-5-css-flex-2023.pdf",
+		href: "presentations/1-5-css-flex-2023.pdf",
 		name: "1-5-css-flex-2023.pdf",
 		category: "css",
 	},
 	{
-		href: "http://localhost:3000/presentations/css-bem.pdf",
+		href: "presentations/css-bem.pdf",
 		name: "1-6-css-bem.pdf",
 		category: "css",
 	},
 	// {
-	// 	href: "http://localhost:3000/presentations/1-7-css-animations-functions-2023.pdf",
+	// 	href: "presentations/1-7-css-animations-functions-2023.pdf",
 	// 	name: "1-7-css-animations-functions-2023.pdf",
 	// 	category: "css",
 	// },
 	// {
-	// 	href: "http://localhost:3000/presentations/1-8-css-sass-2023.pdf",
+	// 	href: "presentations/1-8-css-sass-2023.pdf",
 	// 	name: "1-8-css-sass-2023.pdf",
 	// 	category: "css",
 	// },

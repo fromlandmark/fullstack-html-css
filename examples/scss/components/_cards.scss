@@ -1,0 +1,13 @@
+@import "../mixins";
+
+.card {
+	@include flex(null, center);
+	@include fontSize(1.2);
+	&__header {
+		background: white;
+		input {
+			$bg: pink;
+			color: $bg;
+		}
+	}
+}
