@@ -10,7 +10,7 @@ import { exercisesList, presentationsLinks, ArticlesDB } from "./data.js";
 const exercisesContainer = document.querySelector("#exercises__wrapper");
 
 exercisesList.forEach((exercise) => {
-	if (configs.exercises) {
+ 
 		const exerciseTemplate = (exercise) => {
 			return `<a href="/${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
 					<div class="thumbnail"></div>
@@ -18,11 +18,11 @@ exercisesList.forEach((exercise) => {
 				</a>`;
 		};
 		exercisesContainer.innerHTML += exerciseTemplate(exercise);
-	}
-	exercisesContainer.innerHTML = `<div class='empty-state'>
-		<img src="common/assets/empty-state.png"/>
-		<p>Not available yet</p>
-	</div> `;
+	 
+	// exercisesContainer.innerHTML = `<div class='empty-state'>
+	// 	<img src="common/assets/empty-state.png"/>
+	// 	<p>Not available yet</p>
+	// </div> `;
 });
 
 const presentationsContainer = document.querySelector("#presentations__wrapper");

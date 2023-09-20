@@ -27,27 +27,22 @@ export const exercisesList = [
 	},
 	{
 		name: "CSS Navy Battle",
-		href: "exercises/1-3-css-navy-battle",
+		href: "exercises/1-1-css-navy-battle",
 		category: "css",
 	},
 	{
 		name: "Sports Cards",
-		href: "exercises/1-5-sports-card",
+		href: "exercises/1-2-sports-card",
 		category: "css",
 	},
 	{
 		name: "Mondrian",
-		href: "exercises/1-6-mondrian",
+		href: "exercises/1-3-mondrian",
 		category: "css",
-	},
-	{
-		name: "Take a trip",
-		href: "exercises/1-7-plain-ticket",
-		category: "css",
-	},
+	}, 
 	{
 		name: "Loja",
-		href: "exercises/2-3-loja",
+		href: "exercises/2-1-loja",
 		category: "css",
 	},
 ];
