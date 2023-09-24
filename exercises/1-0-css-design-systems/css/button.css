@@ -1,0 +1,149 @@
+.btn {
+    display: inline-flex;
+    /* height: 32px; */
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all .4s;
+}
+
+.btn span {
+    line-height: 20px;
+}
+
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+/* Variants */
+/* Primary */
+.btn--primary {
+    background: #0070D2;
+    color: white;
+}
+
+.btn--primary[disabled] {
+    background: #C9C7C5;
+    pointer-events: none;
+}
+
+.btn--primary:hover {
+    background: #005FB2;
+}
+
+.btn--primary:focus {
+    background: #005FB2;
+    box-shadow: 0px 0px 3px 0px #0070D2;
+}
+
+/* Outline */
+.btn--outline {
+    background: white;
+    color: #0070D2;
+    border-color: #0070D2;
+}
+
+.btn--outline[disabled] {
+    background: #FFFFFF;
+    color: #DDDBDA;
+    border-color: #DDDBDA;
+    pointer-events: none;
+}
+
+.btn--outline:hover {
+    background: #F4F6F9;
+}
+
+.btn--outline:focus {
+    background: white;
+    box-shadow: 0px 0px 3px 0px #0070D2;
+}
+
+/* danger */
+.btn--danger {
+    background: #C23934;
+    color: white;
+    border-color: #C23934;
+}
+
+.btn--danger[disabled] {
+    color: white;
+    border-color: #DDDBDA;
+    pointer-events: none;
+
+    background: #C9C7C5;
+    pointer-events: none;
+
+}
+
+.btn--danger:hover {
+    background: #A61A14;
+}
+
+.btn--danger:focus {
+    background: #A61A14;
+    box-shadow: 0px 0px 3px 0px #0070D2;
+}
+
+/* success */
+.btn--success {
+    background: #4BCA81;
+    color: #080707;
+
+}
+
+.btn--success[disabled] {
+    background: #FFFFFF;
+    color: #DDDBDA;
+    border-color: #DDDBDA;
+    pointer-events: none;
+}
+
+.btn--success:hover {
+    background: #04844B;
+    color: white;
+}
+
+.btn--success:hover svg path {
+    fill: white;
+}
+
+.btn--success:focus {
+    background: #04844B;
+    box-shadow: 0px 0px 3px 0px #0070D2;
+}
+
+/* Button Group */
+.button_group {
+    display: flex;
+    gap: 0;
+}
+
+.button_group .btn {
+    border-right: 1px solid gainsboro;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    border-radius: 0;
+    background: white;
+}
+
+.button_group .btn:hover {
+    background: #DDDBDA;
+}
+
+.button_group .btn:last-child {
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid gainsboro;
+}
+
+.button_group .btn:first-child {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid gainsboro;
+}
