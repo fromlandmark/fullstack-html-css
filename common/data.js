@@ -15,6 +15,12 @@ export const exercisesList = [
 		category: "html",
 	},
 	{
+		name: "Newsletter Table",
+		href: "exercises/0-4-newsletter-table",
+		category: "html",
+	},
+	
+	{
 		name: "Html Final",
 		href: "exercises/0-4-html-final",
 		category: "html",

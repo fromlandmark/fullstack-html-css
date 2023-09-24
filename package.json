@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "npx browser-sync start --server --files '*.html, *.css, js/*.js'",
+		"start": "npx browser-sync start --server --files '.'",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"read-files": "node common/readFiles.js",
 		"list-exercises": "node common/listExercises.js",
