@@ -22,7 +22,7 @@ export const exercisesList = [
 	
 	{
 		name: "Html Final",
-		href: "exercises/0-4-html-final",
+		href: "exercises/0-5-html-final",
 		category: "html",
 	},
 	// css
