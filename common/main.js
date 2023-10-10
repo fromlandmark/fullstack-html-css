@@ -1,5 +1,5 @@
-import { exercisesList, presentationsLinks, ArticlesDB } from "./data.js";
-
+import { presentationsLinks, ArticlesDB } from "./data.js";
+import   exercisesData   from "./list.js";
  const configs = {
 	materials: true,
 	exercises: true,
@@ -9,16 +9,15 @@ import { exercisesList, presentationsLinks, ArticlesDB } from "./data.js";
 
 const exercisesContainer = document.querySelector("#exercises__wrapper");
 
-exercisesList.forEach((exercise) => {
- 
-		const exerciseTemplate = (exercise) => {
-			return `<a href="/${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
+exercisesData.forEach((exercise) => {
+	const exerciseTemplate = (exercise) => {
+		return `<a href="/${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
 					<div class="thumbnail"></div>
 					<span class="exercise_card__title">${exercise.name}</span>
 				</a>`;
-		};
-		exercisesContainer.innerHTML += exerciseTemplate(exercise);
-	 
+	};
+	exercisesContainer.innerHTML += exerciseTemplate(exercise);
+
 	// exercisesContainer.innerHTML = `<div class='empty-state'>
 	// 	<img src="common/assets/empty-state.png"/>
 	// 	<p>Not available yet</p>
