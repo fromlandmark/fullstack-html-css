@@ -1,0 +1,33 @@
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    overflow: auto;
+    gap: 8px;
+}
+
+.carousel__card {
+    width: 160px;
+    aspect-ratio: 3/4;
+    background: var(--white);
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--color-background)
+}
+
+.carousel__card__thumbnail {
+    width: 100%;
+    aspect-ratio: 1;
+    background: gainsboro;
+    border-radius: 6px;
+}
+
+.carousel__card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0 0 0;
+}
+
+.carousel__card svg {
+    transform: scale(.8)
+}

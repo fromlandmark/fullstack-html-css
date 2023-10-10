@@ -1,0 +1,52 @@
+.articles__headliners {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-evenly;
+}
+
+.articles__headliners .headline__article:not(:last-child) {
+    border-bottom: 1px solid gainsboro;
+}
+
+.headline__article {
+    text-decoration: none;
+    display: block;
+    font-size: 0.8rem;
+    color: black;
+    margin: 0 8px;
+    padding: 8px 0;
+}
+
+.article {
+    width: 100%;
+    aspect-ratio: 16/9;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.article--large {
+    aspect-ratio: 4/3;
+}
+
+.article--large .article__thumbnail {
+    aspect-ratio: initial;
+    height: 80%;
+}
+
+.article__thumbnail {
+    width: 100%;
+    background: #d8d8d8;
+    aspect-ratio: 16/7;
+}
+
+.article__title {
+    position: absolute;
+    width: 90%;
+    bottom: 8px;
+    margin: 0;
+    left: 8px;
+    background: white;
+    padding: 8px;
+    box-sizing: border-box;
+}

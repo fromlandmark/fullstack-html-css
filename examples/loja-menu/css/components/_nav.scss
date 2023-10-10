@@ -1,0 +1,46 @@
+@import "../partials/mixins";
+
+.nav {
+	@include flex();
+	padding: 0 12px;
+	box-sizing: border-box;
+	background: gainsboro;
+	&__logo {
+		img {
+			height: 40px;
+		}
+	}
+	width: 100%;
+	&__menu {
+		@include flex();
+		gap: 8px;
+		.menu__item {
+			.menu__item__dropdown {
+				display: none;
+				background: red;
+				position: absolute;
+				top: 43px;
+				left: 0;
+				width: 100%;
+				min-height: 200px;
+			}
+
+			// states
+			&:hover {
+				.menu__item__dropdown {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		&:has(.menu__item:hover) {
+			.menu__item {
+				.menu__item__dropdown {
+					display: block;
+				}
+			}
+		}
+	}
+}

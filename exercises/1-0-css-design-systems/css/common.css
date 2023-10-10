@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid-sample {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    place-content: center;
+    align-items: center;
+    border-top: 1px dashed gainsboro;
+    padding: 12px 0;
+}
+
+.sample {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}

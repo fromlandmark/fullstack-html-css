@@ -1,0 +1,50 @@
+$sizes: 4, 8, 12, 16, 20, 24, 28, 32;
+$sides: top, right, bottom, left;
+
+@each $size in $sizes {
+	@each $side in $sides {
+		.m-#{$side}-#{$size} {
+			margin-#{$side}: #{$size + "px"};
+		}
+	}
+}
+
+.icon-gradient {
+	width: 24px;
+	height: 24px;
+	background-image: linear-gradient(135deg, #450af5, #c4efd9);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	svg {
+		transform-origin: center;
+		transform: scale(0.6);
+	}
+}
+
+.btn {
+	outline: none;
+	border: 0;
+	font-weight: 700;
+	&--default {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.9rem;
+	}
+	&--rounded {
+		width: 48px;
+		height: 48px;
+		border-radius: 100%;
+	}
+	&__player {
+		background: #1ed760;
+	}
+}
+
+.text {
+	&--uppercase {
+		font-size: 0.8rem;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+	}
+}

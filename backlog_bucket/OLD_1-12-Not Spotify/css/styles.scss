@@ -1,0 +1,22 @@
+@import 'reset';
+@import 'helpers';
+@import 'typography';
+@import 'sidebar';
+@import 'viewer';
+@import 'navigation';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    height: 100%;
+    max-height: calc(100vh - 90px);
+    display: flex;
+}
+ 

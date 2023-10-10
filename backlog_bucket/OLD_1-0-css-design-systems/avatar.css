@@ -1,0 +1,52 @@
+.avatar {
+    width: 32px;
+    aspect-ratio: 1;
+    display: block;
+}
+
+img:is(.avatar) {
+    border-radius: 100%;
+}
+
+.avatar img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.avatar--s {
+    width: 28px;
+}
+
+.avatar--m {
+    width: 32px;
+}
+
+.avatar--l {
+    width: 48px;
+}
+
+.avatar--xl {
+    width: 52px;
+}
+
+[data-status] {
+    position: relative;
+}
+
+[data-status]::after {
+    content: '';
+    width: calc(100% / 4);
+    aspect-ratio: 1;
+    background: red;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 100%;
+}

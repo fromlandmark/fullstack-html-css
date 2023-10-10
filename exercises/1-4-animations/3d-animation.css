@@ -1,0 +1,68 @@
+:root {
+    --bg-color: red;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: linear-gradient(-180deg, rgb(69, 17, 17), rgb(0, 0, 42));
+    display: grid;
+    place-items: center;
+}
+
+
+.loader {
+    width: 200px;
+    aspect-ratio: 1;
+    /* background: rgba(255, 255, 255, .2); */
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: all .4s;
+}
+
+.brick-1 {
+    width: 50%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, var(--bg-color), #eb6d6d);
+    transform: rotate3d(2, 1, 1, -60deg);
+    border-left: 8px solid #9a1818;
+    border-bottom: 8px solid #560b0b;
+    margin-bottom: -100%;
+    z-index: 2;
+    animation: motion 2s alternate infinite;
+    transition: all .4s;
+}
+
+.brick-2 {
+    width: 50%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, var(--bg-color), #eb6d6d);
+    transform: rotate3d(2, 1, 1, -60deg);
+    border-left: 8px solid #9a1818;
+    border-bottom: 8px solid #560b0b;
+    transition: all .4s;
+}
+
+.loader:hover .brick-1 {
+    animation-play-state: paused;
+}
+
+.loader:hover {
+    --bg-color: blue;
+}
+
+
+@keyframes motion {
+    0% {
+        transform: rotate3d(2, 1, 1, -60deg) translate3d(0px, 0, 0)
+    }
+
+    100% {
+        transform: rotate3d(2, 1, 1, -60deg) translate3d(0px, -10px, -50px);
+        box-shadow: -60px 90px 20px 0px rgb(0 0 0 / 40%);
+    }
+}

@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-margin-top: 100px;
 }
 
 html,

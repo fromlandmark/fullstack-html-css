@@ -1,0 +1,94 @@
+/* Common */
+html,
+body {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+
+.box {
+    flex-grow: 1;
+    min-height: 50vh;
+    border: 1px solid gainsboro;
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+/* end Common */
+
+/* loader with balls */
+
+.loader {
+    position: relative;
+
+    width: 20px;
+    aspect-ratio: 1;
+
+    animation: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 2s;
+
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1;
+    background: red;
+    border-radius: 100%;
+
+}
+
+.ball:first-child {
+    animation: moveLeft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.08, 0.82, 1, 0.14);
+}
+
+.ball:last-child {
+    animation: moveRight;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.08, 0.82, 1, 0.14);
+}
+
+@keyframes moveRight {
+    from {
+        transform: translate(0px, 0px)
+    }
+
+    to {
+        transform: translate(60px, 0px);
+
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translate(0px, 0px)
+    }
+
+    to {
+        transform: translate(-60px, 0px);
+
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
