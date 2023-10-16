@@ -1,0 +1,33 @@
+@import 'colors';
+
+.how-to {
+    max-height: 500px;
+    position: relative; 
+    &__content {
+        max-width: 1000px;
+        width: 60vw;
+        margin: 0 auto;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background: gainsboro;
+        height: 80px;
+        display: block;
+        transform: translate(-50%, 50%);
+        left: 50%;
+        top: -15%;
+    }
+    img {
+        margin: 32px 0;
+        width: 600px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .how-to img {
+        width: calc(100% - 32px);
+    }
+}

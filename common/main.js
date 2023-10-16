@@ -11,7 +11,7 @@ const exercisesContainer = document.querySelector("#exercises__wrapper");
 
 exercisesData.forEach((exercise) => {
 	const exerciseTemplate = (exercise) => {
-		return `<a href="/${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
+		return `<a href="${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
 					<div class="thumbnail"></div>
 					<span class="exercise_card__title">${exercise.name}</span>
 				</a>`;
@@ -27,7 +27,7 @@ exercisesData.forEach((exercise) => {
 const presentationsContainer = document.querySelector("#presentations__wrapper");
 presentationsLinks.forEach((exercise) => {
 	const listItem = (exercise) => {
-		return `<a href="/${exercise.href}" download class="presentation_card" data-type="${exercise.category}">
+		return `<a href="${exercise.href}" download class="presentation_card" data-type="${exercise.category}">
 				 <div class='presentation_card__wrapper'>
                  <span class="presentation_card__title">${exercise.name}</span> 
                  </div>

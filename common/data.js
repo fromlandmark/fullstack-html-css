@@ -206,6 +206,10 @@ export const ArticlesDB = [
 				href: "https://www.figma.com/@atlassian",
 				label: "Atlassian Design System",
 			},
+			{
+				href: "https://design.theguardian.com/",
+				label: "The Guardian Design System",
+			},
 		],
 	},
 	{
@@ -219,6 +223,10 @@ export const ArticlesDB = [
 			{
 				href: "https://dev.to/kazmi066/choosing-the-right-css-naming-convention-for-your-project-3kj6?fbclid=IwAR0BWtJw5YiLjVNM6qXZHay_RwjA63CI_mXPfD5BzgdYumzYHDMP_YLnAGA",
 				label: "Choosing the right css naming convention",
+			},
+			{
+				href: "https://www.designstudiouiux.com/blog/why-is-typography-important-in-web-design/",
+				label: "Why is typography important in web design",
 			},
 		],
 	},
@@ -268,6 +276,24 @@ export const ArticlesDB = [
 			{
 				href: "https://htmlreference.io/ ",
 				label: "HTML Reference",
+			},
+		],
+	},
+	{
+		title: "Geral",
+		articles: [
+			{
+				href: "https://www.theguardian.com/europe",
+				label: "The Guardian",
+			},
+
+			{
+				href: "https://htmlreference.io/ ",
+				label: "HTML Reference",
+			},
+			{
+				href: "https://flukeout.github.io/",
+				label: "Game about selectors",
 			},
 		],
 	},
