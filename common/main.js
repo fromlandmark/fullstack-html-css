@@ -1,11 +1,11 @@
 import { presentationsLinks, ArticlesDB } from "./data.js";
-import   exercisesData   from "./list.js";
- const configs = {
+import exercisesData from "./list.js";
+import examplesData from "./examples.js";
+const configs = {
 	materials: true,
 	exercises: true,
 	presentations: true,
-
- }
+}
 
 const exercisesContainer = document.querySelector("#exercises__wrapper");
 
@@ -51,3 +51,11 @@ ArticlesDB.forEach((articleSection) => {
 		})
 		
 })
+
+const examplesContainer = document.querySelector("#examples__wrapper");
+examplesData.forEach((item) => {
+	examplesContainer.innerHTML += `<a href="${item.href}"  target='_blank' class="article_link">
+                  ${item.name || "te"} 
+                 </div>
+			</a>`;
+});
