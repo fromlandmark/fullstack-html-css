@@ -1,6 +1,8 @@
-import { presentationsLinks, ArticlesDB } from "./data.js";
+import { ArticlesDB } from "./data.js";
 import exercisesData from "./list.js";
 import examplesData from "./examples.js";
+import presentationsData from "./presentationsData.js";
+
 const configs = {
 	materials: true,
 	exercises: true,
@@ -25,9 +27,9 @@ exercisesData.forEach((exercise) => {
 });
 
 const presentationsContainer = document.querySelector("#presentations__wrapper");
-presentationsLinks.forEach((exercise) => {
+presentationsData.forEach((exercise) => {
 	const listItem = (exercise) => {
-		return `<a href="${exercise.href}" download class="presentation_card" data-type="${exercise.category}">
+		return `<a href="${exercise.href}" target="_blank" class="presentation_card" data-type="${exercise.category}">
 				 <div class='presentation_card__wrapper'>
                  <span class="presentation_card__title">${exercise.name}</span> 
                  </div>
@@ -37,7 +39,7 @@ presentationsLinks.forEach((exercise) => {
 	presentationsContainer.innerHTML += listItem(exercise);
 });
 
-presentationsContainer.style.gridTemplateColumns = `repeat(${presentationsLinks.length}, 300px)`;
+presentationsContainer.style.gridTemplateColumns = `repeat(${presentationsData.length}, 300px)`;
 
 
 const materialsContainer = document.querySelector("#materials__wrapper");

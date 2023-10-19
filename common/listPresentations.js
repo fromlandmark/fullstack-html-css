@@ -13,3 +13,8 @@ fs.readdirSync("./presentations").forEach((file) => {
 	list.push(item);
 });
 console.table(list); 
+
+fs.writeFileSync(
+	"./common/presentationsData.js",
+	`const presentationsData = ${JSON.stringify(list)}; export default exercisesData`
+);
