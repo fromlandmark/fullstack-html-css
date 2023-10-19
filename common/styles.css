@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 html,
@@ -334,7 +335,7 @@ nav a:hover {
 
 /* Exercices */
 .exercises {
-    padding: 0 16px;
+
     display: grid;
     grid-auto-rows: 200px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -399,7 +400,8 @@ nav a:hover {
     display: grid;
     gap: 12px;
     overflow: auto;
-    padding: 0 16px;
+
+
 }
 
 .presentations::-webkit-scrollbar {
@@ -483,7 +485,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 12px;
-
+    scroll-margin-top: 100px;
 }
 
 .article_link {

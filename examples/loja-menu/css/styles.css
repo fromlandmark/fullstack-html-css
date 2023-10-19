@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: gainsboro;
+  width: 100%;
+}
+.nav__logo img {
+  height: 40px;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.nav__menu .menu__item .menu__item__dropdown {
+  display: none;
+  background: red;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+  min-height: 200px;
+}
+.nav__menu .menu__item:hover .menu__item__dropdown {
+  display: block;
+}
+.nav:hover:has(.menu__item:hover) .menu__item .menu__item__dropdown {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
