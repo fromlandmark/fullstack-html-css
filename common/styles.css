@@ -335,7 +335,7 @@ nav a:hover {
 
 /* Exercices */
 .exercises {
-    padding: 64px 0;
+
     display: grid;
     grid-auto-rows: 200px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -400,7 +400,7 @@ nav a:hover {
     display: grid;
     gap: 12px;
     overflow: auto;
-    padding: 64px 0;
+
 
 }
 
