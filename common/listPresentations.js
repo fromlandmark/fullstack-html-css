@@ -1,4 +1,5 @@
 const fs = require("fs");
+const readline = require("readline")
 
 const list = [];
 
@@ -8,8 +9,12 @@ fs.readdirSync("./presentations").forEach((file) => {
 		path: `http://localhost:3000/presentations/${file}`,
 		name: file,
 	};
+ 
 	list.push(item);
 });
-console.table(list);
+console.table(list); 
 
-//fs.writeFileSync("./common/list.js", `const list = ${JSON.stringify(list)}`);
+fs.writeFileSync(
+	"./common/presentationsData.js",
+	`const presentationsData = ${JSON.stringify(list)}; export default exercisesData`
+);
