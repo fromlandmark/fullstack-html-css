@@ -4,7 +4,6 @@ const examplesData = [
 	// { href: "examples/checkbox-toggle.html", name: "checkbox-toggle.html", category: "css" },
 	// { href: "examples/checkbox-toggle2.html", name: "checkbox-toggle2.html", category: "css" },
 	// { href: "examples/flex-properties", name: "flex-properties", category: "css" },
-	  { href: "examples/inputs", name: "inputs", category: "css" },
 	  { href: "examples/inputs.html", name: "inputs.html", category: "css" },
 	// { href: "examples/loja-menu", name: "loja-menu", category: "css" },
 	// { href: "examples/relative-sizes", name: "relative-sizes", category: "css" },
