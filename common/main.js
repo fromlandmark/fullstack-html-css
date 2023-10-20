@@ -29,7 +29,7 @@ exercisesData.forEach((exercise) => {
 const presentationsContainer = document.querySelector("#presentations__wrapper");
 presentationsData.forEach((exercise) => {
 	const listItem = (exercise) => {
-		return `<a href="${exercise.href}" target="_blank" class="presentation_card" data-type="${exercise.category}">
+		return `<a href="${location.href}/${exercise.path}" target="_blank" class="presentation_card" data-type="${exercise.category}">
 				 <div class='presentation_card__wrapper'>
                  <span class="presentation_card__title">${exercise.name}</span> 
                  </div>
