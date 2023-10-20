@@ -13,27 +13,22 @@ const exercisesContainer = document.querySelector("#exercises__wrapper");
 
 exercisesData.forEach((exercise) => {
 	const exerciseTemplate = (exercise) => {
-		return `<a href="${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
+		return `<a href="${location.href}/${exercise.href}" class="exercise_card" data-exercise="${exercise.category}">
 					<div class="thumbnail"></div>
 					<span class="exercise_card__title">${exercise.name}</span>
 				</a>`;
 	};
 	exercisesContainer.innerHTML += exerciseTemplate(exercise);
-
-	// exercisesContainer.innerHTML = `<div class='empty-state'>
-	// 	<img src="common/assets/empty-state.png"/>
-	// 	<p>Not available yet</p>
-	// </div> `;
 });
 
 const presentationsContainer = document.querySelector("#presentations__wrapper");
 presentationsData.forEach((exercise) => {
 	const listItem = (exercise) => {
 		return `<a href="${location.href}/${exercise.path}" target="_blank" class="presentation_card" data-type="${exercise.category}">
-				 <div class='presentation_card__wrapper'>
-                 <span class="presentation_card__title">${exercise.name}</span> 
-                 </div>
-			</a>`;
+					<div class='presentation_card__wrapper'>
+					<span class="presentation_card__title">${exercise.name}</span> 
+					</div>
+				</a>`;
 	};
 
 	presentationsContainer.innerHTML += listItem(exercise);
@@ -56,7 +51,7 @@ ArticlesDB.forEach((articleSection) => {
 
 const examplesContainer = document.querySelector("#examples__wrapper");
 examplesData.forEach((item) => {
-	examplesContainer.innerHTML += `<a href="${item.href}"  target='_blank' class="article_link">
+	examplesContainer.innerHTML += `<a href="${location.href}/${item.href}"  target='_blank' class="article_link">
                   ${item.name || "te"} 
                  </div>
 			</a>`;
