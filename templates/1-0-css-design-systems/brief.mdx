@@ -1,0 +1,78 @@
+# Recria, este mini design system.
+
+## Objectivos:
+
+1 - Com base neste figma, desenvolve os componentes da forma que aches apropriado.
+https://www.figma.com/file/udWyes5Zfj14qQDmD6oUzL/Edit---Design-Systems?type=design&node-id=0-1&mode=design&t=Aj73DbYShiCsxvcH-0
+
+## Pontos a ter em conta:
+
+1 - Organização.
+A representação dos componentes devem estar colocados nos seus respectivos ficheiros, igualmente no que toca ao css dos mesmos.
+
+2 - Intepretação abstracta dos elementos e da sua responsabilidade:
+O conteúdo que crias deve respeitar a segmentação dos elementos que invoca.
+Como por exemplo:
+
+// Errado
+
+<div class="btn">
+	<button class="btn">{texto}</button>
+</div>
+
+// Correto
+
+<div class="btn_group">
+	<button class="btn">{texto}</button>
+	<button class="btn">{texto}</button>
+	<button class="btn">{texto}</button>
+</div>
+
+o .btn_group é responsável por relacionar um conjunto de botões
+
+Lembra-te de ter em conta o processo abstracto de construção e a jornada dos blocos invisíveis. A regionalização importa.
+
+Algumas das propriedades de CSS que poderás / deverás usar:
+border-radius
+background-color
+vertical-align
+
+Alguns pseudo selectores que poderás / deverás usar:
+
+// interage quando o rato passa por cima do elemento
+element::hover
+
+// interage quando o elemento, por exemplo o input, está num estado focado ou ativo
+element::focus
+element::active
+
+// interge com o primeiro elemento filho de um parent
+element:first-child()
+
+// interge com o último elemento filho de um parent
+element:last-child()
+
+// verifica a condição associada.
+element:has()
+// contempla que o element, seja qual for, terá algo, por exemplo, um p? um input? um input::hover?
+
+Por exemplo:
+
+<style>
+	.btn_group .btn:first-child{" "}
+	{
+		// Mudar alguma coisa
+	}
+	/* é por exemplo uma boa abordagem para os cantos dos últimos e primeiros botões do button group. */
+</style>
+
+<div class="btn_group">
+	<button class="btn">{texto}</button> // first-child
+	<button class="btn">{texto}</button>
+	<button class="btn">{texto}</button> // last-child
+</div>
+
+Vê o exemplo:
+https://codepen.io/cristianpoliveira/pen/mdaopqy
+
+Estas abordagens e novos selectores são uma introdução ao segmento que iremos introduzir mais à frente e servem para te ires ambientando com selectores mais complexos.
