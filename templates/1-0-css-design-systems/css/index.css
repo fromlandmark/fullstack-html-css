@@ -36,11 +36,6 @@ body {
     transform: rotate(180deg);
 }
 
-/* .card p {
-    display: none;
-    transition: all .5;
-} */
-
 .card:hover {
     flex-grow: 4;
 }
