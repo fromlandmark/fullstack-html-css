@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg, red, blue);
+    font-weight: 300;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    background: white;
+    margin: 64px auto;
+
+}
+
+.card__wrapper {
+    background-image: linear-gradient(90deg, orange, rgb(210, 136, 0));
+    color: white;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.foreground-image {
+    width: 100%;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 12px;
+}
+
+.card__logo img {
+    height: 15px;
+}
+
+.card__body {
+    overflow: hidden;
+    padding: 12px;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+}
+
+.card__backdrop {
+    font-size: 12rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    transform: translate(-10%, 0);
+    position: relative;
+    opacity: .5;
+}
+
+.card__description {
+    font-size: 0.8rem;
+    line-height: 150%;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.card__actions {
+    text-align: center;
+    padding: 12px;
+}
+
+.card__actions button {
+    background: white;
+    color: blue;
+    border: 0;
+    border: 2px solid blue;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 9999px;
+    display: block;
+    margin: 0 auto 12px auto;
+    transition: all .4s;
+}
+
+.card__actions button:hover {
+    background: blue;
+    color: white;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.card__actions span {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: rgb(117, 117, 117);
+    margin: 0 auto 12px auto;
+    display: inline-block;
+}
