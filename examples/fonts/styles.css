@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;1,400&display=swap");
+
+html {
+    font-family: "Sometype Mono", monospace;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 800vh;
+    background: rgb(161, 161, 160);
+}
+
+.alternate-font {
+    font-family: "Inter"
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    /* width: clamp(100px, 50vw, 500px); */
+    width: 400px;
+    /* min-width: 100px;
+    max-width: 500px; */
+    height: 100px;
+    border: 2px solid black;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-2 {
+    position: fixed;
+}
+
+.boxzinha {
+    width: 200px;
+    height: 200px;
+    /* background: red;
+    background-image: url('big-thumbnail-5.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom; */
+}
+
+.card {
+    position: relative;
+    background: red;
+    margin: 8px;
+    height: 100px;
+}
+
+.card button {
+    position: absolute;
+    bottom: 0;
+}
+
+.card-1 {
+    z-index: 2;
+}
+
+.card-2 {
+    margin-top: -30px;
+}
+
+/* .boxzinha img {
+    width: 100%;
+} */

@@ -397,16 +397,15 @@ nav a:hover {
 
 /*  Presentations */
 .presentations {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     overflow: auto;
-
-
 }
 
-.presentations::-webkit-scrollbar {
+/* .presentations::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .presentation_card {
     position: relative;
