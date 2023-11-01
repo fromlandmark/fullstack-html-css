@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,500&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+a::after {
+    content: '→';
+    display: block;
+}
+
+.card {
+    /* width: 350px; */
+    max-width: 350px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.card_thumbnail {
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.card_thumbnail img {
+    padding: 16px;
+}
+
+.card_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_content_header, .card_content_body, .card_content_footer {
+    width: 100%;
+}
+
+.card_content_header, .card_content_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.card_content_body {
+    padding: 12px;
+}
+
+.card_title {
+    margin: 0;
+}
+
+.card_description {
+    font-size: 0.9rem;
+    line-height: 150%;
+}
+
+.card_content_footer {
+    color: #007AE9;
+}
+
+.card_author {
+    display: inherit;
+    align-items: inherit;
+}
+.author_thumbnail {
+    width: 32px;
+    height: 32px;
+    background-color: gainsboro;
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        align-content: flex-start;
+    }
+    .card {
+        height: 125px;
+        flex-direction: row;
+        min-width: 400px;
+        
+    }
+
+    .card_content {
+        align-content: flex-start;
+
+    }
+
+    .card_thumbnail {
+        width: 125px;
+        height: 125px;
+    }
+
+    .card_thumbnail img {
+        width: 70%;
+    }
+
+    .card_description, .card_content_footer {
+        display: none;
+    }
+}
