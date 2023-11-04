@@ -349,55 +349,55 @@ template {
 }
 
 .grid__col--0 {
-  width: 0%;
+  width: calc(0% - 16px);
 }
 
 .grid__col--1 {
-  width: 8.3333333333%;
+  width: calc(8.3333333333% - 16px);
 }
 
 .grid__col--2 {
-  width: 16.6666666667%;
+  width: calc(16.6666666667% - 16px);
 }
 
 .grid__col--3 {
-  width: 25%;
+  width: calc(25% - 16px);
 }
 
 .grid__col--4 {
-  width: 33.3333333333%;
+  width: calc(33.3333333333% - 16px);
 }
 
 .grid__col--5 {
-  width: 41.6666666667%;
+  width: calc(41.6666666667% - 16px);
 }
 
 .grid__col--6 {
-  width: 50%;
+  width: calc(50% - 16px);
 }
 
 .grid__col--7 {
-  width: 58.3333333333%;
+  width: calc(58.3333333333% - 16px);
 }
 
 .grid__col--8 {
-  width: 66.6666666667%;
+  width: calc(66.6666666667% - 16px);
 }
 
 .grid__col--9 {
-  width: 75%;
+  width: calc(75% - 16px);
 }
 
 .grid__col--10 {
-  width: 83.3333333333%;
+  width: calc(83.3333333333% - 16px);
 }
 
 .grid__col--11 {
-  width: 91.6666666667%;
+  width: calc(91.6666666667% - 16px);
 }
 
 .grid__col--12 {
-  width: 100%;
+  width: calc(100% - 16px);
 }
 
 section {
@@ -494,6 +494,10 @@ small,
   font-family: "WhyteInktrap", sans-serif;
 }
 
+.bold {
+  font-weight: 800;
+}
+
 .btn {
   display: inline-flex;
   background: transparent;
@@ -523,7 +527,6 @@ small,
   letter-spacing: 0.5px;
   line-height: 1rem;
   font-weight: 800;
-  margin: 1.5rem auto auto;
   padding: 0.75em 2rem;
   text-align: center;
   text-decoration: none;
@@ -551,6 +554,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   z-index: 5;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .nav__logo img {
@@ -561,32 +566,39 @@ nav {
   display: flex;
   align-items: center;
   gap: 32px;
+  position: relative;
 }
 .nav__links .nav__item {
   z-index: 4;
 }
-.nav__links .nav__item:hover {
+.nav__links .nav__dropdown .nav__dropdown__group__link:hover {
   cursor: pointer;
 }
-.nav__links .nav__item:hover .nav__dropdown__items {
-  height: 300px;
-}
-.nav__links .nav__item .nav__dropdown__items {
-  overflow: hidden;
-  transition: height 0.2s;
-  display: block;
-  position: absolute;
-  height: 0px;
-  z-index: -1;
-  width: 100%;
-  background: white;
+.nav__links .nav__dropdown .nav__dropdown__items {
+  position: fixed;
+  width: 100vw;
+  top: 60px;
   left: 0;
-  top: 64px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+  background: red;
+}
+.nav__links .nav__dropdown .nav__dropdown__items li:hover {
+  cursor: pointer;
+}
+.nav__links .nav__dropdown:hover .nav__dropdown__items {
+  display: block;
+  max-height: 100%;
 }
 
 .items__wrapper {
   display: flex;
   gap: 32px;
+  justify-content: flex-end;
+  text-align: right;
+  padding: 0 32px;
+  background: white;
 }
 .items__wrapper ul {
   list-style: none;
@@ -747,8 +759,7 @@ footer .footer__wrapper .footer__columns .footer__list {
   list-style: none;
   font-weight: 300;
   font-size: 12px;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 footer .footer__wrapper .footer__columns .footer__list li {
   margin-bottom: 8px;
@@ -793,6 +804,97 @@ footer .footer__wrapper .footer__details .sitemap .sitemap--links span:not(:last
     display: none;
   }
 }
+.category__title {
+  padding: 0;
+}
+
+.product__dimensions,
+.category__title,
+.product__detail {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product__detail {
+  display: flex;
+  flex-direction: column;
+}
+.product__detail .product__view {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+.product__detail .product__view__thumbnail img {
+  width: 100%;
+}
+.product__detail .product__view__options {
+  display: flex;
+  flex-direction: column;
+}
+.product__detail .product__view__options .product__fabrics {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.product__detail .product__view__options .product__fabrics .fabric__option {
+  width: 20px;
+  aspect-ratio: 1;
+  background: var(--color);
+  border-radius: 20px;
+  outline: transparent 1px solid;
+  outline-offset: 2px;
+  transition: all 0.3s;
+}
+.product__detail .product__view__options .product__fabrics .fabric__option:has(input:checked) {
+  outline: black 1px solid;
+}
+.product__detail .product__view__options .product__fabrics .fabric__option:hover {
+  cursor: pointer;
+}
+.product__detail .product__view__options .product__fabrics .fabric__option input {
+  display: none;
+}
+.product__detail .product__view__options .product__upgrades {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.product__detail .product__view__options .product__upgrades p {
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+.product__detail .product__view__options .product__upgrades .upgrade_checkbox {
+  color: #191919;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product__detail .product__view__options .product__upgrades .upgrade_checkbox input {
+  transform: scale(1.5);
+}
+.product__detail .product__view__options button {
+  margin: auto 0 0 0;
+  align-self: flex-end;
+}
+
+.product__dimensions {
+  display: flex;
+  gap: 16px;
+}
+.product__dimensions .dimension__data .dimension__list .dimension__item {
+  color: #a2a2a2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.product__dimensions .dimension__data .dimension__list .dimension__item:not(:last-child) {
+  border-bottom: 1px solid #a2a2a2;
+}
+.product__dimensions .dimension__thumbnail img {
+  width: 100%;
+}
+
 .category__introduction {
   max-width: 1440px;
   margin: 32px auto;

@@ -7,7 +7,7 @@ $cols: 12;
 
 @for $i from 0 through $cols {
 	.grid__col--#{$i} {
-		width: calc(100% / $cols * $i);
+		width: calc(100% / $cols * $i - 16px);
 	}
 }
 

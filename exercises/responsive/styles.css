@@ -106,6 +106,8 @@ CARD
 
 }
 
+
+
 .card:hover {
     cursor: pointer;
 }
@@ -172,6 +174,8 @@ CARD
 .bold {
     font-weight: 500;
 }
+
+
 
 @media (min-width: 992px) {
     .card {

@@ -747,8 +747,7 @@ footer .footer__wrapper .footer__columns .footer__list {
   list-style: none;
   font-weight: 300;
   font-size: 12px;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 footer .footer__wrapper .footer__columns .footer__list li {
   margin-bottom: 8px;
