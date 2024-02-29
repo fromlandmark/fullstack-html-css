@@ -1,0 +1,31 @@
+<!-- 
+    Documentation: 
+    https://www.a11yproject.com/
+    https://www.youtube.com/watch?v=e2nkq3h1P68
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button
+			aria-roledescription="active button to do something"
+			role="button"
+			aria-label="button primary"
+			aria-describedby="A Button to do something"
+		>
+			Button
+		</button>
+		<a href="" aria-roledescription="A link to toogle" aria-label="New link">www.google.com</a>
+		<img src="" aria-label="text to read" alt="texto" />
+
+		<label for="name">
+			<input type="text" aria-label="An input for writing your name" />
+		</label>
+		<button type="submit" aria-label="submit the form">Submit</button>
+	</body>
+</html>

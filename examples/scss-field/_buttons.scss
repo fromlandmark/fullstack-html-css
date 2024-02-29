@@ -1,0 +1,45 @@
+@import "mixins";
+
+button {
+	color: black;
+	@include flex();
+}
+
+$columns: 12;
+$gap: 12px;
+
+$breakpoint-mobile: 768px;
+
+$icons: 40, 50, 60, 70;
+
+@each $icon in $icons {
+	$i: index($icons, $icon);
+
+	.icon-#{$icon}-#{$i} {
+		@if ($i == 2) {
+			color: red;
+		}
+		width: #{$icon + "px"};
+	}
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gap;
+}
+@for $i from 1 through 12 {
+	.col-lg-#{$i} {
+		width: calc(100% / 12 * $i - $gap);
+		background: white;
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	@for $i from 1 through 12 {
+		.col-lg-#{$i} {
+			width: 100%;
+			background: blue;
+		}
+	}
+}

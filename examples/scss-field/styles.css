@@ -1,0 +1,158 @@
+button {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.icon-40-1 {
+  width: 40px;
+}
+
+.icon-50-2 {
+  color: red;
+  width: 50px;
+}
+
+.icon-60-3 {
+  width: 60px;
+}
+
+.icon-70-4 {
+  width: 70px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.col-lg-1 {
+  width: calc(8.3333333333% - 12px);
+  background: white;
+}
+
+.col-lg-2 {
+  width: calc(16.6666666667% - 12px);
+  background: white;
+}
+
+.col-lg-3 {
+  width: calc(25% - 12px);
+  background: white;
+}
+
+.col-lg-4 {
+  width: calc(33.3333333333% - 12px);
+  background: white;
+}
+
+.col-lg-5 {
+  width: calc(41.6666666667% - 12px);
+  background: white;
+}
+
+.col-lg-6 {
+  width: calc(50% - 12px);
+  background: white;
+}
+
+.col-lg-7 {
+  width: calc(58.3333333333% - 12px);
+  background: white;
+}
+
+.col-lg-8 {
+  width: calc(66.6666666667% - 12px);
+  background: white;
+}
+
+.col-lg-9 {
+  width: calc(75% - 12px);
+  background: white;
+}
+
+.col-lg-10 {
+  width: calc(83.3333333333% - 12px);
+  background: white;
+}
+
+.col-lg-11 {
+  width: calc(91.6666666667% - 12px);
+  background: white;
+}
+
+.col-lg-12 {
+  width: calc(100% - 12px);
+  background: white;
+}
+
+@media screen and (max-width: 768px) {
+  .col-lg-1 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-2 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-3 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-4 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-5 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-6 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-7 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-8 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-9 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-10 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-11 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-12 {
+    width: 100%;
+    background: blue;
+  }
+}
+.form__field {
+  width: 100%;
+}
+.form__field__label {
+  display: block;
+  color: red;
+}
+.form__field__label:hover {
+  color: #000;
+}
+.form__field p span {
+  color: red;
+}
+
+html {
+  background: red;
+}/*# sourceMappingURL=styles.css.map */

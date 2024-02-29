@@ -70,29 +70,6 @@
   width: calc(100% - 8px);
 }
 
-@media screen and (max-width: 1024px) {
-  .col-lg-6 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-7 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-8 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-9 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-10 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-11 {
-    width: calc(100% - 8px);
-  }
-  .col-lg-12 {
-    width: calc(100% - 8px);
-  }
-}
 @media screen and (max-width: 768px) {
   .col-lg-1 {
     width: calc(100% - 8px);

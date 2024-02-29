@@ -1,0 +1,23 @@
+// @mixin flex($align: center, $justify: flex-end, $position: left) {
+// 	display: flex;
+// 	justify-content: $justify;
+// 	align-items: $align;
+// 	#{$position}: 0;
+// }
+
+@mixin font-size($min: 14px, $max: 16px) {
+	$size: 2;
+	font-size: clamp(calc($min / 2), 14vw, $max);
+	width: calc(14px / $size);
+}
+
+@mixin flex($direction: row, $wrap-nowrap: wrap) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap-nowrap;
+	@if $direction == row {
+		align-items: flex-start;
+	} @else if $direction == column-reverse {
+		align-items: flex-end;
+	}
+}
