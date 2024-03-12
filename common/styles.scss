@@ -14,6 +14,8 @@ html {
 	font-weight: 300;
 	font-style: normal;
 	color: #f3f8f2;
+	scroll-behavior: smooth;
+	scroll-padding-top: 200px;
 }
 
 html,
@@ -46,16 +48,19 @@ body {
 }
 
 .nav {
-	background: #2d2d2d;
+	background: #0a0a0a;
+	border: 1px solid #2b2b2b;
 	height: 64px;
 	display: flex;
 	align-items: center;
 	padding: 0 32px;
 	position: sticky;
-	top: 0px;
+	top: 32px;
 	z-index: 999;
 	width: 50%;
 	margin: 0 0 32px auto;
+	gap: 32px;
+	border-radius: 32px;
 }
 
 .presentation {
@@ -171,6 +176,27 @@ body {
 	color: white;
 }
 
+.section_title {
+	font-size: 32px;
+	margin: 64px 0;
+	position: relative;
+	&::after {
+		margin: 32px 0;
+		content: "";
+		position: absolute;
+		height: 1px;
+		width: 50%;
+		background: white;
+		display: block;
+		left: -25%;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 [data-type="html"] {
 	transition: all 0.4s;
 	&:hover {
@@ -202,13 +228,15 @@ body {
 }
 
 .chapter {
-	height: 200px;
+	height: 100px;
 	position: sticky;
 	top: 150px;
 	border: 1px solid #545455;
 	flex-grow: 1;
 	padding: 12px;
 	background: #2b2a2e;
+	display: flex;
+	flex-direction: column;
 	&:hover {
 		cursor: pointer;
 	}
@@ -281,4 +309,87 @@ body {
 			opacity: 1;
 		}
 	}
+}
+
+/* Presentations */
+.presentations {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 12px;
+}
+
+/* Exercices */
+.exercises {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 12px;
+}
+.presentation_card {
+	position: relative;
+	width: 300px;
+	aspect-ratio: 16/9;
+	display: inline-block;
+	background: #222;
+	border-radius: 8px;
+	border: 4px solid;
+	border-image-slice: 1;
+	text-decoration: none;
+	display: flex;
+	align-items: flex-end;
+	transition: all 0.4s;
+	padding: 12px;
+	line-height: 150%;
+
+	border-image-source: conic-gradient(hsl(100 100% 60%), hsl(200 100% 60%), hsl(100 100% 60%));
+}
+
+.presentation_card::before {
+	content: attr(data-type);
+	color: white;
+	position: absolute;
+	top: 12px;
+	opacity: 0;
+	z-index: 3;
+	left: 12px;
+	width: 100%;
+	height: 20px;
+	transition: all 0.4s;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+.presentation_card::after {
+	content: attr(data-exercise);
+	color: white;
+	position: absolute;
+	bottom: 8px;
+	opacity: 0;
+	z-index: 3;
+	right: 8px;
+	transition: all 0.4s;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+	writing-mode: tb-rl;
+	display: block;
+}
+
+.presentation_card:hover::before,
+.presentation_card:hover::after {
+	opacity: 1;
+}
+
+.presentation_card:hover {
+	border-bottom-width: 50px;
+	background: #323131;
+}
+
+.presentation_card__title {
+	color: white;
+	font-size: 1rem;
+	width: 80%;
+	display: block;
 }
