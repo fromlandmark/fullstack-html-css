@@ -1,0 +1,33 @@
+@import "colors";
+@import "variables";
+
+$variants: primary, danger, success, warning;
+$variantcolors: blue, pink, red, orange;
+
+// $var: string;
+// $var: numbers;
+// $var: array = [primary, danger, success, warning];
+
+// @each $variant in $variants {
+// 	$i: index($variants, $variant);
+
+// 	.btn-#{$variant} {
+// 		color: nth($variantcolors, $i);
+// 	}
+// }
+
+%button {
+	padding: 8px 16px;
+	border: 0;
+	border-radius: 4px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn {
+	@extend %button;
+	&--success {
+		background: lighten(green, 0);
+	}
+}

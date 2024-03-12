@@ -1,0 +1,40 @@
+<!-- 
+    Documentation: 
+    https://webreference.com/html/tags/source/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<video controls autoplay muted>
+			<source src="../assets/sample_video.mp4" type="video/mp4" media="(min-width: 800px)" />
+			<source src="../assets/sample_video.webm" type="video/webm" media="(min-width: 600px)" />
+			<p>Your browser doesn't support the given video file.</p>
+		</video>
+
+		<!-- <picture>
+			<source srcset="../assets/sample-image.jpeg" type="image/jpeg" media="(min-width: 800px)" />
+			<source srcset="../assets/sample-image.webp" type="image/webp" media="(min-width: 600px)" />
+			<img src="../assets/sample-image.png" alt="" />
+		</picture> -->
+
+		<img
+			src="../assets/sample-image-md.jpeg"
+			alt=""
+			srcset="
+				../assets/sample-image-sm.jpeg  300w,
+				../assets/sample-image-md.jpeg  600w,
+				../assets/sample-image-lg.jpeg 1200w
+			"
+		/>
+	</body>
+</html>
+
+<!-- 
+<source src="../assets/sample_video.mp4" type="video/mp4" media="(min-width: 800px)" />
+<source src="../assets/sample_video.webm" type="video/webm" media="(min-width: 600px)" /> 
+-->

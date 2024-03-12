@@ -1,0 +1,79 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: gainsboro;
+}
+
+.box {
+
+    height: 70px;
+    background: red;
+
+    font-size: 20px;
+}
+
+.box-1 {
+    order: 1;
+}
+
+.wrapper {
+    border: 1px dashed black;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 700px;
+    height: 500px;
+    align-content: flex-start;
+    /* justify-content: flex-end; */
+    /* align-items: flex-end;
+    justify-content: flex-end; */
+    flex-wrap: wrap;
+    /* height: 400px; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: flex-start; */
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.d-flex {
+    display: flex;
+    gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        background: pink
+    }
+
+    nav,
+    .d-flex {
+        flex-direction: column;
+    }
+}
+
+/* .menu-links {
+    margin-left: auto;
+} */
+
+.menu-actions {
+    margin-left: auto;
+}
+
+
+
+
+.card {
+    background: white;
+}
+
+.card__header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

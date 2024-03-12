@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--page-background);
+    color: white;
+}
+
+.flag {
+    width: 300px;
+    aspect-ratio: 4/3;
+    background: gainsboro;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Italy */
+/* ---------------------------------------------------------------------- */
+
+.flag--italy {
+    display: flex;
+}
+
+.flag--italy .stripe {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.flag--italy .stripe:nth-child(1) {
+    background: green;
+}
+
+.flag--italy .stripe:nth-child(2) {
+    background: white;
+}
+
+.flag--italy .stripe:nth-child(3) {
+    background: red;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Kuwait */
+/* ---------------------------------------------------------------------- */
+
+.flag--kuwait {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.flag--kuwait .stripe {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.flag--kuwait .piece {
+    background: black;
+    height: calc(100% / 3);
+    width: calc(100% / 3);
+    position: absolute;
+    top: calc(100% / 3 * 1)
+}
+
+.flag--kuwait .piece::after {
+    content: '';
+    height: 0;
+    width: 0;
+    top: -100%;
+    display: block;
+    position: absolute;
+    border-bottom: 75px solid black;
+    border-right: 100px solid transparent;
+}
+
+.flag--kuwait .piece::before {
+    content: '';
+    height: 0;
+    width: 0;
+    top: 100%;
+    display: block;
+    position: absolute;
+    border-top: 75px solid black;
+    border-right: 100px solid transparent;
+}
+
+
+
+.flag--kuwait div:nth-child(1 of .stripe) {
+    background: green;
+}
+
+.flag--kuwait div:nth-child(2 of .stripe) {
+    background: white;
+}
+
+.flag--kuwait div:nth-child(3 of .stripe) {
+    background: red;
+}

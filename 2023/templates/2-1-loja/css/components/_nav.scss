@@ -1,0 +1,59 @@
+@import "../partials/colors";
+
+nav {
+	height: 64px;
+	width: 100%;
+	display: flex;
+	position: sticky;
+	background: $white;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 5;
+}
+
+.nav__logo {
+	img {
+		height: 50px;
+	}
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+
+	.nav__item {
+		z-index: 4;
+		&:hover {
+			cursor: pointer;
+			.nav__dropdown__items {
+				height: 300px;
+			}
+		}
+		.nav__dropdown__items {
+			overflow: hidden;
+			transition: height 0.2s;
+			display: block;
+			position: absolute;
+			height: 0px;
+			z-index: -1;
+			width: 100%;
+			background: white;
+			left: 0;
+			top: 64px;
+			// min-height: 200px;
+		}
+	}
+}
+
+.items__wrapper {
+	display: flex;
+	gap: 32px;
+	ul {
+		list-style: none;
+		line-height: 200%;
+		li:first-child {
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    --height: 8px;
+    --background-filled: rgb(126, 86, 255);
+    --background: gainsboro;
+    --units: 4;
+    --container-width: 1000px;
+    --page-background: #e57474;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--page-background);
+    color: white;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 64px 0;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.container p {
+    opacity: .5;
+}
+
+/* -----------------------------------------------------------
+Perspective -------------------------------------------------- 
+-------------------------------------------------------------- */
+.square {
+    width: 100px;
+    height: 50px;
+    background: var(--background-filled);
+    transform: skew(-45deg, 0deg) translate(10px, 10px);
+    border-radius: 4px;
+    animation-name: translate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes translate {
+    to {
+        transform: skew(-45deg, 0deg) translate(-20px, -20px);
+        box-shadow: 20px 19px 16px 7px #4801016b;
+    }
+}
+
+
+
+
+/* -----------------------------------------------------------
+Progress ----------------------------------------------------- 
+-------------------------------------------------------------- */
+
+.progress {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--units), 1fr);
+    gap: 12px;
+}
+
+.unit {
+    height: var(--height);
+    border-radius: var(--height);
+    background-color: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+.unit::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--background-filled);
+    animation-fill-mode: forwards;
+    animation-name: fill;
+    animation-duration: 2s;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.unit:nth-child(1):after {
+    animation-delay: 0s;
+}
+
+.unit:nth-child(2):after {
+    animation-delay: 2s;
+}
+
+.unit:nth-child(3):after {
+    animation-delay: 4s;
+}
+
+.unit:nth-child(4):after {
+    animation-delay: 6s;
+}
+
+
+/* -----------------------------------------------------------
+Balls -------------------------------------------------------- 
+-------------------------------------------------------------- */
+:root {
+    --transferPositive: 15px;
+    --transferNegative: -15px;
+}
+
+.balls {
+    width: 50px;
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    place-items: center;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.balls .unit {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: var(--background-filled);
+    position: absolute;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+.balls .unit:nth-child(1) {
+    transform: translate(var(--transferNegative), var(--transferNegative))
+}
+
+.balls .unit:nth-child(2) {
+
+    transform: translate(var(--transferPositive), var(--transferNegative))
+}
+
+.balls .unit:nth-child(3) {
+    transform: translate(var(--transferNegative), var(--transferPositive))
+}
+
+.balls .unit:nth-child(4) {
+    transform: translate(var(--transferPositive), var(--transferPositive))
+}
+
+@keyframes move {
+    to {
+        transform: translate(0, 0)
+    }
+}
+
+
+/* -----------------------------------------------------------
+Appear ------------------------------------------------------- 
+-------------------------------------------------------------- */
+:root {
+    --character-speed: .4s;
+}
+
+.letters {
+    display: flex;
+    gap: 12px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.character {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 5px);
+    }
+}
+
+.character:nth-child(1) {
+    animation-delay: calc(var(--character-speed) * 1)
+}
+
+.character:nth-child(2) {
+    animation-delay: calc(var(--character-speed) * 2)
+}
+
+.character:nth-child(3) {
+    animation-delay: calc(var(--character-speed) * 3)
+}
+
+.character:nth-child(4) {
+    animation-delay: calc(var(--character-speed) * 4)
+}
+
+.character:nth-child(5) {
+    animation-delay: calc(var(--character-speed) * 5)
+}
+
+.character:nth-child(6) {
+    animation-delay: calc(var(--character-speed) * 6)
+}
+
+/* -----------------------------------------------------------
+Pause me while you can --------------------------------------- 
+-------------------------------------------------------------- */
+:root {
+    --box-size: 40px;
+}
+
+.strip {
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+.box {
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    position: absolute;
+    left: 0;
+    background: var(--background-filled);
+    animation-name: go-to-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes go-to-end {
+    to {
+        left: calc(100% - var(--box-size));
+    }
+}

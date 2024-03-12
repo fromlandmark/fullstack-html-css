@@ -2,110 +2,125 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>FullStack HTML / CSS</title>
+		<title>Document</title>
 		<link rel="stylesheet" href="./common/styles.css" />
 	</head>
 	<body>
-		<section class="hero">
-			<div class="hero__headline">
-				<h1 class="italic bold">FullStack</h1>
-				<h1>Development</h1>
-			</div>
-		</section>
-		<section class="hero_details section--small">
-			<div>
-				<span>EDIT</span>
-				<span class="bold">FullStack Development</span>
-				<span>2023</span>
-			</div>
-			<nav>
-				<a href="#content__wrapper">Conteúdo</a>
-				<a href="#presentations__wrapper">Apresentações</a>
-				<a href="#exercises__wrapper">Exercícios</a>
-				<a href="#materials__wrapper">Materiais de Apoio</a>
-			</nav>
-		</section>
+		<div class="intro">
+			<h1>HTML | CSS</h1>
+			<h2>FULLSTACK WEB DEVELOPMENT</h2>
+		</div>
+		<nav class="nav">
+			<a href="#topics">Topics</a>
+			<a href="#classes">Classes</a>
+			<a href="#presentations">Presentations</a>
+			<a href="#exercises">Exercises</a>
+			<a href="#articles">Articles</a>
+		</nav>
 
-		<section class="splash_screen">
-			<div class="left" data-type="html">
-				<h1>HTML</h1>
+		<div class="presentation">
+			<div class="module" data-type="html">
+				<p class="module__title">HTML</p>
 			</div>
-			<div class="right" data-type="css">
-				<h1>CSS</h1>
+			<div class="module" data-type="css">
+				<p class="module__title">CSS</p>
 			</div>
-		</section>
-		<!-- content -->
-		<section class="content" id="content__wrapper">
-			<div class="content__wrapper">
-				<div class="content_caption">
-					<span>html</span>
-					<span>css</span>
-				</div>
-				<div class="content__details">
-					<div class="content_card" data-type="html">
-						<span class="content_card_title">Síntaxe</span>
-					</div>
-					<div class="content_card" data-type="html">
-						<span class="content_card_title">Tags</span>
-					</div>
-					<div class="content_card" data-type="html">
-						<span class="content_card_title">Características</span>
-					</div>
-					<div class="content_card" data-type="html">
-						<span class="content_card_title">Atributos</span>
-					</div>
-					<div class="content_card" data-type="html">
-						<span class="content_card_title">Semântica</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Síntaxe</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Especificidade</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Hierarquia</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Posicionamento</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Flex & Grid</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Animações</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Responsive Design</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">Media Queries</span>
-					</div>
-					<div class="content_card" data-type="css">
-						<span class="content_card_title">SASS</span>
-					</div>
-				</div>
+		</div>
+
+		<div class="bento" id="topics">
+			<div class="box" data-type="html" style="--column-start: 1; --column-end: 3; --row-start: 1; --row-end: 4">
+				Síntaxe
 			</div>
-		</section>
+			<div class="box" data-type="html" style="--column-start: 3; --column-end: 4; --row-start: 1; --row-end: 3">
+				Características
+			</div>
+			<div class="box" data-type="html" style="--column-start: 0; --column-end: 0; --row-start: 0; --row-end: 0">
+				Tags
+			</div>
+			<div class="box" data-type="html" style="--column-start: 1; --column-end: 4; --row-start: 8; --row-end: 11">
+				Atributos
+			</div>
+			<div class="box" data-type="html" style="--column-start: 1; --column-end: 4; --row-start: 4; --row-end: 8">
+				Semântica
+			</div>
+			<div class="box" data-type="css" style="--column-start: 4; --column-end: 6; --row-start: 1; --row-end: 3">
+				CSS Síntaxe
+			</div>
+			<div class="box" data-type="css" style="--column-start: 6; --column-end: 9; --row-start: 1; --row-end: 6">
+				Especificidade
+			</div>
+			<div class="box" data-type="css" style="--column-start: 4; --column-end: 7; --row-start: 6; --row-end: 11">
+				Hierarquia
+			</div>
+			<div class="box" data-type="css" style="--column-start: 4; --column-end: 6; --row-start: 3; --row-end: 6">
+				Posicionamento
+			</div>
+			<div class="box" data-type="css" style="--column-start: 9; --column-end: 11; --row-start: 1; --row-end: 4">
+				Flex & Grid
+			</div>
+			<div class="box" data-type="css" style="--column-start: 7; --column-end: 9; --row-start: 6; --row-end: 7">
+				Animações
+			</div>
+			<div class="box" data-type="css" style="--column-start: 7; --column-end: 9; --row-start: 7; --row-end: 11">
+				Responsive Design
+			</div>
+			<div class="box" data-type="css" style="--column-start: 9; --column-end: 11; --row-start: 4; --row-end: 6">
+				Media Queries
+			</div>
+			<div class="box" data-type="css" style="--column-start: 9; --column-end: 11; --row-start: 6; --row-end: 11">
+				SASS
+			</div>
+		</div>
 
-		<!-- presentations -->
-		<h3 class="section__title">Apresentações</h3>
-		<section class="presentations" id="presentations__wrapper"></section>
+		<div class="chapters" id="classes">
+			<a class="chapter">
+				<span class="class-count">Aula 1</span>
+				<span class="class-type">html</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 2</span>
+				<span class="class-type">html</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 3</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 4</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 5</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 6</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 7</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 8</span>
+				<span class="class-type">css</span>
+			</a>
+			<a class="chapter">
+				<span class="class-count">Aula 9</span>
+				<span class="class-type">Hands on</span>
+			</a>
+		</div>
 
-		<!-- exercicios -->
-		<h3 class="section__title">Exercícios</h3>
-		<section class="exercises" id="exercises__wrapper"></section>
+		<h2 class="section_title">Presentations</h2>
+		<div class="presentations" id="presentations"></div>
 
-		<!-- examples -->
-		<h3 class="section__title">Exemplos</h3>
-		<section class="materials" id="examples__wrapper"></section>
+		<h2 class="section_title">Exercises</h2>
+		<div class="exercises" id="exercises"></div>
 
-		<!-- materiais de apoio -->
-		<h3 class="section__title">Materiais de Apoio</h3>
-		<section class="materials" id="materials__wrapper"></section>
+		<h2 class="section_title">Articles</h2>
+		<div class="reading" id="articles"></div>
 	</body>
 
-	<script type="module" src="common/main.js"></script>
+	<script type="module" src="main.js"></script>
 </html>

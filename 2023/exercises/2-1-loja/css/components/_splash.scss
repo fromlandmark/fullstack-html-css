@@ -1,0 +1,17 @@
+.splash_screen {
+	width: 100%;
+	height: clamp(600px, 80vw, 800px);
+	background: gainsboro;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.splash_screen img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}

@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'mixins';
+
+
+.splash-screen {
+    max-width: 1000px;
+    width: 50vw;
+    margin: 32px auto;
+    min-height: 500px;
+    @include flex(center, center, row);
+    &__content {
+        .headline {
+            font-weight: bold;
+        }
+        &__actions {
+            display: block;
+            padding: 32px 0 16px 0;
+        }
+    }
+    &__video {
+        margin: 32px auto;
+        width: 600px;
+        position: relative;
+        video {
+            border-radius: 4px; 
+            width: 100%;
+        }
+        &__actions {
+            bottom: -6px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .splash-screen {
+        width: 100vw;
+        &__video {
+            width: 100%;
+            video {
+                width:  calc(100% - 32px);
+            }
+        }
+    }
+}

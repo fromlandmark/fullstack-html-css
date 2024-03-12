@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<section>
+			<div class="menu">
+				<button class="menu__link">Arts</button>
+				<button class="menu__link menu__link--active">Fashion</button>
+				<button class="menu__link">Sports</button>
+				<button class="menu__link menu__link--disabled">Music</button>
+				<button class="menu__link">Shopping</button>
+			</div>
+
+			<!-- grid -->
+			<!-- cards -->
+			<!-- cards__wrapper -->
+			<!-- wrapper -->
+
+			<div class="grid">
+				<div class="card">
+					<div class="card__thumbnail_wrapper">
+						<img class="card__thumbnail" src="assets/backdrop.avif" alt="" />
+					</div>
+					<div class="card__details">
+						<div class="card__header">
+							<span>Category</span>
+							<span>2min Reading</span>
+						</div>
+
+						<h4 class="card__title alternate-font">title</h4>
+						<span class="card__date">1 January 1990</span>
+
+						<p class="card__description card__description--clamp">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, asperiores ex! Reiciendis rerum
+							officia aspernatur, tenetur inventore ipsa sint itaque labore, soluta totam nesciunt quaerat numquam dicta
+							distinctio asperiores voluptatibus.
+						</p>
+
+						<div class="card__foter">
+							<span class="extend">Read More</span>
+							<span>234 Followers</span>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__thumbnail_wrapper">
+						<img class="card__thumbnail" src="assets/backdrop.avif" alt="" />
+					</div>
+					<div class="card__details">
+						<div class="card__header">
+							<span>Category</span>
+							<span>2min Reading</span>
+						</div>
+
+						<h4 class="card__title alternate-font">title</h4>
+						<span class="card__date">1 January 1990</span>
+
+						<p class="card__description card__description--clamp">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, asperiores ex! Reiciendis rerum
+							officia aspernatur, tenetur inventore ipsa sint itaque labore, soluta totam nesciunt quaerat numquam dicta
+							distinctio asperiores voluptatibus.
+						</p>
+
+						<div class="card__foter">
+							<span class="extend">Read More</span>
+							<span>234 Followers</span>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__thumbnail_wrapper">
+						<img class="card__thumbnail" src="assets/backdrop.avif" alt="" />
+					</div>
+					<div class="card__details">
+						<div class="card__header">
+							<span>Category</span>
+							<span>2min Reading</span>
+						</div>
+
+						<h4 class="card__title alternate-font">title</h4>
+						<span class="card__date">1 January 1990</span>
+
+						<p class="card__description card__description--clamp">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, asperiores ex! Reiciendis rerum
+							officia aspernatur, tenetur inventore ipsa sint itaque labore, soluta totam nesciunt quaerat numquam dicta
+							distinctio asperiores voluptatibus.
+						</p>
+
+						<div class="card__foter">
+							<span class="extend">Read More</span>
+							<span>234 Followers</span>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__thumbnail_wrapper">
+						<img class="card__thumbnail" src="assets/backdrop.avif" alt="" />
+					</div>
+					<div class="card__details">
+						<div class="card__header">
+							<span>Category</span>
+							<span>2min Reading</span>
+						</div>
+
+						<h4 class="card__title alternate-font">title</h4>
+						<span class="card__date">1 January 1990</span>
+
+						<p class="card__description card__description--clamp">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, asperiores ex! Reiciendis rerum
+							officia aspernatur, tenetur inventore ipsa sint itaque labore, soluta totam nesciunt quaerat numquam dicta
+							distinctio asperiores voluptatibus.
+						</p>
+
+						<div class="card__foter">
+							<span class="extend">Read More</span>
+							<span>234 Followers</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script>
+		const readMore = document.querySelector(".extend");
+		const description = document.querySelector(".card__description");
+
+		readMore.addEventListener("click", () => {
+			description.classList.remove("card__description--clamp");
+		});
+	</script>
+</html>

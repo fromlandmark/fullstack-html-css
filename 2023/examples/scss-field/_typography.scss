@@ -1,0 +1,48 @@
+// Global
+$warning: red;
+
+// p {
+// 	color: $warning;
+// }
+
+// h1 {
+// 	$warning: blue;
+// 	color: $warning;
+
+// 	// é o mundo do h1
+// 	span {
+// 		$warning: green;
+// 		color: $warning;
+// 	}
+// }
+
+// h1 span {
+// 	color: $warning;
+// }
+
+// h2 {
+// 	color: $warning;
+// }
+
+// div.form__field
+//     label.form__field__label
+
+.form__field {
+	width: 100%;
+
+	// @include font-size();
+	// @include fluid-type(font-size, 10vw, 50vw, 16px, 20px);
+	&__label {
+		display: block;
+		color: red;
+		&:hover {
+			color: #000;
+		}
+	}
+
+	p {
+		span {
+			color: red;
+		}
+	}
+}
