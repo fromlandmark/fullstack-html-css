@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Inter', sans-serif;
-
+    --page-background: #222;
 }
 
 html,
@@ -13,10 +13,33 @@ body {
     color: white;
 }
 
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .flag {
     width: 300px;
     aspect-ratio: 4/3;
     background: gainsboro;
+    position: relative;
+}
+
+.flag::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgba(240, 240, 240, 0.271), rgba(92, 13, 13, 0.162));
+}
+
+.flag_title {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -43,6 +66,26 @@ body {
 .flag--italy .stripe:nth-child(3) {
     background: red;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Ukraine */
+/* ---------------------------------------------------------------------- */
+
+
+.flag--ukraine .stripe {
+    flex-grow: 1;
+    height: 50%;
+}
+
+.flag--ukraine .stripe:nth-child(1) {
+    background: rgb(0, 126, 194);
+}
+
+.flag--ukraine .stripe:nth-child(2) {
+    background: rgb(246, 255, 0);
+}
+
+
 
 /* ---------------------------------------------------------------------- */
 /* Kuwait */
@@ -101,4 +144,118 @@ body {
 
 .flag--kuwait div:nth-child(3 of .stripe) {
     background: red;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Banglasdesh */
+/* ---------------------------------------------------------------------- */
+
+.flag--bangladesh {
+    background: rgb(1, 87, 1);
+    display: grid;
+    place-items: center;
+}
+
+.flag--bangladesh .piece {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: red;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Japan */
+/* ---------------------------------------------------------------------- */
+
+.flag--japan {
+    background: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+}
+
+.flag--japan .piece {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: red;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Greece */
+/* ---------------------------------------------------------------------- */
+
+.flag--greece {
+    background: white;
+}
+
+.flag--greece .stripe {
+    height: calc(100% / 9);
+    background: blue
+}
+
+.flag--greece .stripe:nth-child(odd) {
+    height: calc(100% / 9);
+    background: white
+}
+
+.flag--greece .square {
+    height: calc(100% / 9 * 5);
+    aspect-ratio: 1;
+    background: blue;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+.flag--greece .square::after {
+    height: calc(100% / 5 * 1);
+    aspect-ratio: 1/9;
+    width: 100%;
+    content: '';
+    background: white;
+    position: absolute;
+}
+
+.flag--greece .square::before {
+    height: calc(100% / 5 * 1);
+    aspect-ratio: 1/9;
+    width: 100%;
+    content: '';
+    background: white;
+    position: absolute;
+    transform: rotate(90deg)
+}
+
+/* ---------------------------------------------------------------------- */
+/* Portugal */
+/* ---------------------------------------------------------------------- */
+
+.flag--portugal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag--portugal .red {
+    width: 55%;
+    height: 100%;
+    background: red;
+
+}
+
+.flag--portugal .green {
+    width: 45%;
+    height: 100%;
+    background: green;
+
+}
+
+.flag--portugal .yellow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: yellow;
+    transform: translate(-15px)
 }
