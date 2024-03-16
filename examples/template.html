@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="example">
+			<h3>Example</h3>
+			<pre> 
+                <div id="output"></div> 
+            </pre>
+			<div class="constraint">
+				<style>
+					.box {
+						width: 100px;
+						height: 100px;
+						background: red;
+					}
+				</style>
+				<div class="box"></div>
+			</div>
+			<!-- Create an empty div for output -->
+		</div>
+	</body>
+	<script>
+		const handleCodeWithTemplate = () => {
+			const codeBaseElements = document.querySelectorAll(".constraint");
+			const outputElement = document.getElementById("output"); // Get the output element
+
+			codeBaseElements.forEach((el) => {
+				const codeContent = el.innerHTML;
+				const codeSnippet = document.createElement("code"); // Create a new <code> element
+				codeSnippet.textContent = codeContent.trim(); // Set its text content to the string content
+				outputElement.appendChild(codeSnippet); // Append the code snippet to the output element
+				outputElement.appendChild(document.createElement("br")); // Add a line break after each code snippet
+			});
+		};
+		handleCodeWithTemplate();
+	</script>
+</html>
