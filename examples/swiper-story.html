@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			:root {
+				--width: 250px;
+				--slides: 4;
+				--bleed: 8px;
+			}
+			body {
+				display: grid;
+				place-items: center;
+				min-height: 100vh;
+			}
+
+			.mobile__wrapper {
+				width: var(--width);
+				aspect-ratio: 9/16;
+				background: gainsboro;
+				overflow: hidden;
+			}
+
+			@keyframes swipe {
+				from {
+					transform: translate(0);
+				}
+				to {
+					transform: translate(calc(calc(var(--slides) - 1) * calc(-250px + var(--bleed))));
+				}
+			}
+
+			.slide__wrapper {
+				display: flex;
+				height: 100%;
+				gap: 8px;
+
+				padding: 8px;
+				animation-name: swipe;
+				animation-iteration-count: infinite;
+				animation-duration: 3s;
+			}
+
+			.slide {
+				height: calc(100% - 16px);
+				background: red;
+				min-width: calc(100% - 16px);
+				padding: 8px;
+			}
+		</style>
+		<div class="mobile__wrapper">
+			<div class="slide__wrapper">
+				<div class="slide">Label 1</div>
+				<div class="slide">Label 2</div>
+				<div class="slide">Label 3</div>
+				<div class="slide">Label 4</div>
+			</div>
+		</div>
+	</body>
+</html>
