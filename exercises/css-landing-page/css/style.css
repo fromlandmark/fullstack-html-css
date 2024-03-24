@@ -373,6 +373,8 @@ nav .nav__items .nav__item:hover .nav__item_group {
 .exploring-solutions .cards__container {
   position: relative;
   margin: 32px 0;
+  display: flex;
+  justify-content: center;
 }
 .exploring-solutions .cards__container__wrapper {
   display: flex;
@@ -420,6 +422,8 @@ nav .nav__items .nav__item:hover .nav__item_group {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
 }
 .exploring-solutions .cards__container__background video {
   width: 100%;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
+			html {
+				font-family: "Inter";
+			}
+
+			* {
+				color: yellow;
+			}
+
+			h1 {
+				color: red;
+			}
+
+			/* #color--orange-id {
+				color: orange;
+			} */
+			body > h1 {
+				color: black;
+			}
+
+			.color--blue {
+				color: blue;
+			}
+
+			.color--blue {
+				color: cyan;
+			}
+
+			[data-color="pink"] {
+				color: pink;
+			}
+
+			.body.body--blue {
+				color: blue;
+			}
+
+			.body {
+				color: #000;
+			}
+		</style>
+
+		<h1 class="color--blue" id="color--orange-id" data-color="pink">Eu sou um h1</h1>
+
+		<p class="body body--blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, est.</p>
+
+		<div class="rules">
+			<ul>
+				<li>Usar box-sizing universalmente</li>
+				<li>Usar um reset system para anular as especificidas do browser</li>
+				<li>relatividade é entender também, quando não a usar</li>
+			</ul>
+		</div>
+	</body>
+</html>
