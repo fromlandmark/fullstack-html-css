@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+
+
+button,
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    background: var(--primary);
+    color: white;
+    padding: 8px 12px;
+    border: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.btn .feather {
+    aspect-ratio: 1;
+    height: 100%;
+}
+
+.btn--danger {
+    background: var(--red);
+    color: white;
+}
+
+.btn--success {
+    background: var(--green);
+    color: white;
+}
+
+
+
+/* Outline Buttons */
+.btn--outline {
+    background: transparent;
+    color: inherit;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn--outline.btn--danger {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+.btn--outline.btn--success {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+
+/* States */
+.btn:hover {
+    background: var(--primary-10);
+    cursor: pointer;
+}
+
+.btn--primary:hover {
+    background: var(--primary-10);
+    cursor: pointer;
+}
+
+.btn--danger:hover {
+    background: var(--red-10);
+}
+
+.btn--success:hover {
+    background: var(--green-10);
+}
+
+.btn--outline:hover {
+    background: transparent;
+    color: inherit;
+    border: 1px solid var(--primary-10);
+    color: var(--primary-10)
+}
+
+.btn--outline.btn--danger:hover {
+    color: var(--red-10);
+    border-color: var(--red-10);
+}
+
+.btn--outline.btn--success:hover {
+    color: var(--green-10);
+    border-color: var(--green-10);
+}

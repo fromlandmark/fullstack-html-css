@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			body {
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				align-items: center;
+				justify-content: center;
+				background: rgb(29, 29, 29);
+			}
+
+			.button__group {
+				display: flex;
+				margin-bottom: 16px;
+			}
+
+			.btn {
+				background: transparent;
+				color: inherit;
+				text-decoration: none;
+				border: 0;
+				font-family: Helvetica;
+				font-size: 16px;
+				padding: 8px 16px;
+				background: rgb(87, 29, 225);
+				color: white;
+			}
+
+			.btn:last-child {
+				border-radius: 0 8px 8px 0;
+			}
+
+			.btn:first-child {
+				border-radius: 8px 0 0 8px;
+			}
+		</style>
+		<div class="button__group">
+			<button class="btn">Button</button>
+			<button class="btn">Button</button>
+			<button class="btn">Button</button>
+			<button class="btn">Button</button>
+		</div>
+
+		<div class="button__group">
+			<div class="btn">Button</div>
+			<div class="btn">Button</div>
+			<div class="btn">Button</div>
+			<div class="btn">Button</div>
+		</div>
+
+		<div class="button__group">
+			<a href="https://www.google.com" target="_blank" class="btn">Button</a>
+			<a href="https://www.google.com" target="_blank" class="btn">Button</a>
+			<a href="https://www.google.com" target="_blank" class="btn">Button</a>
+			<a href="https://www.google.com" target="_blank" class="btn">Button</a>
+		</div>
+	</body>
+</html>

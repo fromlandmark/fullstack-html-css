@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper {
+				height: 50vh;
+				width: 90%;
+				margin: 0 auto;
+				border: 1px solid gray;
+				position: relative;
+			}
+
+			.box {
+				width: 50px;
+				height: 50px;
+				background: red;
+			}
+
+			.box-absolute {
+				background: blue;
+				right: 0;
+				top: 20px;
+				position: sticky;
+				z-index: 9;
+			}
+		</style>
+
+		<div class="wrapper">
+			<div class="box"></div>
+		</div>
+
+		<div class="wrapper">
+			<div class="box box-absolute"></div>
+		</div>
+	</body>
+</html>

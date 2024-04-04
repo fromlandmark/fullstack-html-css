@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.tabs {
+				display: flex;
+				flex-direction: column;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.tab__headers {
+				display: flex;
+				position: relative;
+				border-radius: 8px;
+				overflow: hidden;
+				background: rgb(33, 33, 33);
+			}
+
+			.tab__header {
+				text-align: center;
+				flex-grow: 1;
+				width: 200px;
+				padding: 12px 0;
+				z-index: 1;
+			}
+
+			.tab__header:hover {
+				cursor: pointer;
+			}
+
+			input {
+				display: none;
+			}
+
+			span {
+				color: rgb(208, 208, 208);
+			}
+
+			.tab__headers::after {
+				content: "";
+				display: block;
+				height: 100%;
+				width: calc(100% / 4);
+				position: absolute;
+				background: rgb(64, 64, 64);
+				z-index: 0;
+				transition: all 0.4s ease-in-out;
+			}
+
+			.tab__headers:has(.tab__header:nth-child(1) > input:checked)::after {
+				transform: translateX(calc(100% * 0));
+				transform-origin: left;
+			}
+
+			.tab__headers:has(.tab__header:nth-child(2) > input:checked)::after {
+				transform: translateX(calc(100% * 1));
+				transform-origin: left;
+			}
+
+			.tab__headers:has(.tab__header:nth-child(3) > input:checked)::after {
+				transform: translateX(calc(100% * 2));
+				transform-origin: left;
+			}
+			.tab__headers:has(.tab__header:nth-child(4) > input:checked)::after {
+				transform: translateX(calc(100% * 3));
+				transform-origin: left;
+			}
+		</style>
+		<div class="tabs">
+			<div class="tab__headers">
+				<label class="tab__header" for="tab1">
+					<input type="radio" name="tab" id="tab1" checked />
+					<span>Tab Content</span>
+				</label>
+				<label class="tab__header" for="tab2">
+					<input type="radio" name="tab" id="tab2" />
+					<span>Tab Content</span>
+				</label>
+				<label class="tab__header" for="tab3">
+					<input type="radio" name="tab" id="tab3" />
+					<span>Tab Content</span>
+				</label>
+				<label class="tab__header" for="tab4">
+					<input type="radio" name="tab" id="tab4" />
+					<span>Tab Content</span>
+				</label>
+			</div>
+		</div>
+	</body>
+</html>

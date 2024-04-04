@@ -10,7 +10,7 @@ const articleTemplate = (el) => {
 };
 
 const exerciseTemplate = (el) => {
-	return `<a href="${el.href}"  data-exercise="${el.category}" target="_blank" class="presentation_card" data-type="Exercise">
+	return `<a href="${el.href}" data-exercise="${el.category}" target="_blank" class="presentation_card" data-type="Exercise">
 					<div class='presentation_card__wrapper'>
 					<span class="presentation_card__title">${el.label}</span> 
 					</div>
@@ -19,7 +19,7 @@ const exerciseTemplate = (el) => {
 
 
 const presentationTemplate = (el) => {
-	return `<a href="${el.href}"    data-exercise="${el.category}" target="_blank" class="presentation_card" data-type="Presentation">
+	return `<a href="${el.href}" data-exercise="${el.category}" target="_blank" class="presentation_card" data-type="Presentation">
 					<div class='presentation_card__wrapper'>
 					<span class="presentation_card__title">${el.label}</span> 
 					</div>
@@ -32,9 +32,11 @@ class Chapter {
     data = this.data
     populateData = (anchor, template) => {
         const anchorElement = document.getElementById(anchor)
-        this.data.forEach(el => ( 
-            anchorElement.innerHTML += template(el) 
-        ))  
+        this.data.forEach(el => {
+			if (!el.hidden) {
+				anchorElement.innerHTML += template(el);
+			}
+		})  
     }
 }
 

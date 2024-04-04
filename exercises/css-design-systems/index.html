@@ -1,0 +1,100 @@
+<!-- 
+	Documentation: 
+	https://www.figma.com/file/udWyes5Zfj14qQDmD6oUzL/Edit---Design-Systems?type=design&node-id=2%3A783&mode=dev&t=RszSJCDWvtv4ecS1-1
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles/globals.css" />
+		<link rel="stylesheet" href="styles/button.css" />
+		<link rel="stylesheet" href="styles/input.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<h3 class="wrapper__title">Buttons</h3>
+			<div class="wrapper__content">
+				<div class="flex">
+					<button class="btn">Button</button>
+					<button class="btn btn--danger">Button</button>
+					<button class="btn btn--success">Button</button>
+				</div>
+				<div class="flex">
+					<button class="btn btn--outline">Button</button>
+					<button class="btn btn--outline btn--danger">Button</button>
+					<button class="btn btn--outline btn--success">Button</button>
+				</div>
+				<div class="flex">
+					<button class="btn"><i data-feather="database"></i> Button</button>
+					<button class="btn btn--danger">
+						<i data-feather="database"></i>
+						Button
+					</button>
+					<button class="btn btn--success">
+						<i data-feather="database"></i>
+						Button
+					</button>
+				</div>
+				<div class="flex">
+					<button class="btn btn--outline">
+						<i data-feather="database"></i>
+						Button
+					</button>
+					<button class="btn btn--outline btn--danger">
+						<i data-feather="database"></i>
+						Button
+					</button>
+					<button class="btn btn--outline btn--success">
+						<i data-feather="database"></i>
+						Button
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h3 class="wrapper__title">Inputs</h3>
+			<div class="wrapper__content">
+				<div class="flex">
+					<div class="form_field">
+						<label class="form_field__label" for="">Label</label>
+						<div class="form_field__wrapper">
+							<i data-feather="database"></i>
+							<input type="text" />
+						</div>
+						<p class="form_field__error"></p>
+					</div>
+					<div class="form_field">
+						<label class="form_field__label" for="">Email</label>
+						<div class="form_field__wrapper">
+							<input type="text" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+							<i data-feather="database"></i>
+						</div>
+						<p class="form_field__error">Error if needed</p>
+					</div>
+					<div class="form_field">
+						<label class="form_field__label" for="">Label</label>
+						<div class="form_field__wrapper">
+							<input type="text" />
+						</div>
+						<p class="form_field__error"></p>
+					</div>
+
+					<div class="form_field">
+						<label class="form_field__label" for="">Label</label>
+						<div class="form_field__wrapper">
+							<input type="text" value="arroz" disabled />
+						</div>
+						<p class="form_field__error"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script>
+		feather.replace();
+	</script>
+</html>
