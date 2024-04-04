@@ -11,6 +11,7 @@ fs.readdirSync("./exercises").forEach((file) => {
 					href: `${location}/exercises/${file}`,
 					label: file.split("-")[1],
 					category,
+                    hidden: true
 				};
         list.push(item);
     }

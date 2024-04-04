@@ -7,9 +7,10 @@
 		"start": "npx browser-sync start --server --files '.'",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"read-files": "node common/readFiles.js",
-		"publish-exercises": "node _scripts/publish_exercises.js",
 		"list-examples": "node common/listExamples.js",
-		"publish-presentations": "node _scripts/publish_presentations.js"
+		"publish-exercises": "node _scripts/publish_exercises.js",
+		"publish-presentations": "node _scripts/publish_presentations.js",
+		"publish-all": "npm run publish-exercises && npm run publish-presentations"
 	},
 	"keywords": [],
 	"author": "",
