@@ -1,0 +1,55 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+.icon {
+    background: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: rgb(119, 27, 27);
+}
+
+.icon--border {
+    border: 1px solid gray;
+}
+
+.card {
+    background: white;
+    border: 1px solid gray;
+    border-radius: 16px;
+
+}
+
+.card__header {
+    padding: 16px 16px 0 16px;
+}
+
+.card__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px 16px 16px 16px;
+}
+
+.card__footer {
+    padding: 16px;
+    background: red;
+    border-radius: 0 0 16px 16px;
+}

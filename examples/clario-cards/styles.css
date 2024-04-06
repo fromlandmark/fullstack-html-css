@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #0C0D11;
+}
+
+p {
+    margin: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #dde1e5;
+    border-radius: 16px;
+    /* máximo de: */
+    max-width: 400px;
+    /* mínimo de: */
+    min-width: 300px;
+}
+
+.card__header {
+    padding: 12px 12px 0 12px;
+}
+
+.card__body {
+    padding: 12px 12px 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card__footer {
+    padding: 12px 12px 12px 12px;
+    background: #F8F9FB;
+    border-top: 1px solid #dde1e5;
+    border-radius: 0 0 14px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon svg {
+    width: 50%;
+    height: 50%;
+}
+
+.icon--border {
+    border: 1px solid #dde1e5;
+}
+
+.icon--blue svg {
+    fill: #33CFFF;
+}
+
+.icon--green svg {
+    fill: #A5ACBB;
+}
+
+.group__label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #656E7F;
+}
+
+.group__value {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card__percentage__period {
+    color: #6F7587;
+}
+
+.card__percentage {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.card__percentage[data-trend="up"] {
+    color: #42C3A9;
+}
+
+.card__percentage[data-trend="down"] {
+    color: #DF1B41;
+}
+
+.card__percentage__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.card__percentage[data-trend="up"] .card__percentage__icon {
+    fill: #42C3A9;
+}
+
+.card__percentage[data-trend="down"] .card__percentage__icon {
+    fill: #DF1B41;
+    transform: rotate(180deg)
+}

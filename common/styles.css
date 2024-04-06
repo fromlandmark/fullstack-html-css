@@ -408,4 +408,23 @@ a {
 --------------------------------------------------------------------- */
 .template {
   background: #161616;
+  line-height: 180%;
+  max-width: 120ch;
+  margin: 0 auto;
+}
+
+code {
+  display: inline-block;
+  border: 1px solid rgb(126, 126, 0);
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+ol li,
+ul li {
+  margin-bottom: 4px;
+}
+
+.template a {
+  color: rgb(126, 126, 0);
 }/*# sourceMappingURL=styles.css.map */
