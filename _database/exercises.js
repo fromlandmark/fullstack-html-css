@@ -1,8 +1,8 @@
 const exercises = [
 	{ href: "/exercises/html-newspaper-article", label: "newspaper", category: "html" , hidden: false},
+	{ href: "/exercises/html-table/index.html", label: "table", category: "html" , hidden: true},
+	{ href: "/exercises/html-calendar/index.html", label: "calendar", category: "html" , hidden: true},
 	{ href: "/exercises/final-loja", label: "loja", category: "final" , hidden: true},
-	{ href: "/exercises/html-calendar", label: "calendar", category: "html" , hidden: true},
-	{ href: "/exercises/html-table", label: "table", category: "html" , hidden: true},
 	{ href: "/exercises/css-design-systems", label: "design", category: "css" , hidden: true},
 	{ href: "/exercises/css-animations", label: "animations", category: "css" , hidden: true},
 	{ href: "/exercises/css-flags", label: "flags", category: "css" , hidden: true},
