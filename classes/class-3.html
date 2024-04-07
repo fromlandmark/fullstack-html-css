@@ -1,11 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="template">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aula 1</title>
+		<title>Aula 3</title>
+		<link rel="stylesheet" href="../common/styles.css" />
 	</head>
+
 	<body>
-		<h1 class="" class__title>Aula 1</h1>
+		<nav>
+			<a href="/">Voltar atrás</a>
+		</nav>
+		<h1 class="" class__title>Aula 3</h1>
+		<ul class="index">
+			<li><a href="#examples">Exemplos</a></li>
+			<li><a href="#css-fundamentals">Fundamentos de CSS</a></li>
+			<li><a href="#design-systems">Design Systems</a></li>
+		</ul>
+
+		<h3 id="examples">Exemplos</h3>
+		<div class="examples__container">
+			<!-- <a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a> -->
+		</div>
+
+		<!-- Seccção -->
+		<h3 id="css-fundamentals">Conceitos Básicos de CSS</h3>
+		<section>
+			<p>
+				O CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para definir a apresentação de documentos HTML. Alguns dos
+				conceitos fundamentais do CSS incluem:
+			</p>
+
+			<h4>Herança</h4>
+			<p>
+				A herança é um mecanismo pelo qual as propriedades CSS aplicadas a um elemento são transmitidas aos seus elementos filhos. Por
+				exemplo, ao definir o estilo de fonte para o elemento <strong>&lt;body&gt;</strong>, todos os elementos dentro do corpo do documento
+				herdarão essa fonte, a menos que seja especificado de outra forma.
+			</p>
+
+			<h4>Especificidade</h4>
+			<p>
+				A especificidade refere-se à regra que determina qual estilo será aplicado a um elemento quando existem estilos em conflito. Os
+				seletores mais específicos têm maior prioridade. Por exemplo, um seletor de ID (<strong>#</strong>) é mais específico do que um
+				seletor de classe (<strong>.</strong>) ou um seletor de elemento. Além disso, os estilos definidos inline têm maior prioridade do
+				que os estilos definidos em folhas de estilo externas ou internas.
+			</p>
+
+			<h4>Cascata</h4>
+			<p>
+				O princípio da cascata refere-se à ordem de aplicação dos estilos quando há várias regras em conflito que se aplicam ao mesmo
+				elemento. O CSS segue uma ordem de cascata que determina como os estilos são aplicados, com base na origem, especificidade e ordem
+				de declaração das regras. Isso permite que os estilos sejam sobrescritos e combinados de forma flexível para criar a apresentação
+				desejada.
+			</p>
+
+			<p>
+				Estes conceitos são fundamentais para compreender como o CSS funciona e como criar estilos eficazes e bem estruturados para os
+				documentos HTML.
+			</p>
+
+			<div class="snippet">
+				<pre>
+  &lt;p&gt;Este é um parágrafo de texto comum.&lt;/p&gt;
+  &lt;p class="destaque"&gt;Este parágrafo tem uma classe de destaque.&lt;/p&gt;
+  &lt;p id="paragrafo-destaque"&gt;Este parágrafo tem um ID e é destacado.&lt;/p&gt;
+
+</pre
+				>
+			</div>
+		</section>
+
+		<!-- Seccção -->
+		<h3 id="design-systems">Design Systems e SOLID</h3>
+		<section>
+			<p>
+				Um Design System é um conjunto de padrões de design, componentes e diretrizes que visam garantir consistência e reutilização em
+				projetos de desenvolvimento web.
+			</p>
+
+			<h4>HTML e CSS</h4>
+			<p>
+				No âmbito de um Design System, o HTML é utilizado para estruturar o conteúdo de uma página web, enquanto o CSS é utilizado para
+				estilizar esse conteúdo, seguindo as diretrizes definidas pelo Design System. Utilizando classes CSS consistentes e semântica HTML
+				apropriada, podemos garantir que os elementos da interface sejam facilmente estilizados e reutilizados em todo o projeto.
+			</p>
+
+			<h4>Reutilização</h4>
+			<p>
+				A reutilização é um dos princípios fundamentais de um Design System. Componentes e padrões de design devem ser projetados de forma
+				modular, de modo que possam ser facilmente integrados e reaproveitados em diferentes partes do projeto. Isso promove consistência
+				visual e agilidade no desenvolvimento, uma vez que não é necessário recriar elementos de interface comuns.
+			</p>
+
+			<h4>Relacionamento com os Princípios de SOLID</h4>
+			<p>
+				Os princípios de SOLID são um conjunto de cinco princípios de design de software que visam criar sistemas mais compreensíveis,
+				flexíveis e fáceis de manter. Embora não sejam exclusivamente aplicáveis a Design Systems, esses princípios podem ser relacionados
+				de forma útil:
+			</p>
+			<ul>
+				<li>
+					<strong>S</strong> - Single Responsibility Principle (Princípio da Responsabilidade Única): Componentes de um Design System devem
+					ter uma única responsabilidade bem definida, como exibição de um botão ou entrada de formulário.
+				</li>
+				<li>
+					<strong>O</strong> - Open/Closed Principle (Princípio Aberto/Fechado): Componentes devem ser abertos para extensão, permitindo que
+					sejam personalizados e estendidos, mas fechados para modificação, evitando alterações que possam quebrar a funcionalidade
+					existente.
+				</li>
+				<li>
+					<strong>L</strong> - Liskov Substitution Principle (Princípio da Substituição de Liskov): Componentes devem ser substituíveis por
+					instâncias de seus subtipos, garantindo que a substituição de um componente não afete o comportamento esperado da aplicação.
+				</li>
+				<li>
+					<strong>I</strong> - Interface Segregation Principle (Princípio da Segregação de Interface): Interfaces devem ser específicas e
+					coesas, evitando interfaces monolíticas que forcem a implementação de métodos não utilizados.
+				</li>
+				<li>
+					<strong>D</strong> - Dependency Inversion Principle (Princípio da Inversão de Dependência): Componentes de baixo nível não devem
+					depender de componentes de alto nível, mas sim de abstrações, promovendo uma arquitetura flexível e desacoplada.
+				</li>
+			</ul>
+
+			<p>
+				Adotar esses princípios ao projetar um Design System pode contribuir para um sistema mais robusto, flexível e fácil de manter ao
+				longo do tempo.
+			</p>
+
+			<h4>Dependency Inversion Principle Aplicado</h4>
+			<pre>
+  <code>
+    .button &#123;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #007bff;
+      background-color: transparent;
+      color: #007bff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    &#125;
+
+    .button:hover &#123;
+      background-color: #007bff;
+      color: #fff;
+    &#125;
+
+    .button-secondary &#123;
+      border-color: #6c757d;
+      color: #6c757d;
+    &#125;
+
+    .button-secondary:hover &#123;
+      background-color: #6c757d;
+      color: #fff;
+    &#125;
+
+&lt;a href="#" class="button"&gt;Botão Primário&lt;/a&gt;
+&lt;a href="#" class="button button-secondary"&gt;Botão Secundário&lt;/a&gt; 
+  </code>
+</pre>
+			<p>
+				Neste exemplo, temos um componente de botão simples. O princípio de Dependency Inversion Principle é demonstrado na separação entre
+				a definição das propriedades visuais do botão (cores, tamanho, borda, etc.) no CSS e a aplicação dessas propriedades nos elementos
+				HTML. Isso permite que o componente de botão não dependa diretamente das propriedades visuais definidas no CSS, mas sim de uma
+				abstração das propriedades que podem ser facilmente alteradas ou estendidas sem modificar o componente em si. Essa separação de
+				responsabilidades promove uma arquitetura flexível e desacoplada, seguindo o princípio de Dependency Inversion Principle.
+			</p>
+
+			<h4>Liskov Substitution Principle Aplicado</h4>
+			<pre>
+			<code>
+&lt;style&gt;
+      /* Exemplo de CSS embutido para ilustrar o componente */
+      .shape &#123;
+        width: 100px;
+        height: 100px;
+        background-color: #007bff;
+        margin-bottom: 10px;
+      &#125;
+
+      .circle &#123;
+        border-radius: 50%;
+      &#125;
+
+      .square &#123;
+        border-radius: 0;
+      &#125;
+&lt;/style&gt; 
+ 
+&lt;div class=&quot;shape circle&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;shape square&quot;&gt;&lt;/div&gt;
+			</code>
+		</pre>
+
+			<p>
+				Neste exemplo, temos uma classe .shape que representa uma forma básica. Duas sub-classes, .circle e .square, estendem a classe
+				.shape e representam diferentes tipos de formas. O Princípio de Substituição de Liskov é aplicado aqui, pois uma instância de
+				.circle pode ser substituída por uma instância de .shape em qualquer contexto sem afetar o comportamento do programa. O mesmo se
+				aplica à classe .square. A classe base (.shape) define o comportamento comum a todas as formas, enquanto as classes derivadas
+				(.circle e .square) estendem esse comportamento para formas específicas. Isso permite que usemos polimorfismo, substituindo
+				instâncias de sub-classes por instâncias da classe base sem introduzir erros ou comportamentos inesperados.
+			</p>
+		</section>
 	</body>
 </html>
