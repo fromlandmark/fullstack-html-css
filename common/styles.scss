@@ -424,3 +424,13 @@ ul li {
 .template a {
 	color: rgb(126, 126, 0);
 }
+
+.template h3 {
+	border-bottom: 1px solid rgb(225, 225, 225);
+	padding: 12px 0;
+}
+.template pre code {
+	width: 100%;
+	display: block;
+	padding: 12px;
+}

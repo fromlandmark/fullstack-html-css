@@ -1,11 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aula 1</title>
-	</head>
-	<body>
-		<h1 class="" class__title>Aula 1</h1>
-	</body>
+<html lang="en" class="template">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Aula 1</title>
+	<link rel="stylesheet" href="../common/styles.css" />
+</head>
+
+<body>
+	<nav>
+		<a href="/">Voltar atrás</a>
+	</nav>
+	<h1 class="" class__title>Aula 2</h1>
+	<ul class="index">
+		<li><a href="#examples">Exemplos</a></li>
+		<li><a href="#block-inline">Block and Inline</a></li>
+		<li><a href="#media">Media tags</a></li>
+		<li><a href="#forms">Formulários e Inputs</a></li>
+			<li><a href="#tables">Tabelas</a></li>
+		</div>
+
+		<h3 id="examples">Exemplos</h3>
+		<div class="examples__container">
+			<!-- <a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a> -->
+		</div>
+		<!-- Seccção -->
+		<h3 id="block-inline">Elementos Block e Inline em HTML</h3>
+		<section>
+			<h4>Elementos Block:</h4>
+			<p>Os elementos block são aqueles que ocupam toda a largura disponível e começam numa nova linha. Alguns
+				exemplos de elementos block incluem:</p>
+			<ul>
+				<li><strong>&lt;p&gt;</strong> - parágrafo</li>
+				<li><strong>&lt;div&gt;</strong> - divisão genérica</li>
+				<li><strong>&lt;h1&gt;</strong> a <strong>&lt;h6&gt;</strong> - cabeçalhos</li>
+				<li><strong>&lt;ul&gt;</strong> e <strong>&lt;ol&gt;</strong> - listas não ordenadas e ordenadas</li>
+				<li><strong>&lt;li&gt;</strong> - itens de lista</li>
+				<li><strong>&lt;table&gt;</strong> - tabela</li>
+				<li><strong>&lt;form&gt;</strong> - formulário</li>
+			</ul>
+
+			<h4>Elementos Inline:</h4>
+			<p>Os elementos inline são aqueles que ocupam apenas o espaço necessário e não começam uma nova linha.
+				Alguns exemplos de elementos inline incluem:</p>
+			<ul>
+				<li><strong>&lt;a&gt;</strong> - âncora (link)</li>
+				<li><strong>&lt;span&gt;</strong> - divisão genérica</li>
+				<li><strong>&lt;strong&gt;</strong> e <strong>&lt;em&gt;</strong> - texto enfatizado</li>
+				<li><strong>&lt;img&gt;</strong> - imagem</li>
+				<li><strong>&lt;input&gt;</strong> - campo de entrada</li>
+				<li><strong>&lt;button&gt;</strong> - botão</li>
+			</ul>
+		</section>
+
+		<!-- Seccção -->
+		<h3 id="media">Media Tags em HTML</h3>
+		<section>
+			<p>As media tags em HTML permitem especificar recursos de mídia, como imagens, vídeos ou áudios, para serem
+				exibidos de acordo com as características do dispositivo do utilizador.</p>
+
+			<h4>&lt;img&gt; Tag:</h4>
+			<p>A tag <strong>&lt;img&gt;</strong> é utilizada para exibir imagens em uma página web. É um elemento
+				inline que não requer uma tag de fecho e tem um único atributo <strong>src</strong> que especifica a URL
+				da imagem.</p>
+
+			<h4>&lt;picture&gt; Tag:</h4>
+			<p>A tag <strong>&lt;picture&gt;</strong> é utilizada para fornecer várias versões de uma imagem com
+				diferentes resoluções ou formatos para diferentes dispositivos ou condições de visualização. Ela contém
+				uma ou mais tags <strong>&lt;source&gt;</strong> e uma tag <strong>&lt;img&gt;</strong>.</p>
+
+			<div class="snippet">
+				<pre>
+&lt;picture&gt;
+	&lt;source media="..." srcset="..."&gt;
+	&lt;source media="..." srcset="..."&gt;
+	&lt;img src="..." alt="..."&gt;
+&lt;/picture&gt;
+</pre>
+			</div>
+
+			<h4>&lt;source&gt; Tag:</h4>
+			<p>A tag <strong>&lt;source&gt;</strong> é utilizada dentro da tag <strong>&lt;picture&gt;</strong> para
+				especificar uma fonte de mídia alternativa para a imagem. Ela pode incluir o atributo
+				<strong>srcset</strong>, que especifica uma lista de URLs para imagens em diferentes resoluções, e o
+				atributo <strong>type</strong>, que especifica o tipo MIME da imagem.
+			</p>
+
+			<p>É importante notar que a tag <strong>&lt;img&gt;</strong> dentro da tag <strong>&lt;picture&gt;</strong>
+				serve como um fallback para browsers que não suportam a tag <strong>&lt;picture&gt;</strong> ou
+				quando nenhuma das tags <strong>&lt;source&gt;</strong> corresponde ao dispositivo do utilizador.</p>
+
+
+
+			<h4>&lt;audio&gt;</h4>
+			<p>A tag <strong>&lt;audio&gt;</strong> é usada para incorporar conteúdo de áudio nas páginas web. Pode
+				conter uma ou mais tags <strong>&lt;source&gt;</strong> para diferentes formatos de áudio e uma mensagem
+				de fallback entre as tags de abertura e fecho para navegadores que não suportam a reprodução de áudio
+				HTML5. Exemplo:</p>
+			<pre>
+<code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  O seu navegador não suporta o elemento de áudio.
+&lt;/audio&gt;
+</code>
+</pre>
+
+			<h4>&lt;video&gt;</h4>
+			<p>A tag <strong>&lt;video&gt;</strong> é usada para incorporar conteúdo de vídeo nas páginas web. Assim
+				como a tag <strong>&lt;audio&gt;</strong>, pode conter uma ou mais tags <strong>&lt;source&gt;</strong>
+				para diferentes formatos de vídeo e uma mensagem de fallback para navegadores que não suportam a
+				reprodução de vídeo HTML5. Exemplo:</p>
+			<pre>
+<code>&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  O seu navegador não suporta o elemento de vídeo.
+&lt;/video&gt;
+</code>
+</pre>
+
+			<p>Em resumo, a principal diferença entre a tag <strong>&lt;img&gt;</strong> e a tag
+				<strong>&lt;picture&gt;</strong> é que a última permite fornecer várias versões de uma imagem para
+				diferentes condições de visualização, enquanto a primeira é usada simplesmente para exibir uma única
+				imagem.
+			</p>
+		</section>
+
+		<!-- Seccção -->
+		<h3 id="forms">Formulários e Inputs</h3>
+		<section>
+			<p>A tag <strong>&lt;input&gt;</strong> é usada para criar vários tipos de campos de entrada de dados em
+				formulários web. Alguns dos principais tipos de input incluem:</p>
+			<ul>
+				<li><strong>Text:</strong> para entrada de texto.</li>
+				<li><strong>Password:</strong> para entrada de password, onde os caracteres são ocultados.</li>
+				<li><strong>Checkbox:</strong> para seleção de uma ou mais opções de uma lista.</li>
+				<li><strong>Radio:</strong> para seleção única entre várias opções.</li>
+				<li><strong>File:</strong> para upload de ficheiros.</li>
+			</ul>
+			<p>É importante atribuir valores adequados aos atributos <em>name</em> e <em>id</em> para garantir que os
+				dados do formulário sejam processados corretamente.</p>
+
+			<h4>&lt;select&gt;</h4>
+			<p>A tag <strong>&lt;select&gt;</strong> é usada para criar menus de seleção em formulários web. Contém uma
+				ou mais tags <strong>&lt;option&gt;</strong>, que representam as opções disponíveis para seleção.
+				Exemplo:</p>
+			<pre>
+<code>&lt;select id="fruta" name="fruta"&gt;
+  &lt;option value="maca"&gt;Maçã&lt;/option&gt;
+  &lt;option value="banana"&gt;Banana&lt;/option&gt;
+  &lt;option value="laranja"&gt;Laranja&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>
+			<p>O atributo <em>name</em> é crucial para identificar o valor selecionado quando o formulário é submetido.
+			</p>
+
+			<p>Ao criar formulários com <strong>&lt;input&gt;</strong> e <strong>&lt;select&gt;</strong>, é importante
+				considerar:</p>
+			<ul>
+				<li>A acessibilidade, garantindo que os utilizadores possam interagir com os campos facilmente.</li>
+				<li>A validação dos dados, utilizando atributos como <em>required</em>, <em>minlength</em> e
+					<em>maxlength</em> para garantir a integridade dos dados submetidos.</li>
+				<li>A usabilidade, fornecendo feedback claro e orientações sobre como preencher os campos corretamente.
+				</li>
+			</ul>
+		</section>
+
+		<!-- Seccção -->
+		<h3 id="tables">Tabelas</h3>
+		<section>
+			 <p>As tags de tabela em HTML são utilizadas para organizar e exibir dados tabulares de forma estruturada. As principais tags de tabela incluem:</p>
+
+<h4>&lt;table&gt;</h4>
+<p>A tag <strong>&lt;table&gt;</strong> é utilizada para criar uma tabela. Contém uma ou mais linhas, que por sua vez contêm células de dados representadas pela tag <strong>&lt;tr&gt;</strong>. Exemplo:</p>
+<pre>
+<code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Celula 1&lt;/td&gt;
+    &lt;td&gt;Celula 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Celula 3&lt;/td&gt;
+    &lt;td&gt;Celula 4&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<h4>&lt;th&gt;</h4>
+<p>A tag <strong>&lt;th&gt;</strong> é utilizada para criar cabeçalhos de coluna ou linha em uma tabela. Deve ser utilizada dentro de uma tag <strong>&lt;tr&gt;</strong>. Exemplo:</p>
+<pre>
+<code>&lt;tr&gt;
+  &lt;th&gt;Nome&lt;/th&gt;
+  &lt;th&gt;Idade&lt;/th&gt;
+&lt;/tr&gt;
+</code>
+</pre>
+
+<h4>&lt;td&gt;</h4>
+<p>A tag <strong>&lt;td&gt;</strong> é utilizada para criar células de dados em uma tabela. Deve ser utilizada dentro de uma tag <strong>&lt;tr&gt;</strong>. Exemplo:</p>
+<pre>
+<code>&lt;tr&gt;
+  &lt;td&gt;João&lt;/td&gt;
+  &lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+</code>
+</pre>
+
+<p>Ao optar por uma tabela em HTML, é importante considerar as seguintes preocupações:</p>
+<ul>
+  <li>A acessibilidade, garantindo que a tabela seja compreensível e navegável por utilizadores com deficiências visuais ou de mobilidade.</li>
+  <li>A responsividade, tornando a tabela legível e utilizável em diferentes dispositivos e tamanhos de ecrã.</li>
+  <li>A semântica, utilizando as tags de tabela de forma adequada e significativa para representar corretamente a estrutura dos dados.</li>
+</ul>
+
+<p>As tabelas são mais apropriadas quando os dados a serem exibidos possuem uma estrutura tabular clara e organizada, como calendários, listas de preços, dados estatísticos, entre outros.</p>
+
+		</section>
+
+		<h4>Referências:</h4>
+		<ol>
+			<!-- <li>
+				<strong>MDN Web Docs - HTML:</strong>
+				<p>Fonte: <a href="https://developer.mozilla.org/pt-PT/docs/Web/HTML" target="_blank">MDN Web Docs</a></p>
+				<p>
+					O MDN Web Docs é uma excelente fonte de documentação sobre HTML, abrangendo todos os elementos, atributos e conceitos importantes,
+					incluindo id, class e datasets.
+				</p>
+			</li> -->
+
+
+		</ol>
+</body>
+
 </html>
