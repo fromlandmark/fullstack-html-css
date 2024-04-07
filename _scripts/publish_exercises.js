@@ -8,7 +8,7 @@ fs.readdirSync("./exercises").forEach((file) => {
     if (file !== '.DS_Store') {
         const category = file.split('-')[0];
         const item = {
-					href: `/exercises/${file}`,
+					href: `/exercises/${file}/index.html`,
 					label: file.split("-")[1],
 					category,
                     hidden: true
