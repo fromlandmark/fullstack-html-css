@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #ee8d8d;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calendar__container {
+    background: white;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.calendar__container__header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 4px;
+}
+
+th {
+    opacity: .5;
+}
+
+th,
+td {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td:hover {
+    background: #e9e7e7;
+    cursor: pointer;
+}
+
+.active {
+    background: blue;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn {
+    background: blue;
+    color: rgb(190, 178, 254);
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
