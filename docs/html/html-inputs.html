@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.form_field {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.form_field--inline {
+				flex-direction: row;
+			}
+			.form_field label {
+				color: gray;
+			}
+
+			.form_field:has(input:invalid) {
+				background: red;
+			}
+		</style>
+		<form action="">
+			<div class="form_field">
+				<label for="name">Nome</label>
+				<input type="text" id="name" />
+			</div>
+
+			<div class="form_field">
+				<label for="age">Age</label>
+				<input type="number" id="age" min="0" max="10" step="2" />
+			</div>
+
+			<div class="form_field">
+				<label for="email">Email</label>
+				<input required type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+			</div>
+
+			<div class="form_field form_field--inline">
+				<label for="opcao2">Opção 2</label>
+				<input type="checkbox" name="opcoes" id="opcao2" />
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>

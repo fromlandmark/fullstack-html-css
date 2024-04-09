@@ -10,27 +10,20 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<video controls autoplay muted>
-			<source src="../assets/sample_video.mp4" type="video/mp4" media="(min-width: 800px)" />
-			<source src="../assets/sample_video.webm" type="video/webm" media="(min-width: 600px)" />
-			<p>Your browser doesn't support the given video file.</p>
-		</video>
-
-		<!-- <picture>
-			<source srcset="../assets/sample-image.jpeg" type="image/jpeg" media="(min-width: 800px)" />
-			<source srcset="../assets/sample-image.webp" type="image/webp" media="(min-width: 600px)" />
+		<picture>
+			<source srcset="../assets/sample-image-sm.jpeg" type="image/jpeg" media="(min-width: 800px)" />
+			<source srcset="../assets/sample-image-lg.jpeg" type="image/webp" media="(min-width: 600px)" />
 			<img src="../assets/sample-image.png" alt="" />
-		</picture> -->
+		</picture>
 
-		<img
+		<video>
+			<source src="../assets/sample_video.mp4" type="video/mp4" />
+		</video>
+		<!-- <img
 			src="../assets/sample-image-md.jpeg"
 			alt=""
-			srcset="
-				../assets/sample-image-sm.jpeg  300w,
-				../assets/sample-image-md.jpeg  600w,
-				../assets/sample-image-lg.jpeg 1200w
-			"
-		/>
+			srcset="../assets/sample-image-sm.jpeg 300w, ../assets/sample-image-md.jpeg 600w, ../assets/sample-image-lg.jpeg 1200w"
+		/> -->
 	</body>
 </html>
 
