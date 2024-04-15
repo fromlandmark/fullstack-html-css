@@ -1,0 +1,27 @@
+button,
+.btn_section_side {
+    padding: 8px 12px;
+    background: rgb(152, 8, 8);
+    border-radius: 4px;
+    border: 0;
+}
+
+button,
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.btn--danger {
+    background: red;
+    color: white;
+}
+
+.btn--primary {
+    background: blue;
+    color: white;
+}
+
+[href] {
+    background: blue;
+}

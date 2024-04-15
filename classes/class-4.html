@@ -1,11 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="template">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aula 1</title>
+		<title>Aula 4</title>
+		<link rel="stylesheet" href="../common/styles.css" />
 	</head>
+
 	<body>
-		<h1 class="" class__title>Aula 1</h1>
+		<nav>
+			<a href="/">Voltar atrás</a>
+		</nav>
+		<h1 class="" class__title>Aula 4</h1>
+		<ul class="index">
+			<li><a href="#examples">Exemplos</a></li>
+		</ul>
+
+		<h3 id="examples">Exemplos</h3>
+		<div class="examples__container">
+			<!-- <a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a> -->
+		</div>
+
+		<!-- Seccção -->
+		<h3 id="fonts">Como adicionar uma fonte</h3>
+		<section>
+			<h4>Adicionar uma Fonte em HTML e CSS</h4>
+
+			<p>Para adicionar uma fonte personalizada num site, podes seguir estes passos:</p>
+			<ol>
+				<li>
+					Escolhe uma fonte adequada para o teu projeto. Existem muitos sites que oferecem fontes gratuitas, como o
+					<a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
+				</li>
+
+				<li>
+					Depois de selecionar a fonte desejada, copia o link fornecido pelo provider da fonte e cola-o dentro da tag
+					<code>&lt;head&gt;</code> no teu documento HTML. Por exemplo:
+				</li>
+			</ol>
+
+			<pre><code>
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans"&gt;
+</code></pre>
+
+			<p>Agora, podes usar essa fonte no teu CSS, especificando-a na propriedade <code>font-family</code>. Por exemplo:</p>
+
+			<pre><code>
+  .titulo &#123;
+    font-family: 'Roboto', sans-serif;
+  &#125;
+
+  .paragrafo &#123;
+    font-family: 'Open Sans', sans-serif;
+  &#125;
+</code></pre>
+
+			<p>
+				Assim, o elemento com a classe <code>.titulo</code> terá a fonte 'Roboto' aplicada, enquanto o elemento com a classe
+				<code>.paragrafo</code> terá a fonte 'Open Sans'.
+			</p>
+
+			<p>
+				Pessoalmente considero que tem setido adicionar uma fonte personalizada num site através do css, assim fica tudo no seu espaço de
+				responsabilidade:
+			</p>
+			<p>Funciona assim:</p>
+			<p>Por exemplo, se escolheste as fontes 'Roboto' e 'Open Sans', o código CSS fornecido pelo Google Fonts seria:</p>
+			<pre><code>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+</code></pre>
+
+			<p>Depois de obter o código CSS, cola-o no início do ficheiro CSS externo.</p>
+			<pre><code>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+  html  &#123;
+    font-family: 'Roboto', sans-serif;
+  &#125;
+
+  .paragrafo &#123;
+    font-family: 'Open Sans', sans-serif;
+  &#125;
+</code></pre>
+
+			<p>Assim, todo o documento terá a fonte roboto, à exceção de quando usas a classe <code>.paragrafo</code> que atribui a Open Sans.</p>
+		</section>
+
+		<h3 id="fonts">Box Model</h3>
+		<section>
+			<p>
+				O Box Model em CSS é um modelo de design que descreve como os elementos HTML são renderizados na página. Consiste em quatro partes
+				principais:
+			</p>
+			<ul>
+				<li><strong>Conteúdo:</strong> O conteúdo real do elemento, como texto, imagens ou outros elementos.</li>
+				<li><strong>Padding:</strong> Espaço adicional entre o conteúdo e a borda do elemento.</li>
+				<li><strong>Borda:</strong> Uma linha visível que circunda o elemento.</li>
+				<li><strong>Margem:</strong> Espaço externo entre a borda do elemento e outros elementos na página.</li>
+			</ul>
+			<p>O tamanho total de um elemento é calculado como a soma dessas partes: conteúdo + padding + border + margin.</p>
+			<p>Por exemplo, se tivermos um elemento com as seguintes propriedades:</p>
+			<pre><code>
+  .caixa &#123;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid #007bff;
+    margin: 20px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;  
+  &#125;
+</code></pre>
+			<p>
+				O elemento terá uma largura de 200px (incluindo padding e borda), uma altura de 100px (incluindo padding e borda), uma borda sólida
+				de 2px de largura, um espaçamento interno (padding) de 20px e um espaçamento externo (margin) de 20px. O modelo de caixa está
+				definido como "border-box", o que significa que o tamanho total da caixa incluirá o padding e a borda.
+			</p>
+			<p>Se retirarmos a propriedade <code>box-sizing: border-box</code> o elemento terá uma width (200px + 20px + 20px).</p>
+			<p>
+				Utilizar a propriedade <code>box-sizing: border-box</code> permite ao elemento absorver o padding e a border, tornando o elemento
+				mais consistente.
+			</p>
+		</section>
+
+		<h3 id="fonts">Font Sizes e a relação com a relatividade</h3>
+		<section>
+			<p>
+				A propriedade <strong>font-size</strong> em CSS define o tamanho do texto dentro de um elemento. Existem várias unidades de medida
+				que podem ser usadas para especificar o tamanho do texto, entre várias destacam-se:
+			</p>
+
+			<ul>
+				<li>
+					<strong>px (pixels):</strong> Esta é uma unidade fixa de medida. Um pixel é uma unidade de medida relativa ao tamanho do
+					dispositivo de visualização.
+				</li>
+				<li>
+					<strong>rem:</strong> Esta é uma unidade de medida relativa ao tamanho da fonte do elemento raiz (<code>&lt;html&gt;</code>). 1rem
+					é igual ao tamanho da fonte do elemento raiz.
+				</li>
+				<li>
+					<strong>em:</strong> Esta é uma unidade de medida relativa ao tamanho da fonte do elemento pai. 1em é igual ao tamanho da fonte do
+					elemento pai.
+				</li>
+			</ul>
+		</section>
+
+		<h4>Referências:</h4>
+		<ol>
+			<li>
+				<strong>Modelo de Caixa (Box Model):</strong>
+				<p>Fonte: <a href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/box_model" target="_blank">MDN Web Docs</a></p>
+				<p>
+					O MDN Web Docs é uma excelente fonte de documentação sobre o modelo de caixa em CSS, abrangendo todos os elementos, atributos e
+					conceitos importantes, incluindo padding, borda e margem.
+				</p>
+			</li>
+
+			<li>
+				<strong>Propriedade <code>font-size</code> em CSS:</strong>
+				<p>Fonte: <a href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/font-size" target="_blank">MDN Web Docs</a></p>
+				<p>
+					O MDN Web Docs fornece informações detalhadas sobre a propriedade <code>font-size</code> em CSS, incluindo exemplos práticos e
+					diretrizes de uso.
+				</p>
+			</li>
+
+			<li>
+				<strong>Adicionando uma Fonte em CSS:</strong>
+				<p>Fonte: <a href="https://css-tricks.com/almanac/properties/f/font-size/" target="_blank">CSS-Tricks</a></p>
+				<p>
+					O CSS-Tricks oferece tutoriais detalhados sobre como adicionar fontes personalizadas em CSS, incluindo métodos usando @font-face e
+					Google Fonts.
+				</p>
+			</li>
+
+			<li>
+				<strong>Relação entre Filho Absoluto e Pai Relativo em CSS:</strong>
+				<p>Fonte: <a href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/" target="_blank">CSS-Tricks</a></p>
+				<p>
+					O CSS-Tricks explica claramente como funciona a relação entre elementos filhos posicionados absolutamente e elementos pais
+					posicionados relativamente em CSS.
+				</p>
+			</li>
+		</ol>
 	</body>
 </html>

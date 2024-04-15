@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    border: 1px dashed black;
+    min-height: 300px;
+}
+
+.parent--flex {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.parent--flex--self {
+    display: flex;
+}
+
+.parent--flex--self .children {
+    align-self: flex-end;
+    justify-items: flex-end;
+}
+
+
+.children {
+    width: calc(100% / 3 - 24px);
+    height: 100px;
+    background: red;
+    border-radius: 8px;
+    padding: 16px;
+}

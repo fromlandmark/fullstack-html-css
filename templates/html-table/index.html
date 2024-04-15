@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		html,
+		body {
+			margin: 0;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+		}
+
+		.avo {
+			background: blue;
+			height: 250px;
+			display: none;
+		}
+		.pai {
+			/* width: 400px; */
+			width: 50%;
+			height: 200px;
+			background: red;
+			margin: 0 auto;
+		}
+
+		.filho {
+			background: yellow;
+			display: inline-block;
+			width: 50%;
+		}
+	</style>
+	<body>
+		<div class="avo">
+			<div class="pai">
+				<span class="filho">filho</span>
+			</div>
+		</div>
+
+		<table>
+			<tr>
+				<th>header</th>
+				<th>header</th>
+				<th>header</th>
+				<th>header</th>
+				<th>header</th>
+				<th>header</th>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td rowspan="3">2</td>
+				<td>2</td>
+				<td>2</td>
+				<td rowspan="3">2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td rowspan="3">2</td>
+				<td>2</td>
+				<td>2</td>
+				<td rowspan="3">2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td rowspan="3">2</td>
+				<td colspan="2">sou eu</td>
+				<td rowspan="3">2aa</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+				<td>4</td>
+			</tr>
+		</table>
+	</body>
+</html>

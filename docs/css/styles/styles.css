@@ -1,0 +1,55 @@
+:root {
+    --navbar: 80px;
+}
+
+
+* {
+    font-size: 14px;
+}
+
+
+
+html {
+    color: blue;
+    font-size: 16px;
+    margin: 0;
+}
+
+body {
+    height: 200vh;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    height: var(--navbar);
+    width: 100%;
+    background: rgb(110, 41, 40);
+    top: 0;
+}
+
+main {
+    margin-top: calc(var(--navbar) + 100px);
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: yellow;
+    display: inline-block;
+    z-index: 9;
+    position: relative;
+}
+
+.box-orange {
+    background: orange;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+p {
+    background: inherit;
+}
