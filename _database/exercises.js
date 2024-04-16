@@ -1,7 +1,7 @@
 const exercises = [
 	{ href: "/exercises/html-newspaper-article/index.html", label: "newspaper", category: "html" , hidden: false},
-	{ href: "/exercises/html-table/index.html", label: "table", category: "html" , hidden: true},
-	{ href: "/exercises/html-calendar/index.html", label: "calendar", category: "html" , hidden: true},
+	{ href: "/exercises/html-table/index.html", label: "table", category: "html" , hidden: false},
+	{ href: "/exercises/html-calendar/index.html", label: "calendar", category: "html" , hidden: false},
 	{ href: "/exercises/final-loja", label: "loja", category: "final" , hidden: true},
 	{ href: "/exercises/css-design-systems/index.html", label: "design", category: "css" , hidden: true},
 	{ href: "/exercises/css-animations/index.html", label: "animations", category: "css" , hidden: true},

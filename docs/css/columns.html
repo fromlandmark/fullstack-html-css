@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				min-height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.avatar {
+				width: 200px;
+				height: 200px;
+				background: blue;
+				border-radius: 100%;
+				position: relative;
+			}
+
+			.avatar img {
+				width: 100%;
+				border-radius: inherit;
+			}
+			/* .avatar::before {
+				content: "";
+				display: block;
+				width: 50px;
+				height: 50px;
+				background: gainsboro;
+				border-radius: 100%;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+
+			.avatar[data-status="active"]::before {
+				background: green;
+			}
+
+			.avatar[data-status="busy"]::before {
+				background: red;
+			} */
+
+			.avatar:hover {
+				background: red;
+			}
+
+			.avatar-status {
+				width: 50px;
+				height: 50px;
+				display: block;
+				background: gainsboro;
+				border-radius: 100%;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		</style>
+
+		<a href="">Link</a>
+		<div class="avatar" data-status="active">
+			<img src="https://randomuser.me/api/portraits/men/2.jpg" alt="" />
+			<span class="avatar-status"></span>
+		</div>
+
+		<!-- <div class="row">
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+			<div class="column">column</div>
+		</div> -->
+	</body>
+</html>
