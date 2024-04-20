@@ -1,28 +1,163 @@
 <!DOCTYPE html>
 <html lang="en" class="template">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aula 5</title>
-		<link rel="stylesheet" href="../common/styles.css" />
-	</head>
 
-	<body>
-		<nav>
-			<a href="/">Voltar atrás</a>
-		</nav>
-		<h1 class="" class__title>Aula 5</h1>
-		<ul class="index">
-			<li><a href="#examples">Exemplos</a></li>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Aula 5</title>
+	<link rel="stylesheet" href="../common/styles.css" />
+</head>
+
+<body>
+	<nav>
+		<a href="/">Voltar atrás</a>
+	</nav>
+	<h1 class="" class__title>Aula 5</h1>
+	<ul class="index">
+		<li><a href="#flex">Flex</a></li>
+	</ul>
+
+	<h3 id="examples">Exemplos</h3>
+	<div class="examples__container">
+		<!-- <a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a> -->
+	</div>
+
+	<!-- Seccção -->
+	<h3 id="flex">Display: Flex!</h3>
+	<section>
+		<p>
+			No mundo dinâmico do desenvolvimento web, a flexibilidade é fundamental. É aí que entra em cena o display:
+			flex, um módulo de CSS
+			que permite criar estruturas responsivas e adaptáveis com total facilidade.
+		</p>
+		<h4>1. Fundamentos do Display: Flex</h4>
+
+		<ul>
+			<li><strong>Flex Container:</strong> O elemento pai que acolhe seus filhos flexíveis, tornando-se o
+				responsável da orquestra.</li>
+			<li><strong>Flex Items:</strong> Os elementos que residem dentro do container, tornados flexíveis pelo pai.
+			</li>
+			<li>
+				<strong>Eixo Principal:</strong> A linha imaginária que define a direção na qual os flex items se
+				alinham, seja horizontal (row)
+				ou vertical (column).
+			</li>
+			<li>
+				<strong>Espaço Livre:</strong> As áreas vazias entre os flex items, aguardando suas instruções para
+				serem preenchidas ou
+				distribuídas.
+			</li>
 		</ul>
+		<h4>2. Propriedades Mágicas</h4>
 
-		<h3 id="examples">Exemplos</h3>
-		<div class="examples__container">
-			<!-- <a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a> -->
-		</div>
+		<p>Algumas propriedades essenciais para manipular o layout com display: flex:</p>
 
-		<!-- Seccção -->
-		<h3 id="css-fundamentals">Conceitos Básicos de CSS</h3>
-		<section></section>
-	</body>
+		<ul>
+			<li>
+				<strong>flex-direction:</strong> Define a direção do eixo principal, guiando o conjunto dos seus flex
+				items (childrens) (row,
+				column, row-reverse, column-reverse).
+			</li>
+			<li>
+				<strong>flex-wrap:</strong> Determina como os flex items se comportam quando o espaço se torna escasso,
+				envolvendo-os em várias
+				linhas (wrap) ou encolhendo (nowrap).
+			</li>
+			<li>
+				<strong>flex-grow:</strong> Distribui o espaço livre entre os flex items, concedendo mais espaço a
+				alguns enquanto outros ficam
+				iguais.
+			</li>
+			<li>
+				<strong>flex-shrink:</strong> Ajusta o tamanho dos flex items quando o espaço se torna limitado,
+				diminuindo-os proporcionalmente
+				(positive values) ou protegendo-os de encolher (negative values).
+			</li>
+			<li>
+				<strong>flex-basis:</strong> Define a largura ou altura base de cada flex item, servindo como ponto de
+				partida para o crescimento
+				ou encolhimento (auto, &lt;length&gt;, &lt;percentage&gt;).
+			</li>
+		</ul>
+	</section>
+
+	<h3 id="functions">Funções</h3>
+	<section>
+		<ul>
+			<li>
+				<h4>url():</h4>
+				<p>Importa imagens, fontes e outros recursos externos diretamente no CSS, facilitando o gerenciamento de
+					ficheiros.</p>
+				<code>
+<pre>
+body {
+	background-image: url('imagem.jpg');
+} </pre>
+</code>
+			</li>
+			<li>
+				<h4>calc():</h4>
+				<p>Realiza cálculos matemáticos dentro do CSS, ajustando valores dinamicamente.</p>
+
+				<code>
+		</pre>
+        div {
+          width: calc(50% - 20px); /* Divide a largura da tela pela metade e subtrai 20px */
+        }
+      </pre>
+	  </code>
+			</li>
+			<li>
+				<h4>rgb() e rgba():</h4>
+				<p>Cria cores personalizadas com precisão, definindo valores individuais de vermelho, verde e azul (com
+					ou sem opacidade).</p>
+				<code>
+					<pre>
+        h1 {
+          color: rgb(255, 0, 0); /* Vermelho puro */
+        }
+
+        a {
+          color: rgba(0, 0, 255, 0.5); /* Azul semitransparente */
+        }
+      </pre>
+				</code>
+			</li>
+			<li>
+				<h4>linear-gradient():</h4>
+				<p>Cria gradientes de cores suaves e dinâmicos, com transições entre cores definidas.</p>
+				<code>
+					<pre>
+        body {
+          background: linear-gradient(to right, #f00, #00f); /* Gradiente do vermelho para o azul */
+        }
+      </pre>
+			</code>
+			</li>
+			<li>
+				<h4>boxShadow():</h4>
+				<p>Adiciona sombras aos elementos, simulando efeitos 3D e destacando o conteúdo.</p>
+				<code>
+					<pre>
+        button {
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra cinza com opacidade */
+        }
+      </pre>
+				</code>
+			</li>
+				<li>
+				<h4>clamp():</h4>
+  <p>A função clamp() funciona como uma pinça, definindo um valor mínimo, ideal e máximo para uma propriedade CSS. O valor final ficará entre o mínimo e o máximo, respeitando o valor ideal sempre que possível.</p>
+				<code>
+					<pre>
+         h1 {
+      font-size: clamp(1rem, 2vw, 3rem); /* Tamanho mínimo 1rem, ideal relativo à viewport (2vw), máximo 3rem */
+    }
+      </pre>
+				</code>
+			</li>
+		</ul>
+	</section>
+</body>
+
 </html>

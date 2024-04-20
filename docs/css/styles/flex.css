@@ -1,3 +1,7 @@
+/* 
+https: //developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+https: //css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
 * {
     box-sizing: border-box;
 }
@@ -5,9 +9,61 @@
 .parent {
     border: 1px dashed black;
     min-height: 300px;
+    margin-bottom: 32px;
 }
 
 .parent--flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 16px;
+    /* justify-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap; */
+
+}
+
+.children {
+    flex-grow: 1;
+
+    height: 60px;
+
+    background: red;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.children-gordo {
+    height: 90px;
+    background: blue;
+}
+
+li {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+li:nth-child(even) {
+    background-color: red;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* 
+Flex parent
+Justify-content
+align-items
+gap
+align-self
+flex-grow 
+*/
+/* .parent--flex {
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -25,10 +81,18 @@
 }
 
 
-.children {
-    width: calc(100% / 3 - 24px);
-    height: 100px;
-    background: red;
-    border-radius: 8px;
-    padding: 16px;
+
+
+.parent-with-childs-with-grow {
+    display: flex;
 }
+
+.parent-with-childs-with-grow .children:nth-child(1) {
+    flex: 10 1 auto;
+
+}
+
+.parent-with-childs-with-grow .children:nth-child(2) {
+    flex: 10 0 auto;
+    background: blue;
+} */
