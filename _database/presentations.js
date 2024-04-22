@@ -1,5 +1,5 @@
 const presentations = [
-	{ href: "/presentations/css-animations-functions.pdf", label: "animations", category: "css", hidden: true },
+	{ href: "/presentations/css-animations-functions.pdf", label: "animations", category: "css", hidden: false },
 	{ href: "/presentations/css-flex.pdf", label: "flex.pdf", category: "css", hidden: false },
 	{ href: "/presentations/css-introducao.pdf", label: "introducao.pdf", category: "css", hidden: false },
 	{ href: "/presentations/css-properties.pdf", label: "properties.pdf", category: "css", hidden: false },

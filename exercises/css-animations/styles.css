@@ -86,6 +86,7 @@ Progress -----------------------------------------------------
     animation-fill-mode: forwards;
     animation-name: fill;
     animation-duration: 2s;
+    animation-direction: alternate;
 }
 
 @keyframes fill {

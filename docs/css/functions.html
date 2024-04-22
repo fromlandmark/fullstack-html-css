@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Functions</title>
+	</head>
+
+	<style>
+		:root {
+			--bg-app: blue;
+			--color: black;
+			--bg-card: rgb(174, 35, 35);
+			--font-size: 28px;
+			--font-family: "Helvetica";
+			--font-family-special: "Georgia";
+			--bg-app: rgb(255, 249, 249);
+		}
+
+		html {
+			font-family: var(--font-family);
+			font-size: var(--font-size);
+		}
+
+		.alternate-text {
+			font-family: var(--font-family-special);
+		}
+
+		body {
+			background: var(--bg-app);
+		}
+		.card {
+			--font-size: 20px;
+			background: var(--bg-card);
+			height: 400px;
+		}
+
+		li:has(span) {
+			color: red;
+		}
+
+		.form_field:has(input:focus) {
+			background: red;
+		}
+
+		.caixa {
+			/* width: 100%;
+			min-width: 600px;
+			max-width: 800px; */
+			/* width: clamp(600px, 50vw, 800px); */
+			/* width: max(800px, 100%); */
+			background: red;
+			font-size: clamp(14px, 2vw, var(--font-size));
+
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes scale {
+			/* from {}
+            to {} */
+			/* 0% {}
+            1%{} */
+			0% {
+				transform: scale(1) rotate(45deg);
+				background: blue;
+			}
+			20% {
+				transform: scale(0.5) rotate(-30deg);
+			}
+			100% {
+				transform: scale(2) rotate(0deg);
+				background: orange;
+			}
+		}
+
+		@keyframes move {
+			0% {
+				background: red;
+			}
+			50% {
+				background: yellow;
+			}
+			100% {
+				background: blue;
+			}
+		}
+	</style>
+	<body data-theme="light">
+		<div class="form_field">
+			<input type="text" />
+		</div>
+
+		<div class="caixa">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit quam reiciendis architecto quidem delectus! Voluptas, delectus
+			reprehenderit natus ducimus incidunt debitis fugiat illum ipsum autem quidem officiis fugit quasi ea similique illo eum molestiae
+			excepturi accusantium vero quibusdam architecto dicta quos? Molestias incidunt amet dolores debitis unde quibusdam hic ex numquam
+			laboriosam possimus facilis commodi provident dicta quo, consequatur repudiandae optio recusandae doloribus culpa est. Veritatis at
+			vero repellat eveniet maxime est delectus tenetur quidem quos dolorum? Est recusandae nemo, id repellendus ad voluptates blanditiis
+			debitis? Et optio incidunt nihil modi aspernatur voluptatibus. Commodi maiores laborum neque vitae iste quisquam?
+		</div>
+		<ul>
+			<li class="active">
+				<span>i1</span>
+			</li>
+			<li>i2</li>
+			<p>paragraph</p>
+			<li>i3</li>
+			<li>i4</li>
+			<li>i5</li>
+		</ul>
+	</body>
+</html>
+
+<script>
+	// name (parametro, parametro)
+	// name (0 , 1)
+	function name(arg, arg2) {
+		if (!arg || !arg2) throw new Error("Valores");
+		return arg + arg2;
+	}
+
+	console.log("first");
+	console.log(name(2));
+</script>

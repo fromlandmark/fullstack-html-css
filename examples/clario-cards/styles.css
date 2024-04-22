@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+
+:root {
+    --icon-size: 40px;
+}
+
+
 *,
 *::before,
 *::after {
@@ -54,8 +60,8 @@ p {
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     background-color: transparent;
     border-radius: 4px;
     display: flex;
