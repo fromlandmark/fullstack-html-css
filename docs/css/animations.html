@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			:root {
+				--translate-positive: 20px;
+				--translate-negative: -20px;
+			}
+			body {
+				min-height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: rgb(220, 47, 47);
+			}
+
+			.parent {
+				background: yellow;
+				width: 50px;
+				height: 50px;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				animation-name: rotate;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+			}
+
+			.parent:hover {
+				animation-play-state: paused;
+			}
+
+			.child {
+				width: 16px;
+				height: 16px;
+				background: blue;
+				border-radius: 100%;
+				position: absolute;
+				animation-name: move;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate-reverse;
+			}
+
+			.child:nth-child(1) {
+				transform: translate(var(--translate-negative), var(--translate-negative));
+			}
+
+			.child:nth-child(2) {
+				transform: translate(var(--translate-positive), var(--translate-negative));
+			}
+
+			.child:nth-child(3) {
+				transform: translate(var(--translate-negative), var(--translate-positive));
+			}
+
+			.child:nth-child(4) {
+				transform: translate(var(--translate-positive), var(--translate-positive));
+			}
+
+			@keyframes move {
+				to {
+					transform: translate(0, 0);
+				}
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(180deg);
+				}
+			}
+		</style>
+		<div class="parent">
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+		</div>
+	</body>
+</html>
