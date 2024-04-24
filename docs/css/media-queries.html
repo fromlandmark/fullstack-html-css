@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			* {
+				transition: all 0.4s;
+				box-sizing: border-box;
+			}
+
+			html {
+				background: thistle;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			body {
+				display: grid;
+				place-items: center;
+				min-height: 100vh;
+				margin: 0;
+			}
+
+			.card {
+				width: 400px;
+				aspect-ratio: 4/3;
+				background: white;
+				border-radius: 8px;
+				padding: 16px;
+			}
+
+			.device {
+				position: absolute;
+				height: 40px;
+				width: min-content;
+				background: white;
+				top: 16px;
+				border-radius: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 16px;
+				text-transform: uppercase;
+				letter-spacing: 0.9px;
+				font-weight: 700;
+				padding: 0 12px;
+			}
+
+			.device::after {
+				content: "Mobile";
+			}
+
+			@media screen and (min-width: 768px) {
+				.device::after {
+					content: "Tablet";
+				}
+				html {
+					background: teal;
+				}
+
+				.card {
+					aspect-ratio: 16/9;
+				}
+			}
+
+			@media screen and (min-width: 1024px) {
+				.device::after {
+					content: "Desktop";
+				}
+				html {
+					background: rgb(0, 71, 71);
+				}
+
+				.card {
+					aspect-ratio: 16/9;
+				}
+			}
+			/* 
+			@media screen and (orientation: portrait) {
+				.device::after {
+					content: "Portrait";
+				}
+				html {
+					background: rgb(130, 0, 0);
+				}
+			}
+
+			@media screen and (orientation: landscape) {
+				.device::after {
+					content: "Landscape";
+				}
+				html {
+					background: rgb(130, 0, 0);
+				}
+			} */
+		</style>
+
+		<div class="device"></div>
+		<div class="card">
+			<h3>Title</h3>
+		</div>
+	</body>
+</html>

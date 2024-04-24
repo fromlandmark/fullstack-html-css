@@ -1,0 +1,43 @@
+$warning: orange;
+$cols: 12;
+$sizes: 8, 12, 24, 32;
+
+// Variables
+// Imports
+// mixins
+// IF and Else
+// for
+// each
+// nesting
+// extension
+
+// .btn, .btn--[variant], .btn--[size]
+
+@mixin fontSize() {
+	font-size: 12px;
+}
+
+%flex {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.btn {
+	background: $warning;
+	@include fontSize();
+	&--success {
+		@extend %flex;
+		background: blue;
+	}
+}
+// @for $col from 1 through $cols {
+// 	.col-lg-#{$col} {
+// 		margin: auto;
+// 	}
+// }
+
+@each $size in $sizes {
+	.margin-#{$size} {
+		color: #{$size}px;
+	}
+}

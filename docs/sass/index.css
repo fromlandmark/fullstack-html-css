@@ -1,0 +1,28 @@
+.btn--success {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  background: orange;
+  font-size: 12px;
+}
+.btn--success {
+  background: blue;
+}
+
+.margin-8 {
+  color: 8px;
+}
+
+.margin-12 {
+  color: 12px;
+}
+
+.margin-24 {
+  color: 24px;
+}
+
+.margin-32 {
+  color: 32px;
+}/*# sourceMappingURL=index.css.map */
