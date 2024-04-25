@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="./responsive.css" />
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="">Nav</a></li>
+				<li><a href="">Nav</a></li>
+				<li><a href="">Nav</a></li>
+			</ul>
+			<div class="hamburger" data-active="true"><span></span><span></span><span></span></div>
+
+			<!-- <div class="hamburger" data-active="true"><span></span><span></span><span></span></div> -->
+		</nav>
+		<div class="device"></div>
+	</body>
+
+	<script>
+		const menu = document.querySelector(".hamburger");
+		const nav = document.querySelector("nav");
+
+		menu.addEventListener("click", (e) => {
+			console.log(nav.style);
+			if (menu.dataset.active === "true") {
+				console.log("é true");
+				nav.classList.remove("closed");
+				nav.classList.add("open");
+				menu.dataset.active = false;
+			} else {
+				console.log("é false");
+				nav.classList.add("closed");
+				nav.classList.remove("open");
+
+				menu.dataset.active = true;
+			}
+		});
+	</script>
+</html>

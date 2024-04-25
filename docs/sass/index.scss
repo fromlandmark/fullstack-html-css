@@ -1,0 +1,74 @@
+@import "./variables";
+@import "./button";
+
+// Variaveis
+// Imports
+// Identação & Nesting
+// Concatenação
+// SOLID
+
+$success: green;
+$danger: red;
+
+%button {
+	border: 0;
+	background: gainsboro;
+	border-radius: 4px;
+	padding: 8px 12px;
+	border: 2px solid transparent;
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		cursor: pointer;
+	}
+}
+
+.btn {
+	@extend %button;
+
+	&--outline {
+		background: transparent;
+		border: 2px solid black;
+		&.btn--danger {
+			background: transparent;
+			border-color: $success;
+			color: $success;
+		}
+		&.btn--success {
+			background: transparent;
+			border-color: $success;
+			color: $success;
+		}
+	}
+	&--danger {
+		background: $success;
+		color: white;
+	}
+	&--success {
+		background: $success;
+		color: white;
+	}
+
+	// Icons
+	i {
+		width: 24px;
+		height: 100%;
+		flex-shrink: 0;
+		display: inline-block;
+		background: black;
+	}
+
+	//  States
+
+	&:disabled {
+		opacity: 0.5;
+		&:hover {
+			pointer-events: none;
+		}
+	}
+}

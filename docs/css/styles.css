@@ -1,0 +1,97 @@
+* {
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+
+html {
+    background: thistle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.device {
+    position: absolute;
+    height: 40px;
+    width: min-content;
+    background: white;
+    bottom: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-weight: 700;
+    padding: 0 12px;
+}
+
+.device::after {
+    content: "Mobile";
+}
+
+nav {
+    height: 64px;
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+nav.open {
+    height: auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.hamburger span {
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 4px;
+}
+
+.hamburger[data-active="true"] span:nth-child(2) {
+    display: none;
+}
+
+.hamburger[data-active="true"] span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger[data-active="true"] span:nth-child(3) {
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,33 @@
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .device::after {
+        content: "Tablet";
+    }
+
+    html {
+        background: red;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .device::after {
+        content: "Desktop";
+    }
+
+    html {
+        background: orange;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        height: 64px;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+}
