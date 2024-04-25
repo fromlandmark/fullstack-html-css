@@ -1,28 +1,56 @@
-.btn--success {
-  display: flex;
-  flex-wrap: nowrap;
+button {
+  background: orange;
 }
 
 .btn {
-  background: orange;
-  font-size: 12px;
+  border: 0;
+  background: gainsboro;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:focus {
+  cursor: pointer;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid black;
+}
+.btn--outline.btn--danger {
+  background: transparent;
+  border-color: green;
+  color: green;
+}
+.btn--outline.btn--success {
+  background: transparent;
+  border-color: green;
+  color: green;
+}
+.btn--danger {
+  background: green;
+  color: white;
 }
 .btn--success {
-  background: blue;
+  background: green;
+  color: white;
 }
-
-.margin-8 {
-  color: 8px;
+.btn i {
+  width: 24px;
+  height: 100%;
+  flex-shrink: 0;
+  display: inline-block;
+  background: black;
 }
-
-.margin-12 {
-  color: 12px;
+.btn:disabled {
+  opacity: 0.5;
 }
-
-.margin-24 {
-  color: 24px;
-}
-
-.margin-32 {
-  color: 32px;
+.btn:disabled:hover {
+  pointer-events: none;
 }/*# sourceMappingURL=index.css.map */

@@ -1,43 +1,74 @@
-$warning: orange;
-$cols: 12;
-$sizes: 8, 12, 24, 32;
+@import "./variables";
+@import "./button";
 
-// Variables
+// Variaveis
 // Imports
-// mixins
-// IF and Else
-// for
-// each
-// nesting
-// extension
+// Identação & Nesting
+// Concatenação
+// SOLID
 
-// .btn, .btn--[variant], .btn--[size]
+$success: green;
+$danger: red;
 
-@mixin fontSize() {
-	font-size: 12px;
-}
+%button {
+	border: 0;
+	background: gainsboro;
+	border-radius: 4px;
+	padding: 8px 12px;
+	border: 2px solid transparent;
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	&:hover {
+		cursor: pointer;
+	}
 
-%flex {
-	display: flex;
-	flex-wrap: nowrap;
+	&:focus {
+		cursor: pointer;
+	}
 }
 
 .btn {
-	background: $warning;
-	@include fontSize();
-	&--success {
-		@extend %flex;
-		background: blue;
-	}
-}
-// @for $col from 1 through $cols {
-// 	.col-lg-#{$col} {
-// 		margin: auto;
-// 	}
-// }
+	@extend %button;
 
-@each $size in $sizes {
-	.margin-#{$size} {
-		color: #{$size}px;
+	&--outline {
+		background: transparent;
+		border: 2px solid black;
+		&.btn--danger {
+			background: transparent;
+			border-color: $success;
+			color: $success;
+		}
+		&.btn--success {
+			background: transparent;
+			border-color: $success;
+			color: $success;
+		}
+	}
+	&--danger {
+		background: $success;
+		color: white;
+	}
+	&--success {
+		background: $success;
+		color: white;
+	}
+
+	// Icons
+	i {
+		width: 24px;
+		height: 100%;
+		flex-shrink: 0;
+		display: inline-block;
+		background: black;
+	}
+
+	//  States
+
+	&:disabled {
+		opacity: 0.5;
+		&:hover {
+			pointer-events: none;
+		}
 	}
 }
