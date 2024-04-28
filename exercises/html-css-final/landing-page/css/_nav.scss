@@ -1,0 +1,84 @@
+@import 'mixins';
+@import 'colors';
+
+nav {
+    height: 64px;
+    @include flex(space-between, center, row);
+    padding: 0 16px;
+    color: $black;
+    border-bottom: 1px solid $light-gray;
+    .nav__logo {
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background: rgba(230,230,230,1);
+            display: block;
+        }
+    }
+    .nav__items {
+        @include flex(space-between, center, row);
+        gap: 12px;
+        height: 100%;
+        margin: 0 auto 0 64px;
+        .nav__item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;   
+            a {
+                color: $black;
+            }
+
+            .nav__item_group {
+                display: none;
+                transition: all .4s ease-in-out;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+                border: 1px solid $light-gray;
+                background: $white;
+                .nav__item_group_link {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    min-width: 125px;
+                    text-indent: 12px;
+                    transition: all .4s;
+                    &:hover {
+                        background-color: $light-gray;
+                    }
+                }
+            }
+
+            &:hover {
+                .nav__item_group {
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    position: relative;
+    transition: all .4s;
+    &-fixed {
+        position: sticky;
+        top: 0;
+        background: $white;
+        z-index: 9;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    nav {
+        .nav {
+            &__items {
+              display: none;
+            }
+          }
+    }
+  }
+
