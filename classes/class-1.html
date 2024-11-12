@@ -1,101 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" class="template">
+<html lang="pt" class="template">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aula 1</title>
+		<title>Estrutura de Pastas - Projeto HTML e CSS</title>
 		<link rel="stylesheet" href="../common/styles.css" />
 	</head>
+
 	<body>
 		<nav>
 			<a href="/">Voltar atrás</a>
 		</nav>
-		<h1 class="" class__title>Aula 1</h1> 
+		<h1 class="class__title">Estrutura de Pastas em HTML e CSS</h1>
 		<ul class="index">
-			<li><a href="#examples">Exemplos</a></li>
-			<li><a href="#npm">NPM</a></li>
 			<li><a href="#html">HTML</a></li>
 			<li><a href="#semantica">Semântica</a></li>
 			<li><a href="#atributos">Atributos</a></li>
-		</div>
 
-		<h3 id="examples">Exemplos</h3>
-		<div class="examples__container">
-			<a href="../examples/clario-cards/clario.html">Cartão de Dashboard</a>
-		</div>
-		<!-- NPM -->
-		<h3 id="npm">NPM</h3>
-		<section>
-			<p>
-				O npm, ou Gestor de Pacotes do Node, é uma ferramenta essencial para o desenvolvimento de aplicações JavaScript na plataforma
-				Node.js. Funciona como uma espécie de "loja de librarias (projectos)" para programadores, fornecendo acesso a um vasto ecossistema
-				de pacotes de software que podem ser incorporados facilmente em projetos para adicionar funcionalidades específicas, resolver
-				dependências ou simplificar o desenvolvimento.
-			</p>
-
-			<p>
-				O npm é distribuído juntamente com o Node.js, o que significa que quando instalas o Node.js no teu sistema, o npm é automaticamente
-				instalado. Depois de instalado, podes utilizar o npm através da linha de comandos para realizar uma série de tarefas, tais como:
-			</p>
-
-			<ol>
-				<li>
-					<strong>Instalar pacotes:</strong> Podes instalar pacotes facilmente usando o comando <code>npm install</code>. Por exemplo,
-					<code>npm install luxon</code> instalaria o pacote Luxon, uma biblioteca para manipulação de datas e horas, no teu projeto.
-				</li>
-
-				<li>
-					<strong>Gerir dependências:</strong> O npm monitoriza as dependências do teu projeto num ficheiro chamado
-					<code>package.json</code>, que lista todos os pacotes necessários para executar o projeto. Ao instalar um pacote com o npm, este é
-					automaticamente adicionado ao <code>package.json</code>.
-				</li>
-
-				<li>
-					<strong>Atualizar pacotes:</strong> O npm permite atualizar os pacotes instalados para as suas versões mais recentes com o comando
-					<code>npm update</code>.
-				</li>
-
-				<li>
-					<strong>Remover pacotes:</strong> Se já não precisares de um pacote no teu projeto, podes removê-lo facilmente utilizando o
-					comando <code>npm uninstall</code>.
-				</li>
-
-				<li>
-					<strong>Publicar pacotes:</strong> Os programadores podem partilhar o seu próprio código como pacotes no registo público do npm.
-					Isso permite que outros programadores instalem e utilizem os seus pacotes nos seus próprios projetos.
-				</li>
-			</ol>
-
-			<p>
-				Além disso, o npm possui funcionalidades avançadas, como scripts personalizados, que permitem automatizar tarefas comuns de
-				desenvolvimento, como a execução de testes, a compilação de código ou a execução de tarefas de construção.
-			</p>
-
-			<p>
-				Em conclusão, o npm é uma ferramenta essencial para programadores de Node.js, facilitando a gestão de dependências e simplificando o
-				processo de desenvolvimento de software em JavaScript.
-			</p>
-		</section>
+			<li><a href="#estrutura-pastas">Estrutura de Pastas</a></li>
+			<li><a href="#navegacao">Navegação entre Ficheiros</a></li>
+		</ul>
 
 		<h3 id="html">HTML</h3>
 		<section>
 			<p>O html é uma línguagem de marcação.</p>
-		<p>
-			O objectivo banal do html é a definição de elementos na página, este definição vai mais além quando introduzimos conceitos de relação
-			entre elementos e aprimoramos as caracteristicas de cada tag.
-		</p>
+			<p>
+				O objectivo banal do html é a definição de elementos na página, este definição vai mais além quando introduzimos conceitos de
+				relação entre elementos e aprimoramos as caracteristicas de cada tag.
+			</p>
 
-		<p>A escolha entre um elemento varia da exigência que existe no contexto.</p>
+			<p>A escolha entre um elemento varia da exigência que existe no contexto.</p>
 
-		<p>
-			Se a escolha é por exemplo, levar o utilizador para algum lado, leva-nos a escolher entre o
-			<code>&lt;button&gt;&lt;/button&gt;</code> e um <code>&lt;a/&gt;</code>.
-		</p>
+			<p>
+				Se a escolha é por exemplo, levar o utilizador para algum lado, leva-nos a escolher entre o
+				<code>&lt;button&gt;&lt;/button&gt;</code> e um <code>&lt;a/&gt;</code>.
+			</p>
 
-		<p>Não quer isto dizer que outros elementos não poderão fazer o mesmo, mas depende da forma como o devemos, ou não, utilizar.</p>
+			<p>Não quer isto dizer que outros elementos não poderão fazer o mesmo, mas depende da forma como o devemos, ou não, utilizar.</p>
 
-		<p>O html já tem formas nativas de reproduzir alguns comportamentos com os quais não há necessidade de aplicar métodos de JS</p>
-
+			<p>O html já tem formas nativas de reproduzir alguns comportamentos com os quais não há necessidade de aplicar métodos de JS</p>
 		</section>
 
 		<h3 id="semantica">HTML Semântica</h3>
@@ -146,76 +89,144 @@
 
 		<h3 id="atributos">HTML Atributos</h3>
 		<section>
-				<p>
-			Os atributos em HTML são componentes fundamentais para os desenvolvedores web, permitindo adicionar informações adicionais e
-			comportamentos aos elementos HTML. Três desses atributos, `id`, `class` e `datasets`, desempenham papéis importantes na estruturação e
-			funcionalidade das páginas web.
-		</p>
+			<p>
+				Os atributos em HTML são componentes fundamentais para os desenvolvedores web, permitindo adicionar informações adicionais e
+				comportamentos aos elementos HTML. Três desses atributos, `id`, `class` e `datasets`, desempenham papéis importantes na estruturação
+				e funcionalidade das páginas web.
+			</p>
 
-		<p>
-			O atributo `id` é utilizado para identificar de forma única um elemento HTML numa página. Deve ser usado de forma cuidadosa e apenas
-			uma vez por página para garantir a unicidade. Por exemplo, um elemento pode ser identificado com o `id="header"`, enquanto outro pode
-			ter o `id="footer"`, permitindo referenciar estes elementos de forma única e consistente através de CSS ou JavaScript.
-		</p>
+			<p>
+				O atributo `id` é utilizado para identificar de forma única um elemento HTML numa página. Deve ser usado de forma cuidadosa e apenas
+				uma vez por página para garantir a unicidade. Por exemplo, um elemento pode ser identificado com o `id="header"`, enquanto outro
+				pode ter o `id="footer"`, permitindo referenciar estes elementos de forma única e consistente através de CSS ou JavaScript.
+			</p>
 
-		<p>
-			O atributo `class` é utilizado para agrupar elementos que têm características semelhantes, permitindo aplicar estilos CSS e
-			comportamentos JavaScript a vários elementos de uma só vez. Ao contrário do `id`, o atributo `class` pode ser aplicado a múltiplos
-			elementos na mesma página.
-		</p>
+			<p>
+				O atributo `class` é utilizado para agrupar elementos que têm características semelhantes, permitindo aplicar estilos CSS e
+				comportamentos JavaScript a vários elementos de uma só vez. Ao contrário do `id`, o atributo `class` pode ser aplicado a múltiplos
+				elementos na mesma página.
+			</p>
 
-		<p>
-			Os atributos `datasets` permitem adicionar dados personalizados aos elementos HTML, facilitando a interação com JavaScript e CSS.
-			Estes atributos são prefixados com "data-" e podem conter qualquer tipo de informação relevante para a aplicação web. Por exemplo,
-			podemos adicionar o atributo `data-user-id="123"` a um elemento para armazenar o ID do utilizador associado, ou `data-price="19.99"`
-			para indicar o preço de um produto.
-		</p>
+			<p>
+				Os atributos `datasets` permitem adicionar dados personalizados aos elementos HTML, facilitando a interação com JavaScript e CSS.
+				Estes atributos são prefixados com "data-" e podem conter qualquer tipo de informação relevante para a aplicação web. Por exemplo,
+				podemos adicionar o atributo `data-user-id="123"` a um elemento para armazenar o ID do utilizador associado, ou `data-price="19.99"`
+				para indicar o preço de um produto.
+			</p>
 
-		<p>
-			A utilização cuidada destes atributos contribui para uma melhor organização do código HTML, promovendo a reutilização e manutenção do
-			mesmo. Ao atribuir um único `id` a cada elemento, utilizar `class` para agrupar elementos com características semelhantes e `datasets`
-			para armazenar dados adicionais relevantes, os desenvolvedores podem criar páginas web mais estruturadas e funcionais, facilitando
-			também o trabalho com JavaScript e CSS.
-		</p>
+			<p>
+				A utilização cuidada destes atributos contribui para uma melhor organização do código HTML, promovendo a reutilização e manutenção
+				do mesmo. Ao atribuir um único `id` a cada elemento, utilizar `class` para agrupar elementos com características semelhantes e
+				`datasets` para armazenar dados adicionais relevantes, os desenvolvedores podem criar páginas web mais estruturadas e funcionais,
+				facilitando também o trabalho com JavaScript e CSS.
+			</p>
 		</section>
 
-		<h4>Referências:</h4>
-		<ol>
-			<li>
-				<strong>MDN Web Docs - HTML:</strong>
-				<p>Fonte: <a href="https://developer.mozilla.org/pt-PT/docs/Web/HTML" target="_blank">MDN Web Docs</a></p>
-				<p>
-					O MDN Web Docs é uma excelente fonte de documentação sobre HTML, abrangendo todos os elementos, atributos e conceitos importantes,
-					incluindo id, class e datasets.
-				</p>
-			</li>
+		<h3 id="estrutura-pastas">Estrutura de Pastas</h3>
+		<section>
+			<p>
+				Num projeto organizado de HTML e CSS, a estrutura de pastas é fundamental para manter o código acessível e facilitar a manutenção.
+				Uma estrutura básica pode ser:
+			</p>
 
-			<li>
-				<strong>W3Schools - HTML Tutorial:</strong>
-				<p>Fonte: <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></p>
-				<p>
-					O tutorial HTML da W3Schools é uma introdução abrangente ao HTML, com exemplos práticos e explicações detalhadas sobre como usar
-					id, class e datasets, entre outros conceitos.
-				</p>
-			</li>
+			<div class="folder-structure">
+				<pre>
+projeto-html-css/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── images/
+│   └── logo.png
+└── pages/
+    ├── services.html
+    └── team.html
+			</pre
+				>
+			</div>
 
-			<li>
-				<strong>CSS-Tricks - Atributos de HTML:</strong>
-				<p>Fonte: <a href="https://css-tricks.com/a-complete-guide-to-data-attributes/" target="_blank">CSS-Tricks</a></p>
-				<p>
-					Este artigo do CSS-Tricks explora em detalhes os atributos de dados em HTML (datasets), fornecendo exemplos práticos e explicando
-					como eles podem ser úteis no desenvolvimento web.
-				</p>
-			</li>
+			<ul>
+				<li><strong>index.html</strong>: A página principal do site.</li>
+				<li><strong>about.html</strong>: Uma página sobre o projeto ou a equipa.</li>
+				<li><strong>contact.html</strong>: Página de contacto.</li>
+				<li><strong>css/</strong>: Pasta onde são guardados os ficheiros de estilos CSS.</li>
+				<li><strong>js/</strong>: Pasta onde são guardados os ficheiros JavaScript (opcional).</li>
+				<li><strong>images/</strong>: Pasta para armazenar as imagens usadas no projeto.</li>
+				<li><strong>pages/</strong>: Pasta com páginas adicionais, como <em>services.html</em> e <em>team.html</em>.</li>
+			</ul>
+		</section>
 
-			<li>
-				<strong>W3C HTML Living Standard:</strong>
-				<p>Fonte: <a href="https://html.spec.whatwg.org/multipage/" target="_blank">W3C</a></p>
-				<p>
-					O HTML Living Standard é a especificação oficial do HTML mantida pelo World Wide Web Consortium (W3C). Ele contém todas as
-					informações técnicas detalhadas sobre os elementos, atributos e comportamentos do HTML, incluindo id, class e datasets.
-				</p>
-			</li>
-		</ol>
+		<h3 id="navegacao">Navegação entre Ficheiros com <code>&lt;a&gt;</code></h3>
+		<section>
+			<p>
+				A tag <strong>&lt;a&gt;</strong> permite criar links para navegar entre diferentes páginas HTML dentro do projeto. Ao configurar os
+				links corretamente, o utilizador pode navegar pelas diferentes páginas com facilidade.
+			</p>
+
+			<h4>Exemplos de Navegação:</h4>
+			<ul>
+				<li><code>&lt;a href="index.html"&gt;Página Inicial&lt;/a&gt;</code> - Link para a página inicial.</li>
+				<li><code>&lt;a href="about.html"&gt;Sobre&lt;/a&gt;</code> - Link para a página sobre.</li>
+				<li><code>&lt;a href="contact.html"&gt;Contactos&lt;/a&gt;</code> - Link para a página de contactos.</li>
+			</ul>
+
+			<p>
+				Dentro de cada página, é possível adicionar uma barra de navegação comum para facilitar a transição entre as páginas. Por exemplo:
+			</p>
+			<div class="snippet">
+				<pre>
+<nav>
+	<a href="index.html">Página Inicial</a>
+	<a href="about.html">Sobre</a>
+	<a href="contact.html">Contactos</a>
+</nav>
+			</pre>
+			</div>
+		</section>
+
+		<h3 id="navegacao-niveis">Navegação entre Níveis</h3>
+		<section>
+			<p>
+				Quando o projeto tem uma estrutura de pastas com múltiplos níveis, como `pages/`, podemos usar `../` e `./` para navegar entre esses
+				níveis.
+			</p>
+
+			<h4>Exemplos:</h4>
+			<ul>
+				<li>
+					<code>&lt;a href="./team.html"&gt;Equipa&lt;/a&gt;</code> - Link para outra página no mesmo nível, ou seja, `pages/team.html`.
+				</li>
+				<li>
+					<code>&lt;a href="../index.html"&gt;Página Inicial&lt;/a&gt;</code> - Link que sobe um nível para aceder à página principal
+					`index.html`.
+				</li>
+				<li>
+					<code>&lt;a href="../contact.html"&gt;Contactos&lt;/a&gt;</code> - Link para uma página fora da pasta `pages/`, subindo um nível.
+				</li>
+			</ul>
+
+			<p>Exemplo de uma barra de navegação numa página dentro da pasta <code>pages/</code>:</p>
+			<div class="snippet">
+				<pre>
+<nav>
+	<a href="../index.html">Página Inicial</a>
+	<a href="../about.html">Sobre</a>
+	<a href="../contact.html">Contactos</a>
+	<a href="./services.html">Serviços</a>
+	<a href="./team.html">Equipa</a>
+</nav>
+			</pre>
+			</div>
+		</section>
+
+		<footer>
+			<p>
+				Este documento serve como um guia para organizar e navegar num projeto HTML e CSS de forma eficiente, incluindo navegação entre
+				diferentes níveis de diretórios.
+			</p>
+		</footer>
 	</body>
 </html>

@@ -2,55 +2,76 @@ button {
   background: orange;
 }
 
-.btn {
-  border: 0;
-  background: gainsboro;
-  border-radius: 4px;
-  padding: 8px 12px;
-  border: 2px solid transparent;
-  display: inline-flex;
-  align-items: center;
+.row {
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
-.btn:hover {
-  cursor: pointer;
-}
-.btn:focus {
-  cursor: pointer;
+
+[class*=col] {
+  min-height: 40px;
+  background: red;
 }
 
-.btn--outline {
-  background: transparent;
-  border: 2px solid black;
+.col-lg-1 {
+  width: calc(8.3333333333% - 6px);
 }
-.btn--outline.btn--danger {
-  background: transparent;
-  border-color: green;
-  color: green;
+
+.col-lg-2 {
+  width: calc(16.6666666667% - 6px);
 }
-.btn--outline.btn--success {
-  background: transparent;
-  border-color: green;
-  color: green;
+
+.col-lg-3 {
+  width: calc(25% - 6px);
 }
-.btn--danger {
-  background: green;
-  color: white;
+
+.col-lg-4 {
+  width: calc(33.3333333333% - 6px);
 }
-.btn--success {
-  background: green;
-  color: white;
+
+.col-lg-5 {
+  width: calc(41.6666666667% - 6px);
 }
-.btn i {
-  width: 24px;
-  height: 100%;
-  flex-shrink: 0;
-  display: inline-block;
-  background: black;
+
+.col-lg-6 {
+  width: calc(50% - 6px);
 }
-.btn:disabled {
-  opacity: 0.5;
+
+.col-lg-7 {
+  width: calc(58.3333333333% - 6px);
 }
-.btn:disabled:hover {
-  pointer-events: none;
+
+.col-lg-8 {
+  width: calc(66.6666666667% - 6px);
+}
+
+.col-lg-9 {
+  width: calc(75% - 6px);
+}
+
+.col-lg-10 {
+  width: calc(83.3333333333% - 6px);
+}
+
+.col-lg-11 {
+  width: calc(91.6666666667% - 6px);
+}
+
+.col-lg-12 {
+  width: calc(100% - 6px);
+}
+
+@media (max-width: 768px) {
+  .col-lg-1 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-2 {
+    width: 100%;
+    background: blue;
+  }
+  .col-lg-3 {
+    width: 100%;
+    background: blue;
+  }
 }/*# sourceMappingURL=index.css.map */

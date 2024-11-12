@@ -10,65 +10,115 @@
 $success: green;
 $danger: red;
 
-%button {
-	border: 0;
-	background: gainsboro;
-	border-radius: 4px;
-	padding: 8px 12px;
-	border: 2px solid transparent;
-	display: inline-flex;
-	align-items: center;
-	gap: 12px;
-	&:hover {
-		cursor: pointer;
-	}
+$columns: 12;
+$gap: 12px;
 
-	&:focus {
-		cursor: pointer;
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gap;
+}
+
+[class*="col"] {
+	min-height: 40px;
+	background: red;
+	box-sizing: border-box;
+}
+// 100% e o valor é 1/2 então 50%
+@for $i from 1 through $columns {
+	.col-lg-#{$i} {
+		width: calc(100% / $columns * $i - $gap);
 	}
 }
 
-.btn {
-	@extend %button;
-
-	&--outline {
-		background: transparent;
-		border: 2px solid black;
-		&.btn--danger {
-			background: transparent;
-			border-color: $success;
-			color: $success;
-		}
-		&.btn--success {
-			background: transparent;
-			border-color: $success;
-			color: $success;
-		}
-	}
-	&--danger {
-		background: $success;
-		color: white;
-	}
-	&--success {
-		background: $success;
-		color: white;
-	}
-
-	// Icons
-	i {
-		width: 24px;
-		height: 100%;
-		flex-shrink: 0;
-		display: inline-block;
-		background: black;
-	}
-
-	//  States
-
-	&:disabled {
-		opacity: 0.5;
-		&:hover {
-			pointer-events: none;
+@media (max-width: 768px) {
+	@for $i from 1 through 3 {
+		.col-lg-#{$i} {
+			width: 100%;
+			background: blue;
 		}
 	}
 }
+
+// @mixin flex($justify-content, $align-items, $gap) {
+// 	display: flex;
+// 	@if $justify-content == center {
+// 		background: red;
+// 	} @else {
+// 		background: orange;
+// 	}
+// 	justify-content: $justify-content;
+// 	align-items: $align-items;
+// 	gap: #{$gap * 2};
+// }
+
+// .container {
+// 	@include flex(flex-start, flex-start, 12px);
+// }
+
+// .container-2 {
+// 	@include flex(center, flex-start, 12px);
+// }
+
+// %button {
+// 	border: 0;
+// 	background: gainsboro;
+// 	border-radius: 4px;
+// 	padding: 8px 12px;
+// 	border: 2px solid transparent;
+// 	display: inline-flex;
+// 	align-items: center;
+// 	gap: 12px;
+// 	&:hover {
+// 		cursor: pointer;
+// 	}
+
+// 	&:focus {
+// 		cursor: pointer;
+// 	}
+// }
+
+// .btn {
+// 	@extend %button;
+
+// 	&--outline {
+// 		background: transparent;
+// 		border: 2px solid black;
+// 		&.btn--danger {
+// 			background: transparent;
+// 			border-color: $success;
+// 			color: $success;
+// 		}
+// 		&.btn--success {
+// 			background: transparent;
+// 			border-color: $success;
+// 			color: $success;
+// 		}
+// 	}
+// 	&--danger {
+// 		background: $success;
+// 		color: white;
+// 	}
+// 	&--success {
+// 		background: $success;
+// 		color: white;
+// 	}
+
+// 	// Icons
+// 	i {
+// 		width: 24px;
+// 		height: 100%;
+// 		flex-shrink: 0;
+// 		display: inline-block;
+// 		background: black;
+// 	}
+
+// 	//  States
+
+// 	&:disabled {
+// 		opacity: 0.5;
+// 		&:hover {
+// 			pointer-events: none;
+// 		}
+// 	}
+// }
