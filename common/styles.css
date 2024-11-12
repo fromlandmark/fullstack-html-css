@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -25,6 +26,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
 }
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
@@ -116,22 +118,27 @@ body::-webkit-scrollbar {
   margin: 32px 0;
   transition: all 0.3s;
 }
+
 .bento:hover .box {
   transform: translateY(-10px);
   cursor: pointer;
 }
+
 .bento:hover .box:not(:hover) {
   transform: translateY(0px);
 }
+
 .bento:hover::before {
   animation-play-state: paused;
 }
+
 @media screen and (max-width: 1024px) {
   .bento {
     display: flex;
     flex-direction: column;
   }
 }
+
 .bento::before {
   content: "";
   position: absolute;
@@ -155,10 +162,12 @@ body::-webkit-scrollbar {
   from {
     background-size: 50%;
   }
+
   to {
     background-size: 200%;
   }
 }
+
 .box {
   grid-column-start: var(--column-start);
   grid-column-end: var(--column-end);
@@ -180,6 +189,7 @@ body::-webkit-scrollbar {
   margin: 64px 0;
   position: relative;
 }
+
 .section_title::after {
   margin: 32px 0;
   content: "";
@@ -200,6 +210,7 @@ a {
   transition: all 0.4s;
   border: 1px solid #555555;
 }
+
 [data-type=html]:hover {
   background: #d79f11;
   cursor: pointer;
@@ -209,6 +220,7 @@ a {
   transition: all 0.4s;
   border: 1px solid #791936;
 }
+
 [data-type=css]:hover {
   background: #791936;
   cursor: pointer;
@@ -219,6 +231,7 @@ a {
   height: 132vh;
   position: relative;
 }
+
 @media screen and (max-width: 1024px) {
   .chapters {
     display: flex;
@@ -239,15 +252,18 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .chapter:hover {
   cursor: pointer;
 }
+
 @media screen and (max-width: 1024px) {
   .chapter {
     height: 75px;
     margin-top: 0 !important;
   }
 }
+
 .chapter[disabled] {
   opacity: 0.4;
   pointer-events: none;
@@ -289,6 +305,14 @@ a {
   margin-top: 900px;
 }
 
+.chapter:nth-child(10) {
+  margin-top: 1000px;
+}
+
+.chapter:nth-child(11) {
+  margin-top: 1100px;
+}
+
 /* ---------------------------------------------------------------------
 ------------------------------------------------------------------------
 --------------------------------------------------------------------- */
@@ -304,6 +328,7 @@ a {
   text-decoration: none;
   align-items: center;
 }
+
 .article_card .article_card__category {
   background: white;
   padding: 4px 8px;
@@ -313,9 +338,11 @@ a {
   transition: all 0.4s;
   opacity: 0;
 }
+
 .article_card:hover {
   color: yellow;
 }
+
 .article_card:hover .article_card__category {
   opacity: 1;
 }
@@ -439,4 +466,6 @@ ul li {
   display: block;
   padding: 12px;
   margin: 0;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

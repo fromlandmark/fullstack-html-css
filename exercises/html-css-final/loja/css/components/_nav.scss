@@ -1,0 +1,72 @@
+@import "../partials/colors";
+
+nav {
+	height: 64px;
+	width: 100%;
+	display: flex;
+	position: sticky;
+	background: $white;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 5;
+	padding: 0 16px;
+	box-sizing: border-box;
+}
+
+.nav__logo {
+	img {
+		height: 50px;
+	}
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	position: relative;
+	.nav__item {
+		z-index: 4;
+	}
+	.nav__dropdown {
+		.nav__dropdown__group__link {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		.nav__dropdown__items {
+			position: fixed;
+			width: 100vw;
+			top: 60px;
+			left: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.4s;
+			background: red;
+			li:hover {
+				cursor: pointer;
+			}
+		}
+		&:hover {
+			.nav__dropdown__items {
+				display: block;
+				max-height: 100%;
+			}
+		}
+	}
+}
+
+.items__wrapper {
+	display: flex;
+	gap: 32px;
+	justify-content: flex-end;
+	text-align: right;
+	padding: 0 32px;
+	background: white;
+	ul {
+		list-style: none;
+		line-height: 200%;
+		li:first-child {
+			font-weight: bold;
+		}
+	}
+}
