@@ -1,0 +1,37 @@
+.child {
+  position: relative;
+  background: transparent;
+  border: 1px dashed white;
+}
+
+.child::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background: yellow;
+}
+
+.scale::after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.scale-x::after {
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+
+.scale-y::after {
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+
+.scale-z::after {
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+/*# sourceMappingURL=styles.css.map */

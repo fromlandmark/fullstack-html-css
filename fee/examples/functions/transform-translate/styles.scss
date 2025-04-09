@@ -1,0 +1,39 @@
+.child {
+    position: relative;
+    background: transparent;
+    border: 1px dashed white;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        background: yellow;
+    }
+}
+.translate {
+    &::after { 
+        transform: translate(10px, 10px)
+    }
+}
+
+.translate-x {
+    &::after { 
+        transform: translateX(10px)
+    }
+}
+
+.translate-y {
+    &::after { 
+        transform: translateY(10px)
+    }
+}
+
+
+.translate-z {
+    &::after { 
+        transform: translateY(10px)
+    }
+}

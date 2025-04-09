@@ -1,0 +1,37 @@
+.child {
+  position: relative;
+  background: transparent;
+  border: 1px dashed white;
+}
+
+.child::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background: yellow;
+}
+
+.skew::after {
+  -webkit-transform: skew(20deg, 20deg);
+          transform: skew(20deg, 20deg);
+}
+
+.skew-x::after {
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+.skew-y::after {
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+}
+
+.skew-z::after {
+  -webkit-transform: skewZ(20deg);
+          transform: skewZ(20deg);
+}
+/*# sourceMappingURL=styles.css.map */

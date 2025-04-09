@@ -1,0 +1,119 @@
+$bg-container: #424246;
+$bg: #141415;
+$bg-child: #daff0f;
+$border-child: #95ae0d;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    color: white;
+}
+
+body {
+    min-height: 100dvh;
+    background: #141415;
+}
+
+main {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+h3 {
+    padding: 12px 0;
+    border-bottom: 1px solid white;
+}
+
+.container {
+    background: $bg-container;
+    margin: 64px auto;
+    padding: 8px;
+    display: flex;
+    gap: 12px;
+    counter-reset: item;
+    border-radius: 12px;
+    position: relative;
+
+    &-large {
+        min-height: 400px;
+    }
+
+    &::before {
+        content: attr(data-title);
+        position: absolute;
+        transform: translate(0, -32px);
+        color: white;
+        left: 0;
+        top: 0;
+    }
+}
+
+.child {
+    color: $bg-container ;
+    counter-increment: item;
+    background: $bg-child ;
+    border: 1px solid $border-child ;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+
+    &::before {
+        content: counter(item);
+    }
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.no-wrap {
+    flex-wrap: no-wrap;
+}
+
+.items-flex-start {
+    align-items: flex-start;
+}
+
+.items-flex-center {
+    align-items: center;
+}
+
+.items-flex-end {
+    align-items: flex-end;
+}
+
+.items-flex-stretch {
+    align-items: stretch;
+
+    // porque temos um valor de 100px no default
+    .child {
+        height: auto;
+    }
+}

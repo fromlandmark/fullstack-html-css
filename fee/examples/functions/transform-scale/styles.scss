@@ -1,0 +1,43 @@
+.child {
+    position: relative;
+    background: transparent;
+    border: 1px dashed white;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        background: yellow;
+    }
+}
+.scale {
+    &::after {
+
+        transform: scale(0.5)
+    }
+}
+
+.scale-x {
+    &::after {
+
+        transform: scaleX(0.5)
+    }
+}
+
+.scale-y {
+    &::after {
+
+        transform: scaleY(0.5)
+    }
+}
+
+
+.scale-z {
+    &::after {
+
+        transform: scaleY(0.5)
+    }
+}

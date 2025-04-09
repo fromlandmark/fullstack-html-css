@@ -1,0 +1,46 @@
+$degrees: 20deg;
+.child {
+    position: relative;
+    background: transparent;
+    border: 1px dashed white;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        background: yellow;
+    }
+}
+
+.skew {
+    &::after {
+
+        transform: skew($degrees, $degrees);
+    }
+}
+
+.skew-x {
+    &::after {
+
+        transform: skewX($degrees)
+    }
+}
+
+.skew-y {
+    &::after {
+
+        transform: skewY($degrees)
+    }
+}
+
+
+.skew-z {
+    &::after {
+
+        transform: skewZ($degrees)
+    }
+}

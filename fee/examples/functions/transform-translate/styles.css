@@ -1,0 +1,37 @@
+.child {
+  position: relative;
+  background: transparent;
+  border: 1px dashed white;
+}
+
+.child::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background: yellow;
+}
+
+.translate::after {
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+}
+
+.translate-x::after {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.translate-y::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.translate-z::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+/*# sourceMappingURL=styles.css.map */
