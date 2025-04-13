@@ -1,0 +1,54 @@
+html {
+    background: #0a0a0a;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    height: 100px;
+    position: sticky;
+    top: 150px;
+    border: 1px solid #545455;
+    flex-grow: 1;
+    padding: 12px;
+    background: #2b2a2e;
+    display: grid;
+    place-items: center;
+
+}
+
+h1::before {
+    content: 'mobile'
+}
+
+@media (max-width: 600px) {
+    .container {
+        background: blue;
+
+    }
+
+    h1::before {
+        content: 'mobile '
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        background: green;
+
+    }
+
+    h1::before {
+        content: 'tablet '
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        background: yellow;
+
+    }
+
+    h1::before {
+        content: 'desktop '
+    }
+}

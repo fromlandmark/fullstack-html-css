@@ -1,0 +1,11 @@
+.first .child:first-child {
+    background: red;
+}
+
+.last .child:last-child {
+    background: red;
+}
+
+.nth .child:nth-child(2) {
+    background: red;
+}

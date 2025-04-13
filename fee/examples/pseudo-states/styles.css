@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    background: cyan;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    font-size: 2rem;
+}
+
+.btn--hovered {
+    background: blue;
+}
+
+.btn--active {
+    background: darkblue
+}
+
+button:hover {
+    background: blue;
+    cursor: pointer;
+}
+
+button:active {
+    background: darkblue
+}
+
+button:disabled {
+    background: darkgray;
+}
